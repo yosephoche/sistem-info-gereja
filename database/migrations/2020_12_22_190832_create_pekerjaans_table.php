@@ -13,7 +13,7 @@ class CreatePekerjaansTable extends Migration
      */
     public function up()
     {
-        Schema::create('pekerjaan', function (Blueprint $table) {
+        Schema::create('pekerjaans', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100)->nullable()->default('');
             $table->text('description')->nullable();
@@ -30,6 +30,6 @@ class CreatePekerjaansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pekerjaan');
+        Schema::dropIfExists('pekerjaans');
     }
 }

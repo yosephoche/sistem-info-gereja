@@ -13,10 +13,10 @@ class CreateJemaatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jemaat', function (Blueprint $table) {
+        Schema::create('jemaats', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100)->nullable()->default('');
-            $table->foreignId('sektor_id')->constrained('sektor')->onDelete('cascade');
+            $table->foreignId('sektor_id')->constrained('sektors')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
         });
@@ -29,6 +29,6 @@ class CreateJemaatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jemaat');
+        Schema::dropIfExists('jemaats');
     }
 }

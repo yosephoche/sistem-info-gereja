@@ -13,9 +13,9 @@ class CreateMajelisTable extends Migration
      */
     public function up()
     {
-        Schema::create('majelis', function (Blueprint $table) {
+        Schema::create('majeliss', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_profile_id')->constrained('user_profile')->onDelete('cascade');
+            $table->foreignId('user_profile_id')->constrained('user_profiles')->onDelete('cascade');
             $table->string('periode', 100)->nullable()->default('');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
@@ -29,6 +29,6 @@ class CreateMajelisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('majelis');
+        Schema::dropIfExists('majeliss');
     }
 }

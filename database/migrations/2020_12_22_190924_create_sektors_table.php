@@ -13,10 +13,10 @@ class CreateSektorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sektor', function (Blueprint $table) {
+        Schema::create('sektors', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100)->nullable()->default('');
-            $table->foreignId('wilayah_id')->constrained('wilayah')->onDelete('cascade');
+            $table->foreignId('wilayah_id')->constrained('wilayahs')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
         });
@@ -29,6 +29,6 @@ class CreateSektorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sektor');
+        Schema::dropIfExists('sektors');
     }
 }

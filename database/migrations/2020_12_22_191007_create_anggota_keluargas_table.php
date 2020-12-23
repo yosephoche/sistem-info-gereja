@@ -13,10 +13,10 @@ class CreateAnggotaKeluargasTable extends Migration
      */
     public function up()
     {
-        Schema::create('anggota_keluarga', function (Blueprint $table) {
+        Schema::create('anggota_keluargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_profile_id')->constrained('user_profile')->onDelete('cascade');
-            $table->foreignId('keluarga_id')->constrained('keluarga')->onDelete('cascade');
+            $table->foreignId('user_profile_id')->constrained('user_profiles')->onDelete('cascade');
+            $table->foreignId('keluarga_id')->constrained('keluargas')->onDelete('cascade');
             $table->string('status_keluarga', 100)->nullable()->default('');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
@@ -30,6 +30,6 @@ class CreateAnggotaKeluargasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anggota_keluarga');
+        Schema::dropIfExists('anggota_keluargas');
     }
 }

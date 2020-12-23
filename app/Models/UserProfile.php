@@ -9,5 +9,4 @@ class UserProfile extends Model
 {
     use HasFactory;
 
-    protected $table = 'user_profile';
 }
