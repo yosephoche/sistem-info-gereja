@@ -12,10 +12,9 @@ use Auth;
 class UserProfileController extends Controller
 {
     use DisableAuthorization;
+    
     /**
      * Fully-qualified model class name
      */
-
-     protected $model = UserProfile::class;
-
+    protected $model = UserProfile::class;
 }
