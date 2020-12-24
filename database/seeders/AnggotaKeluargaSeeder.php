@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use App\Models\AnggotaKeluarga;
+
 class AnggotaKeluargaSeeder extends Seeder
 {
     /**
@@ -13,6 +15,6 @@ class AnggotaKeluargaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        AnggotaKeluarga::factory()->times(10)->create();
     }
 }

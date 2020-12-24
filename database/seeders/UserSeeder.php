@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-use App\Models\UserProfile;
+use App\Models\User;
 
 
-class UserProfileSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,6 +19,6 @@ class UserProfileSeeder extends Seeder
      */
     public function run()
     {
-        UserProfile::factory()->times(10)->create();
+        User::factory()->times(10)->create();
     }
 }

@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use App\Models\Wilayah;
+
 class WilayahSeeder extends Seeder
 {
     /**
@@ -13,6 +15,6 @@ class WilayahSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Wilayah::factory()->times(10)->create();
     }
 }

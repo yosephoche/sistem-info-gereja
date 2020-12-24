@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Keluarga;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Keluarga;
 
 class KeluargaFactory extends Factory
 {
@@ -22,7 +22,7 @@ class KeluargaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nama_keluarga' => $this->faker->name,
         ];
     }
 }
