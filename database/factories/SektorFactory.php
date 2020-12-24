@@ -2,8 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Sektor;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
+use App\Models\Sektor;
+use App\Models\Wilayah;
 
 class SektorFactory extends Factory
 {
@@ -22,7 +24,8 @@ class SektorFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'wilayah_id' => Wilayah::factory()->create()->id,
         ];
     }
 }

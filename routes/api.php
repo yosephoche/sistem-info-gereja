@@ -4,8 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Orion\Facades\Orion;
 
-use App\Http\Controllers\UserProfileController;
-use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\Api\UserProfileController;
+use App\Http\Controllers\Api\PekerjaanController;
+use App\Http\Controllers\Api\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ use App\Http\Controllers\API\AuthController;
 
 Route::group(['as' => 'api.'], function() {
     Orion::resource('profile', UserProfileController::class);
+    Orion::resource('pekerjaan', PekerjaanController::class);
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

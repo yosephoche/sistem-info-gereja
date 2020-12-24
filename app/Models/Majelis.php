@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Majelis extends Model
 {
     use HasFactory;
+
+    protected $table = 'majeliss';
 }

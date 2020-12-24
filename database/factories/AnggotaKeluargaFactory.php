@@ -2,8 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Models\AnggotaKeluarga;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
+use App\Models\AnggotaKeluarga;
+use App\Models\UserProfile;
+use App\Models\Keluarga;
 
 class AnggotaKeluargaFactory extends Factory
 {
@@ -22,7 +25,8 @@ class AnggotaKeluargaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_profile_id' => UserProfile::factory()->create()->id,
+            'keluarga_id' => Keluarga::factory()->create()->id,
         ];
     }
 }

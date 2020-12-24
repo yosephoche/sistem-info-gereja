@@ -2,8 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Majelis;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
+use App\Models\Majelis;
+use App\Models\UserProfile;
 
 class MajelisFactory extends Factory
 {
@@ -22,7 +24,7 @@ class MajelisFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_profile_id' => UserProfile::factory()->create()->id,
         ];
     }
 }
