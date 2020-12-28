@@ -6,9 +6,9 @@ use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
 
-use App\Models\Keluarga;
+use App\Models\Informasi;
 
-class KeluargaController extends Controller
+class InformasiController extends Controller
 {
-    protected $model = Keluarga::class; 
+    protected $model = Informasi::class;
 }

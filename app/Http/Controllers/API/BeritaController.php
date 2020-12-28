@@ -4,12 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
-
 use Illuminate\Http\Request;
 
-use App\Models\AnggotaKeluarga;
+use App\Models\Berita;
 
-class AnggotaKeluargaController extends Controller
+class BeritaController extends Controller
 {
-    protected $model = AnggotaKeluarga::class;
+    protected $model = Berita::class;
 }

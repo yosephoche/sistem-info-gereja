@@ -20,4 +20,9 @@ class UserProfile extends Model
         'is_sidi'
     ];
 
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
+    }
+
 }

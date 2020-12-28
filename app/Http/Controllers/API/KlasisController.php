@@ -6,9 +6,11 @@ use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
 
-use App\Models\Sektor;
+use App\Models\Klasis;
 
-class SektorController extends Controller
+class KlasisController extends Controller
 {
-    protected $model = Sektor::class;
+    use DisableAuthorization;
+    
+    protected $model = Klasis::class;
 }

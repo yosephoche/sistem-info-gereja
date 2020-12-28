@@ -6,9 +6,9 @@ use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
 
-use App\Models\Jemaat;
+use App\Models\Category;
 
-class JemaatController extends Controller
+class CategoryController extends Controller
 {
-    protected $model = Jemaat::class;
+    protected $model = Category::class;
 }
