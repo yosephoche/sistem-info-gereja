@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Jemaat;
-use App\Models\Sektor;
+use App\Models\Klasis;
 
 class JemaatFactory extends Factory
 {
@@ -24,7 +24,7 @@ class JemaatFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'sektor_id' => Sektor::factory()->create()->id,
+            'klasis_id' => Klasis::factory()->create()->id,
         ];
     }
 }
