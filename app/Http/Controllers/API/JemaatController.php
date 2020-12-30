@@ -10,5 +10,7 @@ use App\Models\Jemaat;
 
 class JemaatController extends Controller
 {
+    use DisableAuthorization;
+    
     protected $model = Jemaat::class;
 }
