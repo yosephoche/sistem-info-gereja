@@ -8,7 +8,7 @@ use Database\Seeders\UserProfileSeeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\PekerjaanSeeder;
 use Database\Seeders\WilayahSeeder;
-use Database\Seeders\SektorSeeder;
+use Database\Seeders\KlasisSeeder;
 use Database\Seeders\JemaatSeeder;
 use Database\Seeders\MajelisSeeder;
 use Database\Seeders\KeluargaSeeder;
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             UserProfileSeeder::class,
             PekerjaanSeeder::class,
             WilayahSeeder::class,
-            SektorSeeder::class,
+            KlasisSeeder::class,
             JemaatSeeder::class,
             MajelisSeeder::class,
             KeluargaSeeder::class,
