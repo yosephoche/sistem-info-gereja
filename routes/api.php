@@ -34,7 +34,9 @@ use App\Http\Controllers\Api\CategoryController;
 Route::group(['as' => 'api.'], function() {
     Orion::belongsToResource('profile', 'user', UserProfileController::class)->withSoftDeletes();
     // Orion::hasOneResource('user', 'profile', UserController::class)->withSoftDeletes();
-    Orion::resource('user', UserController::class)->withSoftDeletes();
+    Route::group(['middleware' => ['auth:sanctum']], function () {
+        Orion::resource('user', UserController::class)->withSoftDeletes();
+    });
 
     Orion::resource('pekerjaan', PekerjaanController::class);
     Orion::resource('klasis', KlasisController::class);
@@ -43,9 +45,9 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('keluarga', KeluargaController::class);
     Orion::resource('anggota-keluarga', AnggotaKeluargaController::class);
     Orion::resource('majelis', MajelisController::class);
-    // Orion::resource('berita', BeritaController::class);
-    // Orion::resource('informasi', InformasiController::class);
-    // Orion::resource('category', CategoryController::class);
+    Orion::resource('berita', BeritaController::class);
+    Orion::resource('informasi', InformasiController::class);
+    Orion::resource('category', CategoryController::class);
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

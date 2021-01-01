@@ -16,4 +16,14 @@ class WilayahController extends Controller
      */
 
     protected $model = Wilayah::class;
+
+    protected function searchableBy() : array
+    {
+        return ['name'];
+    }
+
+    protected function filterableBy() : array
+    {
+        return ['name', 'created_at'];
+    }
 }
