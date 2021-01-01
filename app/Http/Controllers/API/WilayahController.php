@@ -6,7 +6,7 @@ use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 
 use Illuminate\Http\Request;
-
+use App\Models\Wilayah;
 
 class WilayahController extends Controller
 {
