@@ -11,5 +11,6 @@ use App\Models\AnggotaKeluarga;
 
 class AnggotaKeluargaController extends Controller
 {
+    use DisableAuthorization;
     protected $model = AnggotaKeluarga::class;
 }

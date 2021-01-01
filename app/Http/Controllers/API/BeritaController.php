@@ -10,5 +10,6 @@ use App\Models\Berita;
 
 class BeritaController extends Controller
 {
+    use DisableAuthorization;
     protected $model = Berita::class;
 }

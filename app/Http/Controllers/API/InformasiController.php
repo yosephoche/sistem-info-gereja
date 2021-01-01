@@ -10,5 +10,6 @@ use App\Models\Informasi;
 
 class InformasiController extends Controller
 {
+    use DisableAuthorization;
     protected $model = Informasi::class;
 }

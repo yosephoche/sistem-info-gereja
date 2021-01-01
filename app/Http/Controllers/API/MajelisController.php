@@ -11,6 +11,7 @@ use App\Models\Majelis;
 
 class MajelisController extends Controller
 {
+    use DisableAuthorization;
     protected $model = Majelis::class;
     
 }

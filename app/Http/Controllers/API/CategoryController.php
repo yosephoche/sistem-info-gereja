@@ -10,5 +10,6 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
+    use DisableAuthorization;
     protected $model = Category::class;
 }

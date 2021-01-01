@@ -10,4 +10,9 @@ class Klasis extends Model
     use HasFactory;
 
     protected $table = 'klasis';
+
+    protected $fillable = [
+        'name',
+        'wilayah_id',
+    ];
 }
