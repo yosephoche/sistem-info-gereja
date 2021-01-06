@@ -30,6 +30,8 @@
                 
                 @yield('slider')
 
+                @yield('title-breadcrumb')
+
                 <!-- Page Content Wrap -->
                 <div class="page_content_wrap page_paddings_no">
                     @yield('content')

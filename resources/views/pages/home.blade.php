@@ -197,8 +197,8 @@
                         <div class="column-1_3 sc_column_item sc_column_item_1 odd first">
                             <div class="sc_section margin_left_6_4286">
                                 <div class="sc_section_inner">
-                                    <h3 class="sc_title sc_title_regular hp1_event_title_1 tpl_light">Next event in:</h3>
-                                    <h6 class="sc_title sc_title_regular tpl_light font_weight_400">Heart For The House Sunday</h6>
+                                    <h3 class="sc_title sc_title_regular hp1_event_title_1 tpl_light">Kegiatan:</h3>
+                                    <h6 class="sc_title sc_title_regular tpl_light font_weight_400">Rapat Evaluasi tahunan pengurus Klasis</h6>
                                 </div>
                             </div>
                         </div><div class="column-1_3 sc_column_item sc_column_item_2 even">
@@ -210,7 +210,7 @@
                                             <span></span>
                                             <span></span>
                                         </span>
-                                        <span class="sc_countdown_label">Days</span>
+                                        <span class="sc_countdown_label">Hari</span>
                                     </div>
                                     <div class="sc_countdown_separator">:</div>
                                     <div class="sc_countdown_item sc_countdown_hours">
@@ -218,7 +218,7 @@
                                             <span></span>
                                             <span></span>
                                         </span>
-                                        <span class="sc_countdown_label">Hours</span>
+                                        <span class="sc_countdown_label">Jam</span>
                                     </div>
                                     <div class="sc_countdown_separator">:</div>
                                     <div class="sc_countdown_item sc_countdown_minutes">
@@ -226,7 +226,7 @@
                                             <span></span>
                                             <span></span>
                                         </span>
-                                        <span class="sc_countdown_label">Minutes</span>
+                                        <span class="sc_countdown_label">Menit</span>
                                     </div>
                                     <div class="sc_countdown_separator">:</div>
                                     <div class="sc_countdown_item sc_countdown_seconds">
@@ -234,7 +234,7 @@
                                             <span></span>
                                             <span></span>
                                         </span>
-                                        <span class="sc_countdown_label">Seconds</span>
+                                        <span class="sc_countdown_label">Detik</span>
                                     </div>
                                     <div class="sc_countdown_placeholder hide"></div>
                                 </div>
@@ -265,14 +265,14 @@
                         <!-- Services section -->
                     <div class="sc_services_wrap">
                         <div class="sc_services sc_services_style_services-5 sc_services_type_icons sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="5040" data-slides-min-width="250">
-                            <h6 class="sc_services_subtitle sc_item_subtitle">Welcome</h6>
-                            <h2 class="sc_services_title sc_item_title">Loving God, Loving Others and Serving the World</h2>
+                            <h6 class="sc_services_subtitle sc_item_subtitle">Selamat Datang</h6>
+                            <h2 class="sc_services_title sc_item_title">Badan Pekerja Sinode Gereja Toraja</h2>
                             <div class="sc_services_descr sc_item_descr">We’d love to meet you! Come check us out this SUNDAY where you can meet us and see if New Life Church might be a good fit for you. Our heart and soul is to introduce and connect people with the living and powerful God.</div>
                             <!-- Services item --><div class="sc_services_item sc_services_item_1 odd first">
                                 <span class="sc_icon icon-house306"></span>
                                 <div class="sc_services_item_content">
                                     <h4 class="sc_services_item_title">
-                                        <a href="service-single.html">Follow with us</a>
+                                        <a href="service-single.html">Visi</a>
                                     </h4>
                                     <div class="sc_services_item_description">
                                         <p>We would love to see you and your family &amp; friends this weekend in our church at 10 am.</p>
@@ -282,7 +282,7 @@
                                 <span class="sc_icon icon-open-book6"></span>
                                 <div class="sc_services_item_content">
                                     <h4 class="sc_services_item_title">
-                                        <a href="service-single.html">What We Believe</a></h4>
+                                        <a href="service-single.html">Misi</a></h4>
                                     <div class="sc_services_item_description">
                                         <p>We believe that the Bible is God’s Word. It is accurate, authoritative and applicable to our everyday lives.</p>
                                     </div>
@@ -356,16 +356,16 @@
                         <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
                             <div class="sc_section">
                                 <div class="sc_section_inner">
-                                    <h6 class="sc_section_subtitle sc_item_subtitle">Worship</h6>
-                                    <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">The sound of our worship</h2>
+                                    <h6 class="sc_section_subtitle sc_item_subtitle">Fellowship</h6>
+                                    <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">Renungan Firman Tuhan</h2>
                                     <div id="myplayer"></div>
                                 </div>
                             </div>
                         </div><div class="column-1_2 sc_column_item sc_column_item_2 even">
                             <div class="sc_section">
                                 <div class="sc_section_inner">
-                                    <h6 class="sc_section_subtitle sc_item_subtitle">Upcoming Events</h6>
-                                    <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">Conferences & Events</h2>
+                                    <h6 class="sc_section_subtitle sc_item_subtitle">Events</h6>
+                                    <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">Berita & Acara</h2>
                                     <div class="sc_events_wrap">
                                         <div class="sc_events sc_events_style_events-2 sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="7691">
                                             <!-- Event item -->

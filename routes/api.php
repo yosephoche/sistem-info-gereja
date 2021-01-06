@@ -18,6 +18,7 @@ use App\Http\Controllers\Api\WilayahController;
 use App\Http\Controllers\Api\BeritaController;
 use App\Http\Controllers\Api\InformasiController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,8 @@ use App\Http\Controllers\Api\CategoryController;
 
 
 Route::group(['as' => 'api.'], function() {
-    Orion::belongsToResource('profile', 'user', UserProfileController::class)->withSoftDeletes();
+    Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
+    // Orion::belongsToResource('profile', 'user', UserProfileController::class)->withSoftDeletes();
     // Orion::hasOneResource('user', 'profile', UserController::class)->withSoftDeletes();
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Orion::resource('user', UserController::class)->withSoftDeletes();
@@ -48,6 +50,7 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('berita', BeritaController::class);
     Orion::resource('informasi', InformasiController::class);
     Orion::resource('category', CategoryController::class);
+    Orion::resource('event', EventController::class);
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

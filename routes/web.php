@@ -20,6 +20,7 @@ use App\Http\Controllers\HomeController;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/profil', [HomeController::class, 'profile'])->name('profile');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
