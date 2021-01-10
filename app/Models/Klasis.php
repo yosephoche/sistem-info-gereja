@@ -15,4 +15,14 @@ class Klasis extends Model
         'name',
         'wilayah_id',
     ];
+
+    public function wilayah()
+    {
+        return $this->belongsTo('App\Models\Wilayah', 'wilayah_id', 'id');
+    }
+
+    public function jemaat()
+    {
+        return $this->hasMany('App\Models\Jemaat', 'klasis_id', 'id');
+    }
 }

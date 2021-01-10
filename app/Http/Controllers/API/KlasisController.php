@@ -14,13 +14,4 @@ class KlasisController extends Controller
     
     protected $model = Klasis::class;
 
-    /**
-    * Retrieves currently authenticated user based on the guard.
-    *
-    * @return \Illuminate\Contracts\Auth\Authenticatable|null
-    */
-    public function resolveUser()
-    {
-        return Auth::guard('api')->user();
-    }
 }

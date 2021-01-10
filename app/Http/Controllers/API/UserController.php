@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 use App\Models\UserProfile;
@@ -29,17 +30,23 @@ class UserController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['profile'];
+        return ['profile', 'profile.jemaat', 'profile.jemaat.klasis', 'profile.jemaat.klasis.wilayah'];
     }
 
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
+        $user = Auth::user();
+        $jemaat = $user->profile->jemaat;
+        $klasis = $jemaat->klasis;
+        $wilayah = $klasis->wilayah;
+        // dd($klasis->wilayah);
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
 
-        // $query->whereNotNull('profile');
-
         // return list of user that have profile
-        $query->has('profile');
+        $query->whereHas('profile');
+        $query->whereHas('profile.jemaat', function($q) {
+            $q->where('id', 2);
+        });
 
         return $query;
     }

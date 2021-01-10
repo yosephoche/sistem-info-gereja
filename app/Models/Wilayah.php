@@ -12,4 +12,9 @@ class Wilayah extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function klasis()
+    {
+        return $this->hasMany('App\Models\Klasis', 'wilayah_id', 'id');
+    }
 }

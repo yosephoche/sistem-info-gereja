@@ -11,6 +11,16 @@ class Jemaat extends Model
 
     protected $fillable = [
         'name',
-        'sektor_id',
+        'klasis_id',
     ];
+
+    public function user_profile()
+    {
+        return $this->hasMany('App\Models\UserProfile', 'jemaat_id', 'id');
+    }
+
+    public function klasis()
+    {
+        return $this->belongsTo('App\Models\Klasis', 'klasis_id', 'id');
+    }
 }

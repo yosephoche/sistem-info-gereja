@@ -17,12 +17,18 @@ class UserProfile extends Model
         'alamat',
         'status',
         'is_baptis',
-        'is_sidi'
+        'is_sidi',
+        'jemaat_id'
     ];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'user_id', 'id');
+    }
+
+    public function jemaat()
+    {
+        return $this->belongsTo('App\Models\Jemaat', 'jemaat_id', 'id');
     }
 
 }

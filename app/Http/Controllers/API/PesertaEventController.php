@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use Orion\Http\Controllers\Controller;
+use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
+
+use App\Models\PesertaEvent;
 
 class PesertaEventController extends Controller
 {
-    //
+    use DisableAuthorization;
+    
+    protected $model = PesertaEvent::class;
 }

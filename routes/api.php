@@ -19,6 +19,9 @@ use App\Http\Controllers\Api\BeritaController;
 use App\Http\Controllers\Api\InformasiController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\Api\AboutController;
+use App\Http\Controllers\Api\OrganisasiController;
+use App\Http\Controllers\Api\PengurusOrganisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,13 +36,11 @@ use App\Http\Controllers\Api\EventController;
 
 
 Route::group(['as' => 'api.'], function() {
-    Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
-    // Orion::belongsToResource('profile', 'user', UserProfileController::class)->withSoftDeletes();
-    // Orion::hasOneResource('user', 'profile', UserController::class)->withSoftDeletes();
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Orion::resource('user', UserController::class)->withSoftDeletes();
     });
-
+    
+    Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
     Orion::resource('pekerjaan', PekerjaanController::class);
     Orion::resource('klasis', KlasisController::class);
     Orion::resource('wilayah', WilayahController::class);
@@ -51,10 +52,9 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('informasi', InformasiController::class);
     Orion::resource('category', CategoryController::class);
     Orion::resource('event', EventController::class);
+    Orion::resource('about', OrganisasiController::class);
+    Orion::resource('oig', AboutController::class);
+    Orion::resource('pengurus', PengurusOrganisasiController::class);
 });
-
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
 
 Route::post('/login', [AuthController::class, 'login']);
