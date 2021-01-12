@@ -52,8 +52,7 @@ Route::group(['as' => 'api.'], function() {
 
             return response()->json([
                 'message' => 'SUCCESS',
-                'user' => $user,
-                'token' => $user->token
+                'user' => $user
             ], 200);
         });
     });
