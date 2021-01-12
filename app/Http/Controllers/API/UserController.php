@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 use App\Models\UserProfile;
+use App\Models\Jemaat;
 
 class UserController extends Controller
 {
@@ -56,6 +57,11 @@ class UserController extends Controller
         $attributes['password'] = Hash::make($request->password);
         $user->fill($attributes);
         $user->save();
+
+        $jemaat = Jemaat::where('id', $request->jemaat_id);
+        $klasis = $jemaat->klasis->id;
+        $wilayah = $klasis->wilayah->id;
+
         
         if ($user->save()) {
             $profile = UserProfile::create([
@@ -64,7 +70,10 @@ class UserController extends Controller
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'alamat' => $request->alamat,
                 'is_baptis' => $request->is_baptis,
-                'is_sidi' => $request->is_sidi
+                'is_sidi' => $request->is_sidi,
+                'jemaat_id' => $request->jemaat_id,
+                'klasis_id' => $klasis,
+                'wilayah_id' => $wilayah
             ]);
         }
         

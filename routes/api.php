@@ -22,6 +22,8 @@ use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\AboutController;
 use App\Http\Controllers\Api\OrganisasiController;
 use App\Http\Controllers\Api\PengurusOrganisasiController;
+use App\Http\Controllers\Api\RoleController;
+use App\Http\Controllers\Api\UserRoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +57,8 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('about', OrganisasiController::class);
     Orion::resource('oig', AboutController::class);
     Orion::resource('pengurus', PengurusOrganisasiController::class);
+    Orion::resource('role', RoleController::class);
+    Orion::resource('user-role', UserRoleController::class);
 });
 
 Route::post('/login', [AuthController::class, 'login']);
