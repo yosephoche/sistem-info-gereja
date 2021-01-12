@@ -24,6 +24,11 @@ use App\Http\Controllers\Api\OrganisasiController;
 use App\Http\Controllers\Api\PengurusOrganisasiController;
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\UserRoleController;
+use App\Http\Controllers\Api\PendetaController;
+use App\Http\Controllers\Api\PelayananController;
+
+use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +45,17 @@ use App\Http\Controllers\Api\UserRoleController;
 Route::group(['as' => 'api.'], function() {
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Orion::resource('user', UserController::class)->withSoftDeletes();
+        Route::get('auth/user', function () {
+            $user = User::with('profile')
+                ->where('id', Auth::user()->id)
+                ->first();
+
+            return response()->json([
+                'message' => 'SUCCESS',
+                'user' => $user,
+                'token' => $user->token
+            ], 200);
+        });
     });
     
     Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
@@ -59,6 +75,8 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('pengurus', PengurusOrganisasiController::class);
     Orion::resource('role', RoleController::class);
     Orion::resource('user-role', UserRoleController::class);
+    Orion::resource('pendeta', PendetaController::class);
+    Orion::resource('pelayanan', PelayananController::class);
 });
 
 Route::post('/login', [AuthController::class, 'login']);
