@@ -36,18 +36,18 @@ class UserController extends Controller
 
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
-        $user = Auth::user();
-        $jemaat = $user->profile->jemaat;
-        $klasis = $jemaat->klasis;
-        $wilayah = $klasis->wilayah;
+        // $user = Auth::user();
+        // $jemaat = $user->profile->jemaat;
+        // $klasis = $jemaat->klasis;
+        // $wilayah = $klasis->wilayah;
         // dd($klasis->wilayah);
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
 
         // return list of user that have profile
         $query->whereHas('profile');
-        $query->whereHas('profile.jemaat', function($q) {
-            $q->where('id', 2);
-        });
+        // $query->whereHas('profile.jemaat', function($q) {
+        //     $q->where('id', 2);
+        // });
 
         return $query;
     }
