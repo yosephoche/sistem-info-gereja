@@ -58,10 +58,8 @@ class UserController extends Controller
         $user->fill($attributes);
         $user->save();
 
-        $jemaat = Jemaat::where('id', $request->jemaat_id);
-        $klasis = $jemaat->klasis->id;
-        $wilayah = $klasis->wilayah->id;
-
+        $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
+        $klasis = $jemaat->klasis;
         
         if ($user->save()) {
             $profile = UserProfile::create([
@@ -72,8 +70,8 @@ class UserController extends Controller
                 'is_baptis' => $request->is_baptis,
                 'is_sidi' => $request->is_sidi,
                 'jemaat_id' => $request->jemaat_id,
-                'klasis_id' => $klasis,
-                'wilayah_id' => $wilayah
+                'klasis_id' => $klasis->id,
+                'wilayah_id' => $klasis->wilayah_id
             ]);
         }
         
