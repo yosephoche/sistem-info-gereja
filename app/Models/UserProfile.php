@@ -18,7 +18,9 @@ class UserProfile extends Model
         'status',
         'is_baptis',
         'is_sidi',
-        'jemaat_id'
+        'jemaat_id',
+        'klasis_id',
+        'wilayah_id'
     ];
 
     public function user()
