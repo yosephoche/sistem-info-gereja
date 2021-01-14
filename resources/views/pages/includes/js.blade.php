@@ -1,7 +1,7 @@
 <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
 
 <script type="text/javascript" src={{ asset("js/jquery/jquery.js") }}></script>
-<script type="text/javascript" src={{ asset("js/jquery/jquery-migrate.min.js") }}></script>
+{{-- <script type="text/javascript" src={{ asset("js/jquery/jquery-migrate.min.js") }}></script> --}}
 
 <script type="text/javascript" src={{ asset("js/vendor/photostack/modernizr.min.js") }}></script>
 <script type="text/javascript" src={{ asset("js/_main.min.js") }}></script>
@@ -11,6 +11,7 @@
 <script type="text/javascript" src={{ asset("js/vendor/essential-grid/js/jquery.themepunch.tools.min.js") }}></script>
 <script type="text/javascript" src={{ asset("js/vendor/essential-grid/js/jquery.themepunch.essential.min.js") }}></script>
 <script type="text/javascript" src={{ asset("js/essential-grid-homepage-1.min.js") }}></script>
+<script type="text/javascript" src={{ asset("js/gallery-grid.min.js") }}></script>
 
 <script type="text/javascript" src={{ asset("js/vendor/revslider/jquery.themepunch.revolution.min.js") }}></script>
 

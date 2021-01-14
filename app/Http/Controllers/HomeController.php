@@ -16,7 +16,7 @@ class HomeController extends Controller
         return view('pages.profile');
     }
 
-    public function event(Request $request)
+    public function events(Request $request)
     {
         return view('pages.event');
     }

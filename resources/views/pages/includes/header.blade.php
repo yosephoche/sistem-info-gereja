@@ -29,13 +29,13 @@
                             </li>
                             <!-- Events -->
                             <li class="menu-item">
-                                <a href="events.html">Events</a>
+                                <a href="/events">Events</a>
                             </li>
                             <!-- /Events -->
                             <!-- OIG -->
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#">OIG</a>
-                                <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="/oig">OIG</a>
+                                {{-- <ul class="sub-menu">
                                     <li class="menu-item">
                                         <a href="#">PKBGT</a>
                                     </li>
@@ -48,34 +48,23 @@
                                     <li class="menu-item">
                                         <a href="#">SMGT</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <!-- /Sermons -->
                             <!-- Gallery -->
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#">Gallery</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="gallery-grid.html">Grid Gallery</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="gallery-cobbles.html">Cobbles Gallery</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="gallery-masonry.html">Masonry Gallery</a>
-                                    </li>
-                                </ul>
+                            <li class="menu-item">
+                                <a href="/gallery">Gallery</a>
                             </li>
                             <!-- /Gallery -->
                             <!-- Blog -->
                             <li class="menu-item">
-                                <a href="post-formats.html">Blog</a>
+                                <a href="/blog">Blog</a>
                             </li>
                             <!-- /Blog -->
                             <!-- Donate -->
-                            <li class="donate-btn menu-item">
+                            {{-- <li class="donate-btn menu-item">
                                 <a href="donate-now.html">Give</a>
-                            </li>
+                            </li> --}}
                             <!-- /Donate -->
                         </ul>
                     </nav>
