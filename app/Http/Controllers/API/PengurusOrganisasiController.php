@@ -13,4 +13,6 @@ class PengurusOrganisasiController extends Controller
     use DisableAuthorization;
     
     protected $model = PengurussOrganisasi::class;
+
+    
 }

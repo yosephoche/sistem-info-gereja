@@ -76,6 +76,8 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('user-role', UserRoleController::class);
     Orion::resource('pendeta', PendetaController::class);
     Orion::resource('pelayanan', PelayananController::class);
+
+    // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
 });
 
 Route::post('/login', [AuthController::class, 'login']);
