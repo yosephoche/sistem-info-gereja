@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\About;
+use App\Models\Event;
+
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('pages.home');
+        $about = About::first();
+        $events = Event::all();
+
+        return view('pages.home', compact('about', 'events'));
     }
 
     public function profile(Request $request)
@@ -18,7 +24,9 @@ class HomeController extends Controller
 
     public function events(Request $request)
     {
-        return view('pages.event');
+        $events = Event::all();
+
+        return view('pages.event', compact('events'));
     }
 
     public function oig(Request $request)

@@ -268,38 +268,32 @@
                             <div class="sc_services sc_services_style_services-5 sc_services_type_icons sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="5040" data-slides-min-width="250">
                                 <h6 class="sc_services_subtitle sc_item_subtitle">Selamat Datang</h6>
                                 <h2 class="sc_services_title sc_item_title">Badan Pekerja Sinode Gereja Toraja</h2>
-                                <div class="sc_services_descr sc_item_descr">We’d love to meet you! Come check us out this SUNDAY where you can meet us and see if New Life Church might be a good fit for you. Our heart and soul is to introduce and connect people with the living and powerful God.</div>
-                                <!-- Services item --><div class="sc_services_item sc_services_item_1 odd first">
+                                <div class="sc_services_descr sc_item_descr">
+                                    {{ $about->description}}
+                                </div>
+                                <!-- Services item -->
+                                <div class="sc_services_item sc_services_item_1 odd first">
                                     <span class="sc_icon icon-house306"></span>
                                     <div class="sc_services_item_content">
                                         <h4 class="sc_services_item_title">
                                             <a href="service-single.html">Visi</a>
                                         </h4>
                                         <div class="sc_services_item_description">
-                                            <p>We would love to see you and your family &amp; friends this weekend in our church at 10 am.</p>
+                                            <p>{{ $about->visi }}</p>
                                         </div>
                                     </div>
-                                </div><!-- /Services item --><!-- Services item --><div class="sc_services_item sc_services_item_2 even">
+                                </div><!-- /Services item -->
+                                <!-- Services item -->
+                                <div class="sc_services_item sc_services_item_2 even">
                                     <span class="sc_icon icon-open-book6"></span>
                                     <div class="sc_services_item_content">
                                         <h4 class="sc_services_item_title">
                                             <a href="service-single.html">Misi</a></h4>
                                         <div class="sc_services_item_description">
-                                            <p>We believe that the Bible is God’s Word. It is accurate, authoritative and applicable to our everyday lives.</p>
+                                            <p>{{ $about->misi }}</p>
                                         </div>
                                     </div>
-                                </div><!-- /Services item --><!-- Services item --><div class="sc_services_item sc_services_item_3 odd">
-                                    <span class="sc_icon icon-avatar110"></span>
-                                    <div class="sc_services_item_content">
-                                        <h4 class="sc_services_item_title">
-                                            <a href="service-single.html">New Here?</a>
-                                        </h4>
-                                        <div class="sc_services_item_description">
-                                            <p>Tell us about yourself to begin your journey with connecting to our community.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Services item -->
+                                </div><!-- /Services item -->
                             </div>
                         </div>
                             </div>
@@ -329,27 +323,7 @@
                     </div>
                 </div>
                 <!-- /Mission section -->
-                <!-- Info section -->
-                <div class="hp1_info_section">
-                    <div class="sc_section">
-                        <div class="sc_section_inner">
-                            <h1 class="sc_title sc_title_regular sc_align_center">Get Connected. What&#8217;s Your Next Step?<br />
-                                Follow. Connect. Go.</h1>
-                            <div class="custom_heading_1">Following Jesus as disciples and connecting with others as part of a spiritual family</div>
-                            <div class="sc_section aligncenter">
-                                <div class="sc_section_inner">
-                                    <a href="events.html" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_3 sc_button_size_large width_120">small groups &amp;<br />
-                                    BIBLE STUDIES</a>
-                                    <a href="donate-now.html" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_3 sc_button_size_large width_120">MISSIONS<br />
-                                    &amp; donation</a>
-                                    <a href="post-formats.html" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_3 sc_button_size_large width_120">Musical<br />
-                                    Worship Team</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Info section -->
+               
                 <!-- Upcoming events section -->
                 <div class="hp1_upcoming_events_section">
                     <div class="content_wrap">
@@ -366,83 +340,25 @@
                                 <div class="sc_section">
                                     <div class="sc_section_inner">
                                         <h6 class="sc_section_subtitle sc_item_subtitle">Events</h6>
-                                        <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">Berita & Acara</h2>
+                                        <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">Informasi Jadwal Acara</h2>
                                         <div class="sc_events_wrap">
                                             <div class="sc_events sc_events_style_events-2 sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="7691">
                                                 <!-- Event item -->
-                                                <div class="sc_events_item sc_events_item_1 odd first">
-                                                    <span class="sc_events_item_date">
-                                                        <span class="sc_events_item_month">Apr</span>
-                                                        <span class="sc_events_item_day">24</span>
-                                                    </span>
-                                                    <h6 class="sc_events_item_title">
-                                                        <a href="event-single.html">Church Leaders meeting</a>
-                                                    </h6>
-                                                    <span class="sc_events_item_time">1:00 pm - 7:00 pm</span>
-                                                    <span class="sc_events_item_details">
-                                                        <a href="event-single.html">Details</a>
-                                                    </span>
-                                                </div>
-                                                <!-- /Event item -->
-                                                <!-- Event item -->
-                                                <div class="sc_events_item sc_events_item_2 even">
-                                                    <span class="sc_events_item_date">
-                                                        <span class="sc_events_item_month">Apr</span>
-                                                        <span class="sc_events_item_day">09</span>
-                                                    </span>
-                                                    <h6 class="sc_events_item_title">
-                                                        <a href="event-single.html">Prayer Day</a>
-                                                    </h6>
-                                                    <span class="sc_events_item_time">6:00 pm - 8:00 pm</span>
-                                                    <span class="sc_events_item_details">
-                                                        <a href="event-single.html">Details</a>
-                                                    </span>
-                                                </div>
-                                                <!-- /Event item -->
-                                                <!-- Event item -->
-                                                <div class="sc_events_item sc_events_item_3 odd">
-                                                    <span class="sc_events_item_date">
-                                                        <span class="sc_events_item_month">Mar</span>
-                                                        <span class="sc_events_item_day">02</span>
-                                                    </span>
-                                                    <h6 class="sc_events_item_title">
-                                                        <a href="event-single.html">Monthly Band Tryouts</a>
-                                                    </h6>
-                                                    <span class="sc_events_item_time">3:00 pm - 7:00 pm</span>
-                                                    <span class="sc_events_item_details">
-                                                        <a href="event-single.html">Details</a>
-                                                    </span>
-                                                </div>
-                                                <!-- /Event item -->
-                                                <!-- Event item -->
-                                                <div class="sc_events_item sc_events_item_4 even">
-                                                    <span class="sc_events_item_date">
-                                                        <span class="sc_events_item_month">Jan</span>
-                                                        <span class="sc_events_item_day">31</span>
-                                                    </span>
-                                                    <h6 class="sc_events_item_title">
-                                                        <a href="event-single.html">WOW Conference</a>
-                                                    </h6>
-                                                    <span class="sc_events_item_time">10:00 am - 2:00 pm</span>
-                                                    <span class="sc_events_item_details">
-                                                        <a href="event-single.html">Details</a>
-                                                    </span>
-                                                </div>
-                                                <!-- /Event item -->
-                                                <!-- Event item -->
-                                                <div class="sc_events_item sc_events_item_5 odd">
-                                                    <span class="sc_events_item_date">
-                                                        <span class="sc_events_item_month">Jun</span>
-                                                        <span class="sc_events_item_day">24</span>
-                                                    </span>
-                                                    <h6 class="sc_events_item_title">
-                                                        <a href="event-single.html">Seniors Bible Study</a>
-                                                    </h6>
-                                                    <span class="sc_events_item_time">4:00 pm - 6:00 pm</span>
-                                                    <span class="sc_events_item_details">
-                                                        <a href="event-single.html">Details</a>
-                                                    </span>
-                                                </div>
+                                                @foreach ($events as $event)
+                                                    <div class="sc_events_item sc_events_item_1 odd first">
+                                                        <span class="sc_events_item_date">
+                                                            <span class="sc_events_item_month">{{ $event->month }}</span>
+                                                            <span class="sc_events_item_day">{{ $event->day }}</span>
+                                                        </span>
+                                                        <h6 class="sc_events_item_title">
+                                                            <a href="event-single.html">{{$event->name}}</a>
+                                                        </h6>
+                                                        <span class="sc_events_item_time">{{$event->time}}</span>
+                                                        <span class="sc_events_item_details">
+                                                            <a href="{{ route('event.detail', ['id'=>$event->id]) }}">Details</a>
+                                                        </span>
+                                                    </div>
+                                                @endforeach
                                                 <!-- /Event item -->
                                             </div>
                                         </div>
@@ -452,17 +368,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- /Upcoming events section -->
-                <!-- The Essential Grid -->
-                <!-- GRID WRAPPER FOR CONTAINER SIZING - HERE YOU CAN SET THE CONTAINER SIZE AND CONTAINER SKIN -->
                 <article class="myportfolio-container minimal-light" id="esg-grid-5-1-wrap">
                     <!-- THE GRID ITSELF WITH FILTERS, PAGINATION, SORTING ETC... -->
                     <div id="esg-grid-5-1" class="esg-grid">
-                        <!-- ############################ -->
-                        <!-- THE GRID ITSELF WITH ENTRIES -->
-                        <!-- ############################ -->
                         <ul>
-                            <!-- PORTFOLIO ITEM -->
+                            <!-- GALERY ITEM -->
                             <li class="filterall filter-home-1 eg-washington-wrapper">
                                 <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
                                 <div class="esg-media-cover-wrapper">
@@ -492,290 +402,8 @@
                                 </div>
                                 <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
                             </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600" >
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">We Give Hope</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-post-2234 eg-washington-element-3 esg-flipup" data-delay="0.1">Through the Never</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">Forgiveness & Acceptance</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">The Answer Is God</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">Find Love Inside Yourself</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">The Power of Words Not Spoken</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="#" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">Basic Points of Belief</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">5 Questions for Decision Makers</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
-                            <!-- PORTFOLIO ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="http://placehold.it/2400x1600" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
-                                        </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">5 Reasons to Love Churches in 2016</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
-                                    </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF PORTFOLIO ITEM -->
+                            <!-- END OF Gallery ITEM -->
                         </ul>
-                        <!-- ############################ -->
-                        <!--      END OF THE GRID         -->
-                        <!-- ############################ -->
                     </div>
                     <!-- END OF THE GRID -->
                 </article>

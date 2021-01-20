@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +13,38 @@ class Event extends Model
     protected $fillable = [
         "name", "location", "start_date", "end_date", "description", "created_by"
     ];
+
+    protected $appends = array('day', 'month', 'time');
+
+    public function getStartDateAttribute($value)
+    {
+        $event_date = Carbon::parse($value);
+        return $event_date->locale('id')->format('j F, Y - h:i a');
+    }
+
+    public function getEndDateAttribute($value)
+    {
+        $event_date = Carbon::parse($value);
+        return $event_date->locale('id')->format('j F, Y - h:i a');
+    }
+
+    public function getDayAttribute()
+    {
+        $event_date = Carbon::parse($this->start_date);
+        return $event_date->locale('id')->day;
+    }
+
+    public function getMonthAttribute()
+    {
+        $event_date = Carbon::parse($this->start_date);
+        return $event_date->locale('id')->shortMonthName;
+    }
+
+    public function getTimeAttribute()
+    {
+        $event_date = Carbon::parse($this->start_date);
+        return $event_date->locale('id')->format('h:i: A');;
+    }
 
     public function peserta()
     {

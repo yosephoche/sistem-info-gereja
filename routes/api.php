@@ -26,6 +26,7 @@ use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\UserRoleController;
 use App\Http\Controllers\Api\PendetaController;
 use App\Http\Controllers\Api\PelayananController;
+use App\Http\Controllers\Api\ArtikelController;
 
 use App\Models\User;
 
@@ -76,6 +77,7 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('user-role', UserRoleController::class);
     Orion::resource('pendeta', PendetaController::class);
     Orion::resource('pelayanan', PelayananController::class);
+    Orion::resource('artikel', ArtikelController::class);
 
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
 });

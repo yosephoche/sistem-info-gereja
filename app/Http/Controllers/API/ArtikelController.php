@@ -6,10 +6,10 @@ use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
 
-use App\Models\About;
+use App\Models\Artikel;
 
-class AboutController extends Controller
+class ArtikelController extends Controller
 {
     use DisableAuthorization;
-    protected $model = About::class;
+    protected $model = Artikel::class;
 }

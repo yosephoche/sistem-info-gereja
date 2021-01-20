@@ -22,6 +22,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/profil', [HomeController::class, 'profile'])->name('profile');
 Route::get('/events', [HomeController::class, 'events'])->name('events');
+Route::get('/event/{id}', [HomeController::class, 'events'])->name('event.detail');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 
