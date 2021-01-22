@@ -16,6 +16,16 @@ class Event extends Model
 
     protected $appends = array('day', 'month', 'time');
 
+    public function setStartDateAttribute($value)
+    {
+        $this->attributes['start_date'] = Carbon::parse($value)->format('Y-m-d H:i:s');
+    }
+
+    public function setEndDateAttribute($value)
+    {
+        $this->attributes['end_date'] = Carbon::parse($value)->format('Y-m-d H:i:s');
+    }
+
     public function getStartDateAttribute($value)
     {
         $event_date = Carbon::parse($value);
