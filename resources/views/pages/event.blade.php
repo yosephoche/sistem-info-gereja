@@ -102,8 +102,8 @@
                                                     <div class="author location">
                                                         <!-- Schedule & Recurrence Details -->
                                                         <div class="tribe-event-schedule-details">
-                                                            <span class="tribe-event-date-start">{{$event->start_date}}</span> -
-                                                            <span class="tribe-event-date-end">{{$event->end_date}}</span>
+                                                            <span class="tribe-event-date-start">{{$event->custom_start_date}}</span> -
+                                                            <span class="tribe-event-date-end">{{$event->custom_end_date}}</span>
                                                         </div>
                                                         <!-- Venue Display Info -->
                                                         <div class="tribe-events-venue-details">

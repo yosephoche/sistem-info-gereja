@@ -11,13 +11,14 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = [
-        "name", "location", "start_date", "end_date", "description", "created_by"
+        "name", "location", "start_date", "end_date", "description", "created_by", "address"
     ];
 
-    protected $appends = array('day', 'month', 'time');
+    protected $appends = array('day', 'month', 'time', 'custom_start_date', 'custom_end_date');
 
     public function setStartDateAttribute($value)
     {
+        // dd(Carbon::parse($value)->format('Y-m-d H:i:s'));
         $this->attributes['start_date'] = Carbon::parse($value)->format('Y-m-d H:i:s');
     }
 
@@ -26,13 +27,13 @@ class Event extends Model
         $this->attributes['end_date'] = Carbon::parse($value)->format('Y-m-d H:i:s');
     }
 
-    public function getStartDateAttribute($value)
+    public function getCustomStartDateAttribute($value)
     {
         $event_date = Carbon::parse($value);
         return $event_date->locale('id')->format('j F, Y - h:i a');
     }
 
-    public function getEndDateAttribute($value)
+    public function getCustomEndDateAttribute($value)
     {
         $event_date = Carbon::parse($value);
         return $event_date->locale('id')->format('j F, Y - h:i a');
