@@ -10,11 +10,11 @@ class PengurusOrganisasi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user', 'oig', 'jabatan', 'status'
+        'user', 'organisasi_id', 'jabatan', 'status'
     ];
 
     public function organisasi()
     {
-        return $this->belongsTo('App\Models\Organisasi', 'oig', 'id');
+        return $this->belongsTo('App\Models\Organisasi', 'organisasi_id', 'id');
     }
 }

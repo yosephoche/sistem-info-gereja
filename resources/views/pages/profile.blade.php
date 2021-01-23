@@ -386,3 +386,11 @@
     </div>
 </div>
 @endsection
+
+@section('script')
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+    $("body").removeClass("home");
+});
+</script>
+@endsection

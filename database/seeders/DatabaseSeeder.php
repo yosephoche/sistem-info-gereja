@@ -13,6 +13,10 @@ use Database\Seeders\JemaatSeeder;
 use Database\Seeders\MajelisSeeder;
 use Database\Seeders\KeluargaSeeder;
 use Database\Seeders\AnggotaKeluargaSeeder;
+use Database\Seeders\OrganisasiSeeder;
+use Database\Seeders\PengurusOrganisasiSeeder;
+use Database\Seeders\OrganisasiWilayahSeeder;
+use Database\Seeders\PengurusOrganisasiWilayahSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,7 +37,10 @@ class DatabaseSeeder extends Seeder
             MajelisSeeder::class,
             KeluargaSeeder::class,
             AnggotaKeluargaSeeder::class,
-
+            OrganisasiSeeder::class,
+            PengurusOrganisasiSeeder::class,
+            OrganisasiWilayahSeeder::class,
+            PengurusOrganisasiWilayahSeeder::class
         ]);
     }
 }

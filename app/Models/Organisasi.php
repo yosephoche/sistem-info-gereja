@@ -10,12 +10,12 @@ class Organisasi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'description', 'status'
+        'name', 'jemaat_id', 'description', 'status'
     ];
 
     public function pengurus()
     {
-        return $this->hasOne('App\Models\PengurusOrganisasi', 'oig', 'id');
+        return $this->hasOne('App\Models\PengurusOrganisasi', 'organisasi_id', 'id');
     }
 
 }

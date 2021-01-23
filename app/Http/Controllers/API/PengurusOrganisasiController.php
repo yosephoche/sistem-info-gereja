@@ -6,13 +6,12 @@ use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
 
-use App\Models\PengurussOrganisasi;
+use App\Models\PengurusOrganisasi;
 
 class PengurusOrganisasiController extends Controller
 {
     use DisableAuthorization;
     
-    protected $model = PengurussOrganisasi::class;
+    protected $model = PengurusOrganisasi::class;
 
-    
 }

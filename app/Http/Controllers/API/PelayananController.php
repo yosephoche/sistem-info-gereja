@@ -13,4 +13,9 @@ class PelayananController extends Controller
     use DisableAuthorization;
     
     protected $model = Pelayanan::class;
+
+    protected function alwaysIncludes() : array
+    {
+        return ['pendeta', 'jemaat'];
+    }
 }

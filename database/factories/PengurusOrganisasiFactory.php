@@ -5,6 +5,9 @@ namespace Database\Factories;
 use App\Models\PengurusOrganisasi;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use App\Models\User;
+use App\Models\Organisasi;
+
 class PengurusOrganisasiFactory extends Factory
 {
     /**
@@ -22,7 +25,10 @@ class PengurusOrganisasiFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user' => User::inRandomOrder()->first()->id,
+            'organisasi_id' => Organisasi::inRandomOrder()->first()->id,
+            'jabatan' => $this->faker->name,
+            'status' => $this->faker->boolean
         ];
     }
 }

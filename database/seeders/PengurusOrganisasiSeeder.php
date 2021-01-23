@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use App\Models\PengurusOrganisasi;
+
 class PengurusOrganisasiSeeder extends Seeder
 {
     /**
@@ -13,6 +15,6 @@ class PengurusOrganisasiSeeder extends Seeder
      */
     public function run()
     {
-        //
+        PengurusOrganisasi::factory()->times(5)->create();
     }
 }

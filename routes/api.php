@@ -20,8 +20,13 @@ use App\Http\Controllers\Api\InformasiController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\AboutController;
+
 use App\Http\Controllers\Api\OrganisasiController;
+use App\Http\Controllers\Api\OrganisasiWilayahController;
+
 use App\Http\Controllers\Api\PengurusOrganisasiController;
+use App\Http\Controllers\Api\PengurusOrganisasiWilayahController;
+
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\UserRoleController;
 use App\Http\Controllers\Api\PendetaController;
@@ -71,8 +76,13 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('category', CategoryController::class);
     Orion::resource('event', EventController::class);
     Orion::resource('about', AboutController::class);
+
     Orion::resource('oig', OrganisasiController::class);
     Orion::resource('pengurus', PengurusOrganisasiController::class);
+
+    Orion::resource('oig-wilayah', OrganisasiWilayahController::class);
+    Orion::resource('pengurus-oig-wilayah', PengurusOrganisasiWilayahController::class);
+    
     Orion::resource('role', RoleController::class);
     Orion::resource('user-role', UserRoleController::class);
     Orion::resource('pendeta', PendetaController::class);

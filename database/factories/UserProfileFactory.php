@@ -24,7 +24,7 @@ class UserProfileFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::factory()->create()->id,
+            'user_id' => User::inRandomOrder()->first()->id,
             'nama' => $this->faker->name,
             'jenis_kelamin' => 'Pria',
             'tanggal_lahir' => now(),
