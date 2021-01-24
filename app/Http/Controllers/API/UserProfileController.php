@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\UserProfile;
 use Auth;
 
-class UserProfileController extends RelationController
+class UserProfileController extends Controller
 {
     use DisableAuthorization;
     
@@ -19,7 +19,7 @@ class UserProfileController extends RelationController
      */
     protected $model = UserProfile::class;
 
-    protected $relation = 'user';
+    // protected $relation = 'user';
 
     protected function filterableBy() : array
     {
@@ -28,7 +28,7 @@ class UserProfileController extends RelationController
 
     protected function searchableBy() : array
     {
-        return ['nama', 'alamat', 'user.email'];
+        return ['nama', 'alamat', 'user.email', 'jemaat.name'];
     }
 
     protected function sortableBy() : array

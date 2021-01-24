@@ -30,6 +30,11 @@ class UserController extends Controller
      */
     protected $attributes = ['name', 'email', 'password'];
 
+    protected function searchableBy() : array
+    {
+        return ['email', 'profile.nama'];
+    }
+
     protected function alwaysIncludes() : array
     {
         return ['profile', 'profile.jemaat', 'profile.jemaat.klasis', 'profile.jemaat.klasis.wilayah'];
@@ -37,15 +42,11 @@ class UserController extends Controller
 
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
-        // $user = Auth::user();
-        // $jemaat = $user->profile->jemaat;
-        // $klasis = $jemaat->klasis;
-        // $wilayah = $klasis->wilayah;
-        // dd($klasis->wilayah);
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
 
         // return list of user that have profile
         $query->whereHas('profile');
+        
         // $query->whereHas('profile.jemaat', function($q) {
         //     $q->where('id', 2);
         // });

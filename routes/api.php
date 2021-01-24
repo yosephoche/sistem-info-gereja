@@ -49,8 +49,8 @@ use App\Models\User;
 
 
 Route::group(['as' => 'api.'], function() {
+    Orion::resource('user', UserController::class)->withSoftDeletes();
     Route::group(['middleware' => ['auth:sanctum']], function () {
-        Orion::resource('user', UserController::class)->withSoftDeletes();
         Route::get('auth/user', function () {
             $user = User::with('profile')
                 ->where('id', Auth::user()->id)
