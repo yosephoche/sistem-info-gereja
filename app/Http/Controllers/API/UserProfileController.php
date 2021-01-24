@@ -24,6 +24,11 @@ class UserProfileController extends Controller
 
     protected $relation = 'user';
 
+    protected function alwaysIncludes() : array
+    {
+        return ['user', 'jemaat'];
+    }
+
     protected function filterableBy() : array
     {
         return ['id', 'nama', 'alamat', 'status', 'is_baptis', 'is_sidi', 'created_at'];
