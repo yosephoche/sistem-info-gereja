@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\About;
 use App\Models\Event;
+use App\Models\Artikel;
 
 class HomeController extends Controller
 {
@@ -41,6 +42,12 @@ class HomeController extends Controller
 
     public function blog(Request $request)
     {
-        return view('pages.blog');
+        $articles = Artikel::with('kategori', 'user')
+            ->where('is_published', true)
+            ->paginate(2);
+
+        // dd($articles);
+
+        return view('pages.blog', compact('articles'));
     }
 }

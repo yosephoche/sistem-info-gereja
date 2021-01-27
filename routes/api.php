@@ -22,10 +22,10 @@ use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\AboutController;
 
 use App\Http\Controllers\Api\OrganisasiController;
-use App\Http\Controllers\Api\OrganisasiWilayahController;
+use App\Http\Controllers\Api\OrganisasiKlasisController;
 
 use App\Http\Controllers\Api\PengurusOrganisasiController;
-use App\Http\Controllers\Api\PengurusOrganisasiWilayahController;
+use App\Http\Controllers\Api\PengurusOrganisasiKlasisController;
 
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\UserRoleController;
@@ -80,8 +80,8 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('oig', OrganisasiController::class);
     Orion::resource('pengurus', PengurusOrganisasiController::class);
 
-    Orion::resource('oig-wilayah', OrganisasiWilayahController::class);
-    Orion::resource('pengurus-oig-wilayah', PengurusOrganisasiWilayahController::class);
+    Orion::resource('oig-wilayah', OrganisasiKlasisController::class);
+    Orion::resource('pengurus-oig-wilayah', PengurusOrganisasiKlasisController::class);
     
     Orion::resource('role', RoleController::class);
     Orion::resource('user-role', UserRoleController::class);
