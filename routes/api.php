@@ -80,8 +80,8 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('oig', OrganisasiController::class);
     Orion::resource('pengurus', PengurusOrganisasiController::class);
 
-    Orion::resource('oig-wilayah', OrganisasiKlasisController::class);
-    Orion::resource('pengurus-oig-wilayah', PengurusOrganisasiKlasisController::class);
+    Orion::resource('oig-klasis', OrganisasiKlasisController::class);
+    Orion::resource('pengurus-oig-klasis', PengurusOrganisasiKlasisController::class);
     
     Orion::resource('role', RoleController::class);
     Orion::resource('user-role', UserRoleController::class);
