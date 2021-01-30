@@ -18,4 +18,9 @@ class Artikel extends Model
     {
         return $this->belongsTo('App\Models\User', 'author', 'id');
     }
+
+    public function tag_list()
+    {
+        return explode(',', $this->attributes['tag']);
+    }
 }

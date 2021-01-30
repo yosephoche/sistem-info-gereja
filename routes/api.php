@@ -33,6 +33,8 @@ use App\Http\Controllers\Api\PendetaController;
 use App\Http\Controllers\Api\PelayananController;
 use App\Http\Controllers\Api\ArtikelController;
 
+use App\Http\Controllers\Api\SettingController;
+
 use App\Models\User;
 
 
@@ -88,6 +90,8 @@ Route::group(['as' => 'api.'], function() {
     Orion::resource('pendeta', PendetaController::class);
     Orion::resource('pelayanan', PelayananController::class);
     Orion::resource('artikel', ArtikelController::class);
+
+    Orion::resource('settings', SettingController::class);
 
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
 });

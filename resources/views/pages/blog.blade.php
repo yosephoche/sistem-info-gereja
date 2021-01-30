@@ -23,7 +23,7 @@
                     <div class="post_featured">
                         <div class="post_thumb" data-title="Image Post">
                             <a class="hover_icon hover_icon_link" href="#">
-                                <img alt="Image Post" src="http://placehold.it/770x448"></a>
+                                <img alt="Image Post" src="{{ URL::to('/') }}/images/{{$post->image}}"></a>
                         </div>
                     </div>
                     <div class="post_content clearfix">
