@@ -42,8 +42,8 @@
                     </div>
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption tp-resizeme slide_button_1" id="slide-4-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','1','0']" data-y="['top','top','top','top']" data-voffset="['528','528','448','290']" data-color="['rgba(0, 10, 0, 1.00)','rgba(0, 10, 0, 1.00)','rgba(255, 255, 255, 1.00)','rgba(0, 10, 0, 1.00)']" data-width="['848','932','639','438']" data-height="['56','56','57','none']" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="opacity:0;s:900;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;" data-start="2800" data-splitin="none" data-splitout="none" data-responsive_offset="on">
-                        <a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_2 sc_button_size_large">ABOUT US</a>
-                        <a href="#" class="sc_button sc_button_square sc_button_style_border sc_button_color_style_4 sc_button_size_large">VISIT US</a>
+                        <a href="/profil" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_2 sc_button_size_large">ABOUT US</a>
+                        <a target="_blank" href="https://www.google.com/maps/dir//Jl.+Ahmad+Yani+No.45,+Singki',+Rantepao,+Kabupaten+Toraja+Utara,+Sulawesi+Selatan+91833/@-2.974088,119.8940643,17z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x2d93e9e5869aedd1:0x322495fff55f9876!2m2!1d119.896253!2d-2.974088" class="sc_button sc_button_square sc_button_style_border sc_button_color_style_4 sc_button_size_large">VISIT US</a>
                     </div>
                 </li>
                 <!-- SLIDE  -->
@@ -199,11 +199,11 @@
                                 <div class="sc_section margin_left_6_4286">
                                     <div class="sc_section_inner">
                                         <h3 class="sc_title sc_title_regular hp1_event_title_1 tpl_light">Kegiatan:</h3>
-                                        <h6 class="sc_title sc_title_regular tpl_light font_weight_400">Rapat Evaluasi tahunan pengurus Klasis</h6>
+                                        <h6 class="sc_title sc_title_regular tpl_light font_weight_400">{{$newest_event->name}}</h6>
                                     </div>
                                 </div>
                             </div><div class="column-1_3 sc_column_item sc_column_item_2 even">
-                                <div id="sc_countdown_1" class="sc_countdown sc_countdown_style_1 aligncenter margin_top_null" data-date="2017-06-08" data-time="12:00:00">
+                                <div id="sc_countdown_1" class="sc_countdown sc_countdown_style_1 aligncenter margin_top_null" data-date="{{date('Y-m-d', strtotime($newest_event->start_date))}}" data-time="{{date('H:i:s', strtotime($newest_event->start_date))}}">
                                     <div class="sc_countdown_inner">
                                         <div class="sc_countdown_item sc_countdown_days">
                                             <span class="sc_countdown_digits">
@@ -243,7 +243,7 @@
                             </div><div class="column-1_3 sc_column_item sc_column_item_3 odd">
                                 <div class="sc_section aligncenter margin_top_null">
                                     <div class="sc_section_inner">
-                                        <a href="#" class="sc_button sc_button_square sc_button_style_border sc_button_color_style_4 sc_button_size_large">EVENT DETAIL</a>
+                                        <a href="{{ route('event.detail', ['id'=>$newest_event->id]) }}" class="sc_button sc_button_square sc_button_style_border sc_button_color_style_4 sc_button_size_large">EVENT DETAIL</a>
                                     </div>
                                 </div>
                             </div>
@@ -308,14 +308,14 @@
                     <div class="content_wrap">
                         <div class="columns_wrap sc_columns columns_fluid no_margins sc_columns_count_2">
                             <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
-                                <h2 class="sc_title sc_title_regular sc_align_right">Our church mission is to ignite a passion to follow Jesus.</h2>
+                                <h2 class="sc_title sc_title_regular sc_align_right">Misi kami adalah menyalakan semangat untuk mengikuti Yesus.</h2>
                             </div><div class="column-1_2 sc_column_item sc_column_item_2 even">
                                 <div class="sc_section">
                                     <div class="sc_section_inner">
                                         <p class="tpl_light">
-                                          “The church is the body of Christ on earth, empowered by the Holy Spirit to continue the task of reaching the lost and discipling the saved, helping them become fully devoted followers of Christ.”
+                                          “Gereja adalah tubuh Kristus di bumi, yang diberi kuasa oleh Roh Kudus untuk melanjutkan tugas menjangkau yang terhilang dan memuridkan yang diselamatkan, membantu mereka menjadi pengikut Kristus yang setia.”
                                         </p>
-                                        <p class="tpl_light">Ephesians 4:1-16</p>
+                                        <p class="tpl_light">Efesus 4:1-16</p>
                                     </div>
                                 </div>
                             </div>
@@ -372,37 +372,39 @@
                     <!-- THE GRID ITSELF WITH FILTERS, PAGINATION, SORTING ETC... -->
                     <div id="esg-grid-5-1" class="esg-grid">
                         <ul>
-                            <!-- GALERY ITEM -->
-                            <li class="filterall filter-home-1 eg-washington-wrapper">
-                                <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                <div class="esg-media-cover-wrapper">
-                                    <!-- THE MEDIA OF THE ENTRY -->
-                                    <div class="esg-entry-media">
-                                        <img src="http://placehold.it/2400x1600" alt="">
-                                    </div>
-                                    <!-- THE CONTENT OF THE ENTRY -->
-                                    <div class="esg-entry-cover esg-fade" data-delay="0">
-                                        <!-- THE COLORED OVERLAY -->
-                                        <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
-                                        <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                            <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
-                                                <i class="eg-icon-search"></i>
-                                            </a>
+                            @for ($i = 0; $i < 5; $i++)
+                                <!-- GALERY ITEM -->
+                                <li class="filterall filter-home-1 eg-washington-wrapper">
+                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
+                                    <div class="esg-media-cover-wrapper">
+                                        <!-- THE MEDIA OF THE ENTRY -->
+                                        <div class="esg-entry-media">
+                                            <img src="http://placehold.it/2400x1600" alt="">
                                         </div>
-                                        <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
-                                            <a class="eg-washington-element-1" href="post-single.html" target="_self">
-                                                <i class="eg-icon-link"></i>
-                                            </a>
+                                        <!-- THE CONTENT OF THE ENTRY -->
+                                        <div class="esg-entry-cover esg-fade" data-delay="0">
+                                            <!-- THE COLORED OVERLAY -->
+                                            <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
+                                            <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
+                                                <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                    <i class="eg-icon-search"></i>
+                                                </a>
+                                            </div>
+                                            <div class="esg-center eg-washington-element-1-a esg-falldown" data-delay="0.2">
+                                                <a class="eg-washington-element-1" href="post-single.html" target="_self">
+                                                    <i class="eg-icon-link"></i>
+                                                </a>
+                                            </div>
+                                            <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
+                                            <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">Truth Does Not Hurt</div>
+                                            <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
                                         </div>
-                                        <div class="esg-center eg-washington-element-8 esg-none esg-clear"></div>
-                                        <div class="esg-center eg-washington-element-3 esg-flipup" data-delay="0.1">Truth Does Not Hurt</div>
-                                        <div class="esg-center eg-washington-element-9 esg-none esg-clear"></div>
+                                        <!-- END OF THE CONTENT IN THE ENTRY -->
                                     </div>
-                                    <!-- END OF THE CONTENT IN THE ENTRY -->
-                                </div>
-                                <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                            </li>
-                            <!-- END OF Gallery ITEM -->
+                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
+                                </li>
+                                <!-- END OF Gallery ITEM -->
+                            @endfor
                         </ul>
                     </div>
                     <!-- END OF THE GRID -->
@@ -440,11 +442,11 @@
                             <div class="sc_section_inner">
                                 <div class="sc_section aligncenter">
                                     <div class="sc_section_inner">
-                                        <h1 class="donation_title_custom">Giving is an action of worship,<br />
-                                            affection &amp; love for Jesus.</h1>
+                                        <h1 class="donation_title_custom">Memberi adalah tindakan ibadah,<br />
+                                            kasih sayang &amp; cinta untuk Yesus.</h1>
                                         <h2 class="sc_title sc_title_cursive sc_align_center">Making a difference</h2>
-                                        <a href="donate-now.html" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_4 sc_button_size_large give_now_btn">GIVE NOW</a>
-                                        <a href="#" class="sc_button sc_button_square sc_button_style_border sc_button_color_style_4 sc_button_size_large">WAYS TO GIVE</a>
+                                        <a href="donate-now.html" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_4 sc_button_size_large give_now_btn">Telegram</a>
+                                        <a href="#" class="sc_button sc_button_square sc_button_style_border sc_button_color_style_4 sc_button_size_large">Whatsapp</a>
                                     </div>
                                 </div>
                             </div>
@@ -455,185 +457,52 @@
                 <!-- Blogger section -->
                 <div class="hp1_blogger_section content_wrap">
                     <div id="sc_blogger_1" class="sc_blogger layout_classic_3 template_masonry margin_top_huge margin_bottom_medium sc_blogger_horizontal sc_scroll_controls sc_scroll_controls_type_top sc_scroll_controls_horizontal">
-                        <h6 class="sc_blogger_subtitle sc_item_subtitle">Latest News</h6>
+                        <h6 class="sc_blogger_subtitle sc_item_subtitle">Artikel Terbaru</h6>
                         <h2 class="sc_blogger_title sc_item_title">From our blog</h2>
                         <div id="sc_blogger_1_scroll" class="sc_scroll sc_scroll_horizontal sc_slider_noresize swiper-slider-container scroll-container width_100_per">
                             <div class="sc_scroll_wrapper swiper-wrapper">
                                 <div class="sc_scroll_slide swiper-slide">
                                     <div class="isotope_wrap" data-columns="3">
-                                        <!-- Isotope item -->
-                                        <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
-                                            <div class="post_item post_item_classic post_item_classic_3 odd">
-                                                <div class="post_featured">
-                                                    <span class="post_date_wrapper">
-                                                        <span class="post_date post_date-month">Oct</span>
-                                                        <span class="post_date post_date-day">03</span>
-                                                    </span>
-                                                    <div class="post_thumb" data-title="Small Group Leader Training">
-                                                        <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                            <img alt="Small Group Leader Training" src="http://placehold.it/370x209">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="post_content isotope_item_content">
-                                                    <h5 class="post_title">Small Group Leader Training</h5>
-                                                    <div class="post_info">
-                                                        <span class="post_info_item post_info_posted_by">by Jane Doe</span>
-                                                        <span class="post_info_item post_info_counters">0 Comments</span>
-                                                    </div>
-                                                    <div class="post_descr">
-                                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non...</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Isotope item -->
-                                        <!-- Isotope item -->
-                                        <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
-                                            <div class="post_item post_item_classic post_item_classic_3	even">
-                                                <div class="post_featured">
-                                                    <span class="post_date_wrapper">
-                                                        <span class="post_date post_date-month">Oct</span>
-                                                        <span class="post_date post_date-day">02</span>
-                                                    </span>
-                                                    <div class="post_thumb" data-title="The Power of Scripture">
-                                                        <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                            <img alt="The Power of Scripture" src="http://placehold.it/370x209">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="post_content isotope_item_content">
-                                                    <h5 class="post_title">The Power of Scripture</h5>
-                                                    <div class="post_info">
-                                                        <span class="post_info_item post_info_posted_by">by Jane Doe</span>
-                                                        <span class="post_info_item post_info_counters">0 Comments</span>
-                                                    </div>
-                                                    <div class="post_descr">
-                                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo...</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Isotope item -->
-                                        <!-- Isotope item -->
-                                        <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
-                                            <div class="post_item post_item_classic post_item_classic_3 odd">
-                                                <div class="post_featured">
-                                                    <span class="post_date_wrapper">
-                                                        <span class="post_date post_date-month">Sep</span>
-                                                        <span class="post_date post_date-day">22</span>
-                                                    </span>
-                                                    <div class="post_thumb" data-title="Be Inspired by Biblical Teaching">
-                                                        <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                            <img alt="Be Inspired by Biblical Teaching" src="http://placehold.it/370x209">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="post_content isotope_item_content">
-                                                    <h5 class="post_title">Be Inspired by Biblical Teaching</h5>
-                                                    <div class="post_info">
-                                                        <span class="post_info_item post_info_posted_by">by Jane Doe</span>
-                                                        <span class="post_info_item post_info_counters">0 Comments</span>
-                                                    </div>
-                                                    <div class="post_descr">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Isotope item -->
-                                        <!-- Isotope item -->
-                                        <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
-                                            <div class="post_item post_item_classic post_item_classic_3	even">
-                                                <div class="post_featured">
-                                                    <span class="post_date_wrapper">
-                                                        <span class="post_date post_date-month">Aug</span>
-                                                        <span class="post_date post_date-day">22</span>
-                                                    </span>
-                                                    <div class="post_thumb" data-title="Listen to the Wind Words, the Spirit blowing through the churches.">
-                                                        <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                            <img alt="Listen to the Wind Words, the Spirit blowing through the churches." src="http://placehold.it/370x209">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="post_content isotope_item_content">
-                                                    <h5 class="post_title">Listen to the Wind Words, the Spirit blowing through the churches.</h5>
-                                                    <div class="post_info">
-                                                        <span class="post_info_item post_info_posted_by">by Jane Doe</span>
-                                                        <span class="post_info_item post_info_counters">0 Comments</span>
-                                                    </div>
-                                                    <div class="post_descr">
-                                                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste...</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Isotope item -->
-                                        <!-- Isotope item -->
-                                        <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
-                                            <div class="post_item post_item_classic post_item_classic_3	odd">
-                                                <div class="post_featured">
+                                        @foreach ($latest_article as $article)
+                                            <!-- Isotope item -->
+                                            <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
+                                                <div class="post_item post_item_classic post_item_classic_3 odd">
+                                                    <div class="post_featured">
                                                         <span class="post_date_wrapper">
-                                                            <span class="post_date post_date-month">Mar</span>
-                                                            <span class="post_date post_date-day">19</span>
+                                                            <span class="post_date post_date-month">{{$article->month}}</span>
+                                                            <span class="post_date post_date-day">{{$article->date}}</span>
                                                         </span>
-                                                    <div class="post_thumb" data-title="Want to Try an Online Church?‎">
-                                                        <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                            <img alt="Want to Try an Online Church?‎" src="http://placehold.it/370x209">
-                                                        </a>
+                                                        <div class="post_thumb" data-title="Small Group Leader Training">
+                                                            <a class="hover_icon hover_icon_link" href="post-single.html">
+                                                                <img alt="Small Group Leader Training" src="http://placehold.it/370x209">
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="post_content isotope_item_content">
-                                                    <h5 class="post_title">Want to Try an Online Church?‎</h5>
-                                                    <div class="post_info">
-                                                        <span class="post_info_item post_info_posted_by">by Jane Doe</span>
-                                                        <span class="post_info_item post_info_counters">0 Comments</span>
-                                                    </div>
-                                                    <div class="post_descr">
-                                                        <p>Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. Aliquam vel finibus metus. Aenean venenatis sodales...</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Isotope item -->
-                                        <!-- Isotope item -->
-                                        <div class="isotope_item isotope_item_classic isotope_item_classic_3 isotope_column_3">
-                                            <div class="post_item post_item_classic post_item_classic_3	even last">
-                                                <div class="post_featured">
-                                                    <span class="post_date_wrapper">
-                                                        <span class="post_date post_date-month">Mar</span>
-                                                        <span class="post_date post_date-day">17</span>
-                                                    </span>
-                                                    <div class="post_thumb" data-title="Finding Yourself">
-                                                        <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                            <img alt="Finding Yourself" src="http://placehold.it/370x209">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="post_content isotope_item_content">
-                                                    <h5 class="post_title">Finding Yourself</h5>
-                                                    <div class="post_info">
-                                                        <span class="post_info_item post_info_posted_by">by Jane Doe</span>
-                                                        <span class="post_info_item post_info_counters">0 Comments</span>
-                                                    </div>
-                                                    <div class="post_descr">
-                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut tristique pretium tellus, sed fermentum est...</p>
+                                                    <div class="post_content isotope_item_content">
+                                                        <h5 class="post_title">{{$article->title}}</h5>
+                                                        <div class="post_info">
+                                                            <span class="post_info_item post_info_posted_by">by {{$article->user->name}}</span>
+                                                            @if ($article->user->profile->jemaat)
+                                                                <span class="post_info_item post_info_counters">{{$article->user->profile->jemaat->name}}</span>
+                                                            @endif
+                                                        </div>
+                                                        <div class="post_descr">
+                                                            <p>{{\Illuminate\Support\Str::limit($article->content, 300, $end='.')}}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- /Isotope item -->
+                                            <!-- /Isotope item -->
+                                            
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                             <div id="sc_blogger_1_scroll_bar" class="sc_scroll_bar sc_scroll_bar_horizontal sc_blogger_1_scroll_bar"></div>
                         </div>
-                        <div class="sc_scroll_controls_wrap">
-                            <a class="sc_scroll_prev" href="#"></a>
-                            <a class="sc_scroll_next" href="#"></a>
-                        </div>
+                        
                         <div class="sc_blogger_button sc_item_button">
-                            <a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_2 sc_button_size_large">Read more</a>
+                            <a href="/blog" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_2 sc_button_size_large">Read more</a>
                         </div>
                     </div>
                 </div>

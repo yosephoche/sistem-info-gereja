@@ -14,8 +14,10 @@ class HomeController extends Controller
     {
         $about = About::first();
         $events = Event::all();
+        $newest_event = Event::orderBy('created_at', 'desc')->first();
+        $latest_article = Artikel::orderBy('created_at', 'desc')->limit(3)->get();
 
-        return view('pages.home', compact('about', 'events'));
+        return view('pages.home', compact('about', 'events', 'newest_event', 'latest_article'));
     }
 
     public function profile(Request $request)
@@ -38,16 +40,5 @@ class HomeController extends Controller
     public function gallery(Request $request)
     {
         return view('pages.gallery');
-    }
-
-    public function blog(Request $request)
-    {
-        $articles = Artikel::with('kategori', 'user')
-            ->where('is_published', true)
-            ->paginate(2);
-
-        // dd($articles);
-
-        return view('pages.blog', compact('articles'));
     }
 }
