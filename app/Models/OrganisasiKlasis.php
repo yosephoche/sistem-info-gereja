@@ -12,11 +12,16 @@ class OrganisasiKlasis extends Model
     protected $table = 'organisasi_klasis';
 
     protected $fillable = [
-        'name', 'klasis_id', 'description', 'status'
+        'name', 'group_id', 'klasis_id', 'description', 'status'
     ];
 
     public function pengurus()
     {
         return $this->hasOne('App\Models\PengurusOrganisasiKlasis', 'organisasi_klasis_id', 'id');
+    }
+
+    public function group()
+    {
+        return $this->belongsTo('App\Models\GroupOrganisasi', 'group_id', 'id');
     }
 }

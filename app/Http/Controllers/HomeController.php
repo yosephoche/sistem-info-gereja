@@ -22,7 +22,9 @@ class HomeController extends Controller
 
     public function profile(Request $request)
     {
-        return view('pages.profile');
+        $about = About::first();
+
+        return view('pages.profile', compact('about'));
     }
 
     public function events(Request $request)
