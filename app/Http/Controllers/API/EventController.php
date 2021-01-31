@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 use App\Models\Event;
 use Auth;
@@ -20,38 +21,36 @@ class EventController extends Controller
 
     protected $model = Event::class;
 
-    // public function performStore(Request $request, Model $event, array $attributes): void
-    // {
-    //     $attributes['password'] = Hash::make($request->password);
-    //     $attributes['created_by'] = Auth::user();
-        
-    //     $event->fill($attributes);
-    //     $event->save();
-        
-    // }
+    protected function filterableBy() : array
+    {
+        return ['id', 'name', 'start_date', 'created_by', 'created_at'];
+    }
 
-    // public function performUpdate(Request $request, Model $event, array $attributes): void
-    // {
-    //     $attributes['password'] = Hash::make($request->password);
-    //     $user->fill($attributes);
-    //     $user->save();
+    protected function searchableBy() : array
+    {
+        return ['name', 'address'];
+    }
 
-    //     $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
-    //     $klasis = $jemaat->klasis;
+    protected function sortableBy() : array
+    {
+        return ['id', 'name', 'start_date', 'created_at'];
+    }
+
+    protected function runIndexFetchQuery(Request $request, Builder $query, int $paginationLimit): LengthAwarePaginator
+    {
+        return $query->paginate($paginationLimit);
+    }
+
+    protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
+    {
+        $query = parent::buildIndexFetchQuery($request, $requestedRelations);
         
-    //     if ($user->save()) {
-    //         $profile = UserProfile::create([
-    //             'user_id' => $user->id,
-    //             'nama' => $user->name,
-    //             'jenis_kelamin' => $request->jenis_kelamin,
-    //             'alamat' => $request->alamat,
-    //             'is_baptis' => $request->is_baptis,
-    //             'is_sidi' => $request->is_sidi,
-    //             'jemaat_id' => $request->jemaat_id,
-    //             'klasis_id' => $klasis->id,
-    //             'wilayah_id' => $klasis->wilayah_id,
-    //             'tanggal_lahir' => Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s')
-    //         ]);
-    //     }
-    // }
+        if ($request->exists('sortBy')) {
+            $queryString = Str::of($request->sortBy)->explode('|');
+
+            $query->orderBy($queryString[0], $queryString[1]);
+        };
+        
+        return $query;
+    }
 }

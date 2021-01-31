@@ -14,4 +14,14 @@ class AnggotaKeluarga extends Model
         'keluarga_id',
         'status_keluarga'
     ];
+
+    public function keluarga()
+    {
+        return $this->belongsTo('App\Models\Keluarga', 'keluarga_id', 'id');
+    }
+
+    public function profile()
+    {
+        return $this->hasOne('App\Models\UserProfile', 'id', 'user_profile_id');
+    }
 }

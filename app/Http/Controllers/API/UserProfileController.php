@@ -26,7 +26,7 @@ class UserProfileController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['user', 'jemaat'];
+        return ['user', 'jemaat', 'user.artikel'];
     }
 
     protected function filterableBy() : array

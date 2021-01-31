@@ -17,6 +17,11 @@ class WilayahController extends Controller
 
     protected $model = Wilayah::class;
 
+    protected function alwaysIncludes() : array
+    {
+        return ['user'];
+    }
+
     protected function searchableBy() : array
     {
         return ['name'];

@@ -17,4 +17,9 @@ class Wilayah extends Model
     {
         return $this->hasMany('App\Models\Klasis', 'wilayah_id', 'id');
     }
+
+    public function user()
+    {
+        return $this->hasMany('App\Models\UserProfile', 'wilayah_id', 'id');
+    }
 }

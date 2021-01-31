@@ -19,4 +19,9 @@ class PengurusOrganisasiKlasis extends Model
     {
         return $this->belongsTo('App\Models\OrganisasiKlasis', 'organisasi_klasis_id', 'id');
     }
+
+    public function user()
+    {
+        return $this->hasOne('App\Models\User', 'id', 'user_id');
+    }
 }

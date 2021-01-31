@@ -15,4 +15,9 @@ class Majelis extends Model
         'user_profile_id',
         'periode',
     ];
+
+    public function profile()
+    {
+        return $this->hasOne('App\Models\UserProfile', 'id', 'user_profile_id');
+    }
 }

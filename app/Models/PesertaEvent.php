@@ -17,4 +17,9 @@ class PesertaEvent extends Model
     {
         return $this->belongsTo('App\Event', 'event_id', 'id');
     }
+
+    public function profile()
+    {
+        return $this->hasOne('App\Models\UserProfile', 'id', 'user_profile');
+    }
 }

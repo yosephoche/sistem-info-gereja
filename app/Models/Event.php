@@ -61,4 +61,9 @@ class Event extends Model
     {
         return $this->hasMany('App\PesertaEvent', 'event_id', 'id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'created_by', 'id');
+    }
 }
