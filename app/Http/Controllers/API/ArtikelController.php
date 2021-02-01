@@ -56,4 +56,11 @@ class ArtikelController extends Controller
         
         return $query;
     }
+
+    public function performStore(Request $request, Model $user, array $attributes): void
+    {
+        dd($request->image);
+        
+    }
+
 }

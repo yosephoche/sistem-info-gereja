@@ -11,7 +11,16 @@ class Artikel extends Model
     use HasFactory;
 
     protected $fillable = [
-        "title", "content", "image", "category", "author". "tag", "is_published"
+        "title", 
+        "content", 
+        "image", 
+        "category", 
+        "author",
+        "tag", 
+        "is_published", 
+        "meta_title",
+        "slug",
+        "meta_description"
     ];
 
     protected $appends = array('date', 'month');
