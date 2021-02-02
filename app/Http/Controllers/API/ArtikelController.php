@@ -65,9 +65,9 @@ class ArtikelController extends Controller
         if ($request->hasFile('image')) {
             $extension = $request->image->extension();
             $request->image->store('galeri', 'public');
+            $attributes['image'] = $request->image->hashName();
         }
 
-        $attributes['image'] = $request->image->hashName();
         
         $artikel->fill($attributes);
         $artikel->save();
@@ -78,10 +78,9 @@ class ArtikelController extends Controller
         if ($request->hasFile('image')) {
             $extension = $request->image->extension();
             $request->image->store('galeri', 'public');
+            $attributes['image'] = $request->image->hashName();
         }
 
-        $attributes['image'] = $request->image->hashName();
-        
         $artikel->fill($attributes);
         $artikel->save();
     }
