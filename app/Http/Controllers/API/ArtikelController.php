@@ -73,4 +73,17 @@ class ArtikelController extends Controller
         $artikel->save();
     }
 
+    public function performUpdate(Request $request, Model $artikel, array $attributes): void
+    {
+        if ($request->hasFile('image')) {
+            $extension = $request->image->extension();
+            $request->image->store('galeri', 'public');
+        }
+
+        $attributes['image'] = $request->image->hashName();
+        
+        $artikel->fill($attributes);
+        $artikel->save();
+    }
+
 }
