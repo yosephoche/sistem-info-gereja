@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
+
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 use App\Models\Artikel;
@@ -57,10 +60,17 @@ class ArtikelController extends Controller
         return $query;
     }
 
-    public function performStore(Request $request, Model $user, array $attributes): void
+    public function performStore(Request $request, Model $artikel, array $attributes): void
     {
-        dd($request->image);
+        if ($request->hasFile('image')) {
+            $extension = $request->image->extension();
+            $request->image->store('galeri', 'public');
+        }
+
+        $attributes['image'] = $request->image->hashName();
         
+        $artikel->fill($attributes);
+        $artikel->save();
     }
 
 }
