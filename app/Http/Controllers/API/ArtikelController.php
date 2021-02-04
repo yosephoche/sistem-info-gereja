@@ -68,6 +68,9 @@ class ArtikelController extends Controller
             $attributes['image'] = $request->image->hashName();
         }
 
+        $user = Auth::user();
+        $attributes['author'] = $user->id;
+
         
         $artikel->fill($attributes);
         $artikel->save();
@@ -80,6 +83,9 @@ class ArtikelController extends Controller
             $request->image->store('galeri', 'public');
             $attributes['image'] = $request->image->hashName();
         }
+
+        $user = Auth::user();
+        $attributes['author'] = $user->id;
 
         $artikel->fill($attributes);
         $artikel->save();
