@@ -8,6 +8,7 @@ use Orion\Concerns\DisableAuthorization;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 

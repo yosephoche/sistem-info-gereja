@@ -52,19 +52,18 @@ use App\Models\User;
 */
 
 
-Route::group(['as' => 'api.'], function() {
+Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     Orion::resource('user', UserController::class)->withSoftDeletes();
-    Route::group(['middleware' => ['auth:sanctum']], function () {
-        Route::get('auth/user', function () {
-            $user = User::with('profile')
-                ->where('id', Auth::user()->id)
-                ->first();
+    
+    Route::get('auth/user', function () {
+        $user = User::with('profile')
+            ->where('id', Auth::user()->id)
+            ->first();
 
-            return response()->json([
-                'message' => 'SUCCESS',
-                'user' => $user
-            ], 200);
-        });
+        return response()->json([
+            'message' => 'SUCCESS',
+            'user' => $user
+        ], 200);
     });
     
     Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
