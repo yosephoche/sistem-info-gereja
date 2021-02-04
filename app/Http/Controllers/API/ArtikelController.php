@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -13,6 +14,7 @@ use Illuminate\Support\Str;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 use App\Models\Artikel;
+
 
 class ArtikelController extends Controller
 {
@@ -52,6 +54,8 @@ class ArtikelController extends Controller
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
         
+        $query->where('author', Auth::user()->id);
+
         if ($request->exists('sortBy')) {
             $queryString = Str::of($request->sortBy)->explode('|');
 
