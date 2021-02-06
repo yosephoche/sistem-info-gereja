@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use Illuminate\Database\Eloquent\Model;
 use Orion\Http\Controllers\Controller;
 use Orion\Http\Controllers\RelationController;
 use Orion\Concerns\DisableAuthorization;
@@ -34,31 +35,40 @@ class UserProfileController extends Controller
         return ['id', 'nama', 'alamat', 'status', 'is_baptis', 'is_sidi', 'created_at'];
     }
 
-    protected function searchableBy() : array
-    {
-        return ['nama', 'alamat', 'user.email', 'jemaat.name'];
-    }
+    // protected function searchableBy() : array
+    // {
+    //     return ['nama', 'alamat', 'user.email', 'jemaat.name'];
+    // }
 
-    protected function sortableBy() : array
-    {
-        return ['id', 'nama', 'created_at'];
-    }
+    // protected function sortableBy() : array
+    // {
+    //     return ['id', 'nama', 'created_at'];
+    // }
 
     protected function runIndexFetchQuery(Request $request, Builder $query, int $paginationLimit): LengthAwarePaginator
     {
         return $query->paginate($paginationLimit);
     }
 
-    protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
+    protected function buildFetchQuery(Request $request, array $requestedRelations): Builder
     {
-        $query = parent::buildIndexFetchQuery($request, $requestedRelations);
+        $query = parent::buildFetchQuery($request, $requestedRelations);
         
+        if ($request->exists('keyword')) {
+            $keyword = $request->keyword;
+            // $query->search(['nama', 'alamat', 'user.email', 'jemaat.name'], $keyword);
+            $query->whereLike(['nama'], $keyword);
+        }
+
         if ($request->exists('sortBy')) {
             $queryString = Str::of($request->sortBy)->explode('|');
 
             $query->orderBy($queryString[0], $queryString[1]);
         };
-        
+
+        // dd($query->toSql(), $query->getBindings());
+
         return $query;
     }
+    
 }

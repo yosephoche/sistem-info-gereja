@@ -36,6 +36,8 @@ use App\Http\Controllers\Api\ArtikelController;
 use App\Http\Controllers\Api\SettingController;
 use App\Http\Controllers\Api\GaleriController;
 use App\Http\Controllers\Api\GroupOrganisasiController;
+use App\Http\Controllers\Api\DashboardController;
+
 
 use App\Models\User;
 
@@ -97,7 +99,9 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
 
     Orion::resource('settings', SettingController::class);
 
+    
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
+    Route::get('dashboard', [DashboardController::class, 'index']);
 });
 
 Route::post('/login', [AuthController::class, 'login']);

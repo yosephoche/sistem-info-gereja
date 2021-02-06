@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Role;
+use App\Models\RoleGroup;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RoleFactory extends Factory
+class RoleGroupFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Role::class;
+    protected $model = RoleGroup::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class RoleFactory extends Factory
     public function definition()
     {
         return [
-            
+            //
         ];
     }
 }

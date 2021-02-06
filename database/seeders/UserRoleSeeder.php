@@ -40,7 +40,8 @@ class UserRoleSeeder extends Seeder
 
         $user_role = DB::table('user_roles')->insert([
             'user_id' => $user->id,
-            'role_id' => $role->id
+            'role_id' => $role->id,
+            'group_id' => null
         ]);
     }
 }

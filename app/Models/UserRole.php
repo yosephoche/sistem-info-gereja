@@ -18,8 +18,13 @@ class UserRole extends Model
         return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
 
+    // public function role()
+    // {
+    //     return $this->hasOne('App\Models\Role', 'role_id', 'id');
+    // }
+
     public function role()
     {
-        return $this->hasOne('App\Models\Role', 'role_id', 'id');
+        return $this->hasOne('App\Models\Role', 'id', 'role_id');
     }
 }
