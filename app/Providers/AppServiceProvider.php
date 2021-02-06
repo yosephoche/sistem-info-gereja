@@ -46,15 +46,5 @@ class AppServiceProvider extends ServiceProvider
         
             return $this;
         });
-
-        Builder::macro('whereLike', function ($attributes, string $searchTerm) {
-            $this->where(function (Builder $query) use ($attributes, $searchTerm) {
-                foreach (Arr::wrap($attributes) as $attribute) {
-                    $query->orWhere($attribute, 'LIKE', "%{$searchTerm}%");
-                }
-            });
-        
-            return $this;
-        });
     }
 }

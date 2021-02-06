@@ -35,29 +35,31 @@ class UserProfileController extends Controller
         return ['id', 'nama', 'alamat', 'status', 'is_baptis', 'is_sidi', 'created_at'];
     }
 
-    // protected function searchableBy() : array
-    // {
-    //     return ['nama', 'alamat', 'user.email', 'jemaat.name'];
-    // }
+    protected function searchableBy() : array
+    {
+        return ['nama', 'alamat', 'user.email', 'jemaat.name'];
+    }
 
-    // protected function sortableBy() : array
-    // {
-    //     return ['id', 'nama', 'created_at'];
-    // }
+    protected function sortableBy() : array
+    {
+        return ['id', 'nama', 'created_at'];
+    }
 
     protected function runIndexFetchQuery(Request $request, Builder $query, int $paginationLimit): LengthAwarePaginator
     {
         return $query->paginate($paginationLimit);
     }
 
-    protected function buildFetchQuery(Request $request, array $requestedRelations): Builder
+    protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
-        $query = parent::buildFetchQuery($request, $requestedRelations);
+        $query = parent::buildIndexFetchQuery($request, $requestedRelations);
+        // dd($query);
         
         if ($request->exists('keyword')) {
             $keyword = $request->keyword;
-            // $query->search(['nama', 'alamat', 'user.email', 'jemaat.name'], $keyword);
-            $query->whereLike(['nama'], $keyword);
+            $query->search(['nama', 'alamat', 'user.email', 'jemaat.name'], $keyword);
+            // $query->whereLike(['nama'], $keyword);
+            // $query->orWhere('nama', 'like', '%z%');
         }
 
         if ($request->exists('sortBy')) {
