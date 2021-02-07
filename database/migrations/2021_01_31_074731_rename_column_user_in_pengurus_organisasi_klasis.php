@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameColumnUserInPengurusOrganisasiKlasis extends Migration
+class RenameColumnOrganisasiWilayahIdInPengurusOrganisasiKlasis extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class RenameColumnUserInPengurusOrganisasiKlasis extends Migration
     public function up()
     {
         Schema::table('pengurus_organisasi_klasis', function (Blueprint $table) {
-            $table->dropForeign('pengurus_organisasi_klasis_user_foreign');
-            $table->renameColumn('user', 'user_id');
+            $table->dropForeign('pengurus_organisasi_wilayahs_organisasi_wilayah_id_foreign');
+            $table->renameColumn('organisasi_wilayah_id', 'organisasi_klasis_id');
         });
     }
 
@@ -27,7 +27,7 @@ class RenameColumnUserInPengurusOrganisasiKlasis extends Migration
     public function down()
     {
         Schema::table('pengurus_organisasi_klasis', function (Blueprint $table) {
-            $table->renameColumn('user_id', 'user');
+            $table->renameColumn('organisasi_klasis_id', 'organisasi_wilayah_id');
         });
     }
 }
