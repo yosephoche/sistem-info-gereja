@@ -10,5 +10,6 @@ use App\Models\Keluarga;
 
 class KeluargaController extends Controller
 {
+    use DisableAuthorization;
     protected $model = Keluarga::class; 
 }

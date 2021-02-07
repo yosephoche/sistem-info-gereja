@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Localhost",
+            "database": "sistem_informasi_gereja",
+            "username": "root",
+            "password": "msi2020"
+        }
+    ]
+}
