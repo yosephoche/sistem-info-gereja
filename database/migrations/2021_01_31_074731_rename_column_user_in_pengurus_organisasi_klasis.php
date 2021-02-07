@@ -14,6 +14,7 @@ class RenameColumnUserInPengurusOrganisasiKlasis extends Migration
     public function up()
     {
         Schema::table('pengurus_organisasi_klasis', function (Blueprint $table) {
+            $table->dropForeign('pengurus_organisasi_klasis_user_foreign');
             $table->renameColumn('user', 'user_id');
         });
     }
