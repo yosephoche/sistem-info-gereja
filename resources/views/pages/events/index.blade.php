@@ -94,7 +94,7 @@
                                             <div class="type-tribe_events tribe-clearfix tribe-events-first">
                                                 <!-- Event Title -->
                                                 <h2 class="tribe-events-list-event-title">
-                                                    <a class="tribe-event-url" href="event-single.html" title="Listen to the Wind Words" rel="bookmark">
+                                                    <a class="tribe-event-url" href="{{ route('event.detail', ['id'=>$event->id]) }}" title="Listen to the Wind Words" rel="bookmark">
                                                         {{$event->name}}
                                                     </a>
                                                 </h2>

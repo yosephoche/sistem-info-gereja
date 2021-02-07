@@ -192,6 +192,7 @@
         <article class="post_item post_item_single page">
             <section class="post_content">
                 <!-- Next event section -->
+                @if ($newest_event)
                 <div class="hp1_next_event_section tpl_add_bg">
                     <div class="content_wrap">
                         <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3 margin_bottom_null">
@@ -202,7 +203,8 @@
                                         <h6 class="sc_title sc_title_regular tpl_light font_weight_400">{{$newest_event->name}}</h6>
                                     </div>
                                 </div>
-                            </div><div class="column-1_3 sc_column_item sc_column_item_2 even">
+                            </div>
+                            <div class="column-1_3 sc_column_item sc_column_item_2 even">
                                 <div id="sc_countdown_1" class="sc_countdown sc_countdown_style_1 aligncenter margin_top_null" data-date="{{date('Y-m-d', strtotime($newest_event->start_date))}}" data-time="{{date('H:i:s', strtotime($newest_event->start_date))}}">
                                     <div class="sc_countdown_inner">
                                         <div class="sc_countdown_item sc_countdown_days">
@@ -251,54 +253,56 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                @endif
                 <!-- /Next event section -->
                 <!-- Welcome section -->
                 <div class="hp1_welcome_section">
                     <div class="content_wrap">
                         <div class="columns_wrap">
-                          <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
-                            <figure class="sc_image sc_image_shape_square">
-                                <a href="service-single.html">
-                                    <img src="http://placehold.it/520x660" alt="" />
-                                </a>
-                            </figure>
-                          </div><div class="column-1_2 sc_column_item sc_column_item_2 even">
-                            <!-- Services section -->
-                        <div class="sc_services_wrap">
-                            <div class="sc_services sc_services_style_services-5 sc_services_type_icons sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="5040" data-slides-min-width="250">
-                                <h6 class="sc_services_subtitle sc_item_subtitle">Selamat Datang</h6>
-                                <h2 class="sc_services_title sc_item_title">Badan Pekerja Sinode Gereja Toraja</h2>
-                                <div class="sc_services_descr sc_item_descr">
-                                    {{ $about->description}}
+                            <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
+                                <figure class="sc_image sc_image_shape_square">
+                                    <a href="service-single.html">
+                                        <img src="http://placehold.it/520x660" alt="" />
+                                    </a>
+                                </figure>
+                            </div>
+                            @if ($about)
+                            <div class="column-1_2 sc_column_item sc_column_item_2 even">
+                                <!-- Services section -->
+                                <div class="sc_services_wrap">
+                                    <div class="sc_services sc_services_style_services-5 sc_services_type_icons sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="5040" data-slides-min-width="250">
+                                        <h6 class="sc_services_subtitle sc_item_subtitle">Selamat Datang</h6>
+                                        <h2 class="sc_services_title sc_item_title">Badan Pekerja Sinode Gereja Toraja</h2>
+                                        <div class="sc_services_descr sc_item_descr">
+                                            {{ $about->description}}
+                                        </div>
+                                        <!-- Services item -->
+                                        <div class="sc_services_item sc_services_item_1 odd first">
+                                            <span class="sc_icon icon-house306"></span>
+                                            <div class="sc_services_item_content">
+                                                <h4 class="sc_services_item_title">
+                                                    <a href="service-single.html">Visi</a>
+                                                </h4>
+                                                <div class="sc_services_item_description">
+                                                    <p>{{ $about->visi }}</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /Services item -->
+                                        <!-- Services item -->
+                                        <div class="sc_services_item sc_services_item_2 even">
+                                            <span class="sc_icon icon-open-book6"></span>
+                                            <div class="sc_services_item_content">
+                                                <h4 class="sc_services_item_title">
+                                                    <a href="service-single.html">Misi</a></h4>
+                                                <div class="sc_services_item_description">
+                                                    <p>{{ $about->misi }}</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /Services item -->
+                                    </div>
                                 </div>
-                                <!-- Services item -->
-                                <div class="sc_services_item sc_services_item_1 odd first">
-                                    <span class="sc_icon icon-house306"></span>
-                                    <div class="sc_services_item_content">
-                                        <h4 class="sc_services_item_title">
-                                            <a href="service-single.html">Visi</a>
-                                        </h4>
-                                        <div class="sc_services_item_description">
-                                            <p>{{ $about->visi }}</p>
-                                        </div>
-                                    </div>
-                                </div><!-- /Services item -->
-                                <!-- Services item -->
-                                <div class="sc_services_item sc_services_item_2 even">
-                                    <span class="sc_icon icon-open-book6"></span>
-                                    <div class="sc_services_item_content">
-                                        <h4 class="sc_services_item_title">
-                                            <a href="service-single.html">Misi</a></h4>
-                                        <div class="sc_services_item_description">
-                                            <p>{{ $about->misi }}</p>
-                                        </div>
-                                    </div>
-                                </div><!-- /Services item -->
                             </div>
-                        </div>
-                            </div>
-                        <!-- /Services section -->
-    
+                            @endif
                         </div>
                     </div>
                 </div>

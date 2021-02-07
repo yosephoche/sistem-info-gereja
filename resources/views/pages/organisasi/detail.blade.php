@@ -36,42 +36,44 @@
                                 <a href="#sc_tab_2-2" class="theme_button" id="sc_tab_2-2_tab">Misi</a>
                             </li>
                             <li class="sc_tabs_title last">
-                                <a href="#sc_tab_2-3" class="theme_button" id="sc_tab_2-3_tab">Tab title 3</a>
+                                <a href="#sc_tab_2-3" class="theme_button" id="sc_tab_2-3_tab">Sejarah</a>
                             </li>
                         </ul>
-                        <div id="sc_tab_2-1" class="sc_tabs_content odd first">
-                            <div id="sc_tab_2-1_scroll" class="sc_scroll sc_scroll_vertical">
-                                <div class="sc_scroll_wrapper swiper-wrapper">
-                                    <div class="sc_scroll_slide swiper-slide">
-                                        <p>Nulla suscipit ex augue, ac mattis leo mattis vel. Aliquam vulputate augue erat. Integer pharetra elit quam, vel feugiat nisl ullamcorper et. Integer pellentesque fringilla justo condimentum ullamcorper. Etiam porttitor justo at neque convallis, eu auctor felis convallis. Pellentesque sollicitudin augue leo, ut viverra quam lobortis vitae. Duis efficitur metus vel tortor molestie facilisis. Ut magna nibh, scelerisque nec lorem at, rutrum ornare mi. Vestibulum ultricies eu ligula at cursus. Morbi vehicula, massa non dignissim volutpat, erat nunc tempus nunc, eu finibus justo erat at massa. Phasellus vulputate, lacus quis congue facilisis, ipsum urna porttitor diam, id bibendum felis eros ut urna. Maecenas non dui erat. Quisque pellentesque mattis diam. Nullam lacinia sollicitudin elit, et venenatis</p>
+                        @if ($organisasi)
+                            <div id="sc_tab_2-1" class="sc_tabs_content odd first">
+                                <div id="sc_tab_2-1_scroll" class="sc_scroll sc_scroll_vertical">
+                                    <div class="sc_scroll_wrapper swiper-wrapper">
+                                        <div class="sc_scroll_slide swiper-slide">
+                                            <p>{{$organisasi->visi}}</p>
+                                        </div>
                                     </div>
+                                    <div id="sc_tab_2-1_scroll_bar" class="sc_scroll_bar sc_scroll_bar_vertical sc_tab_2-1_scroll_bar"></div>
                                 </div>
-                                <div id="sc_tab_2-1_scroll_bar" class="sc_scroll_bar sc_scroll_bar_vertical sc_tab_2-1_scroll_bar"></div>
                             </div>
-                        </div>
-                        <div id="sc_tab_2-2" class="sc_tabs_content even">
-                            <div id="sc_tab_2-2_scroll" class="sc_scroll sc_scroll_vertical">
-                                <div class="sc_scroll_wrapper swiper-wrapper">
-                                    <div class="sc_scroll_slide swiper-slide">
-                                        <p>Donec mollis risus mauris. Morbi pharetra arcu mi, ultricies tincidunt erat tempor a. Integer blandit velit turpis, a facilisis arcu varius vel. Sed faucibus vestibulum ante quis volutpat. Etiam aliquet eros augue, interdum tincidunt risus tristique quis. Curabitur et arcu et mi semper vehicula ut in massa. Etiam porttitor justo at neque convallis, eu auctor felis convallis. Pellentesque sollicitudin augue leo, ut viverra quam lobortis vitae. Duis efficitur metus vel tortor molestie facilisis. Ut magna nibh, scelerisque nec lorem at, rutrum ornare mi. Vestibulum ultricies eu ligula at cursus. Morbi vehicula, massa non dignissim volutpat, erat nunc tempus nunc, eu finibus justo erat at massa. Phasellus vulputate, lacus quis congue facilisis, ipsum urna porttitor diam, id bibendum felis eros ut urna.</p>
+                            <div id="sc_tab_2-2" class="sc_tabs_content even">
+                                <div id="sc_tab_2-2_scroll" class="sc_scroll sc_scroll_vertical">
+                                    <div class="sc_scroll_wrapper swiper-wrapper">
+                                        <div class="sc_scroll_slide swiper-slide">
+                                            <p>{{$organisasi->misi}}</p>
+                                        </div>
                                     </div>
+                                    <div id="sc_tab_2-2_scroll_bar" class="sc_scroll_bar sc_scroll_bar_vertical sc_tab_2-2_scroll_bar"></div>
                                 </div>
-                                <div id="sc_tab_2-2_scroll_bar" class="sc_scroll_bar sc_scroll_bar_vertical sc_tab_2-2_scroll_bar"></div>
                             </div>
-                        </div>
-                        <div id="sc_tab_2-3" class="sc_tabs_content odd">
-                            <div id="sc_tab_2-3_scroll" class="sc_scroll sc_scroll_vertical">
-                                <div class="sc_scroll_wrapper swiper-wrapper">
-                                    <div class="sc_scroll_slide swiper-slide">
-                                        <p>Sed orci nibh, ullamcorper vitae scelerisque non, fermentum eu diam. Mauris vitae libero efficitur, lacinia nibh scelerisque, pellentesque leo. Vivamus quis nisi elit. Cras egestas rhoncus pulvinar. Curabitur vitae augue sollicitudin, tincidunt ex sed, dignissim quam. Sed orci nibh, ullamcorper vitae scelerisque non, fermentum eu diam. Mauris vitae libero efficitur, lacinia nibh scelerisque, pellentesque leo. Vivamus quis nisi elit. Cras egestas rhoncus pulvinar. Curabitur vitae augue sollicitudin, tincidunt ex sed, dignissim quam. Etiam porttitor justo at neque convallis, eu auctor felis convallis. Pellentesque sollicitudin augue leo, ut viverra quam lobortis vitae. Duis efficitur metus vel tortor molestie facilisis. Ut magna nibh, scelerisque nec lorem at, rutrum ornare mi. Vestibulum.</p>
+                            <div id="sc_tab_2-3" class="sc_tabs_content odd">
+                                <div id="sc_tab_2-3_scroll" class="sc_scroll sc_scroll_vertical">
+                                    <div class="sc_scroll_wrapper swiper-wrapper">
+                                        <div class="sc_scroll_slide swiper-slide">
+                                            <p>{{$organisasi->sejarah}}</p>
+                                        </div>
                                     </div>
+                                    <div id="sc_tab_2-3_scroll_bar" class="sc_scroll_bar sc_scroll_bar_vertical sc_tab_2-3_scroll_bar"></div>
                                 </div>
-                                <div id="sc_tab_2-3_scroll_bar" class="sc_scroll_bar sc_scroll_bar_vertical sc_tab_2-3_scroll_bar"></div>
                             </div>
-                        </div>
+                        @endif
                     </div>
                     
-                    <p>Maecenas et nunc augue. Duis convallis nulla augue, vel pretium quam mattis nec. Pellentesque dapibus faucibus lacus quis feugiat. Quisque viverra fermentum hendrerit. Nam in augue eu ipsum finibus dignissim. Nunc quis maximus orci, rhoncus volutpat ipsum. Mauris in laoreet leo. Fusce interdum felis gravida, faucibus leo et, fringilla eros. In vulputate, eros sed volutpat pulvinar, quam magna sollicitudin elit, sed ornare dui nisi non massa. Vestibulum eget sem lorem. Maecenas varius justo eget orci hendrerit ornare. Morbi varius eu tellus id varius. Etiam condimentum lobortis risus et facilisis. Nam consequat arcu in magna sodales aliquam. In eu urna vel leo accumsan efficitur non a quam. In tempor tortor in lectus tincidunt placerat.</p>
+                    <p>{{$organisasi->description}}</p>
                     
                 </section>
             </article>

@@ -36,7 +36,10 @@ class HomeController extends Controller
 
     public function oig(Request $request)
     {
-        return view('pages.oig');
+        $organisasi = GroupOrganisasi::all();
+        dd($organisasi);
+
+        return view('pages.organisasi.index', compact('organisasi'));
     }
 
     public function gallery(Request $request)
