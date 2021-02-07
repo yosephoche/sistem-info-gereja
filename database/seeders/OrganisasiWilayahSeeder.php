@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-use App\Models\OrganisasiWilayah;
+use App\Models\OrganisasiKlasis;
 
 class OrganisasiWilayahSeeder extends Seeder
 {
@@ -15,6 +15,6 @@ class OrganisasiWilayahSeeder extends Seeder
      */
     public function run()
     {
-        OrganisasiWilayah::factory()->times(5)->create();
+        OrganisasiKlasis::factory()->times(5)->create();
     }
 }

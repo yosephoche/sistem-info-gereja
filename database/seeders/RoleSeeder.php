@@ -26,5 +26,9 @@ class RoleSeeder extends Seeder
         $role5 = new Role;
         $role5->name = 'pengurus_oig';
         $role5->save();
+
+        $role6 = new Role;
+        $role6->name = 'koordinator';
+        $role6->save();
     }
 }

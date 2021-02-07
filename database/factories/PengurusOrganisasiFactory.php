@@ -25,7 +25,7 @@ class PengurusOrganisasiFactory extends Factory
     public function definition()
     {
         return [
-            'user' => User::inRandomOrder()->first()->id,
+            'user_id' => User::inRandomOrder()->first()->id,
             'organisasi_id' => Organisasi::inRandomOrder()->first()->id,
             'jabatan' => $this->faker->name,
             'status' => $this->faker->boolean
