@@ -81,9 +81,14 @@ class UserProfileController extends Controller
         $user = Auth::user();
         $profile = $user->profile;
 
-        if ($request->email) $user->email = $request->email;
+        if ($request->email) {
+            $user->email = $request->email;
+        }
 
-        if ($request->name) $user->name = $request->name;
+        if ($request->name) {
+            $user->name = $request->name;
+            $profile->nama = $request->name;
+        };
 
         if ($request->password) {
             $user->password = Hash::make($request->password);
@@ -96,7 +101,10 @@ class UserProfileController extends Controller
         }
 
         if ($profile->save() && $user->save()) {
-            return response()->json(['message' => 'Update Success'], 200);
+            return response()->json([
+                'message' => 'Update Success',
+                'user'=>$user
+            ], 200);
         } else {
             return response()->json(['message' => 'Update Fail'], 400);
         }

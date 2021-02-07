@@ -11,7 +11,8 @@
                             <img src={{asset("images/logo-gt-small.png")}} class="logo_main" alt="">
                             <img src={{asset("images/logo-gt-small.png")}} class="logo_fixed" alt="">
                         </a>
-                        <h3 style="margin-top: -65px; margin-left: 75px;">BPS - Gereja Toraja</h3>
+
+                        <h3 style="margin-top: -65px; margin-left: 75px;">{{$setting != null ? $setting->title : "BPS-Demo"}}</h3>
                     </div>
                 </div>
                 <!-- /Contact logo -->
