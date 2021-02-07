@@ -3,14 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use Orion\Http\Controllers\Controller;
-use Orion\Http\Controllers\RelationController;
 use Orion\Concerns\DisableAuthorization;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
 use App\Models\User;
@@ -46,7 +44,7 @@ class UserController extends Controller
 
         // return list of user that have profile
         $query->whereHas('profile');
-        
+
         // $query->whereHas('profile.jemaat', function($q) {
         //     $q->where('id', 2);
         // });
@@ -62,7 +60,7 @@ class UserController extends Controller
 
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
-        
+
         if ($user->save()) {
             $profile = UserProfile::create([
                 'user_id' => $user->id,
@@ -77,7 +75,7 @@ class UserController extends Controller
                 'tanggal_lahir' => Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s')
             ]);
         }
-        
+
     }
 
     public function performUpdate(Request $request, Model $user, array $attributes): void
@@ -88,7 +86,7 @@ class UserController extends Controller
 
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
-        
+
         if ($user->save()) {
             $profile = UserProfile::create([
                 'user_id' => $user->id,

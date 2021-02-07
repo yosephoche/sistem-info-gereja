@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use Config;
 use Auth;
+use Config;
+
 use App\Models\UserProfile;
 
 class DashboardController extends Controller
@@ -28,8 +29,6 @@ class DashboardController extends Controller
         $data = $this->get_dashboard_data($role->name);
 
         return response()->json($data, 200);
-
-
     }
 
     public function get_dashboard_data(String $role = null)
@@ -38,13 +37,13 @@ class DashboardController extends Controller
             case Config::get('constants.role.SUPERADMIN'):
                 return $this->superadmin_data();
                 break;
-            
+
             default:
                 break;
         }
     }
 
-    public function superadmin_data(Type $var = null)
+    public function superadmin_data()
     {
         $data = [];
         $data['jemaat'] = UserProfile::all()->count();

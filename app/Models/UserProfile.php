@@ -20,7 +20,8 @@ class UserProfile extends Model
         'is_sidi',
         'jemaat_id',
         'klasis_id',
-        'wilayah_id'
+        'wilayah_id',
+        'photo'
     ];
 
     public function user()

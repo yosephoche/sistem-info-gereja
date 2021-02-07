@@ -56,7 +56,7 @@ use App\Models\User;
 
 Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     Orion::resource('user', UserController::class)->withSoftDeletes();
-    
+
     Route::get('auth/user', function () {
         $user = User::with('profile')
             ->where('id', Auth::user()->id)
@@ -67,8 +67,10 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
             'user' => $user
         ], 200);
     });
-    
+
     Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
+    Route::post('edit-profile', [UserProfileController::class, 'update_login_info']);
+
     Orion::resource('pekerjaan', PekerjaanController::class);
     Orion::resource('klasis', KlasisController::class);
     Orion::resource('wilayah', WilayahController::class);
@@ -87,19 +89,19 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
 
     Orion::resource('oig-klasis', OrganisasiKlasisController::class);
     Orion::resource('pengurus-oig-klasis', PengurusOrganisasiKlasisController::class);
-    
+
     Orion::resource('role', RoleController::class);
     Orion::resource('user-role', UserRoleController::class);
     Orion::resource('pendeta', PendetaController::class);
     Orion::resource('pelayanan', PelayananController::class);
     Orion::resource('artikel', ArtikelController::class);
     Orion::resource('galeri', GaleriController::class);
-    
+
     Orion::resource('group-organisasi', GroupOrganisasiController::class);
 
     Orion::resource('settings', SettingController::class);
 
-    
+
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
     Route::get('dashboard', [DashboardController::class, 'index']);
 });

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 use App\Models\UserProfile;
 use Auth;
@@ -17,7 +18,7 @@ use Auth;
 class UserProfileController extends Controller
 {
     use DisableAuthorization;
-    
+
     /**
      * Fully-qualified model class name
      */
@@ -53,14 +54,6 @@ class UserProfileController extends Controller
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
-        // dd($query);
-        
-        // if ($request->exists('keyword')) {
-            // $keyword = $request->keyword;
-            // $query->search(['nama', 'alamat', 'user.email', 'jemaat.name'], $keyword);
-            // $query->whereLike(['nama'], $keyword);
-            // $query->orWhere('nama', 'like', '%z%');
-        // }
 
         if ($request->exists('sortBy')) {
             $queryString = Str::of($request->sortBy)->explode('|');
@@ -80,9 +73,34 @@ class UserProfileController extends Controller
             $query->where('jemaat_id', $request->jemaat);
         };
 
-        // dd($query->toSql(), $query->getBindings());
-
         return $query;
     }
-    
+
+    public function update_login_info(Request $request)
+    {
+        $user = Auth::user();
+        $profile = $user->profile;
+
+        if ($request->email) $user->email = $request->email;
+
+        if ($request->name) $user->name = $request->name;
+
+        if ($request->password) {
+            $user->password = Hash::make($request->password);
+        }
+
+        if ($request->hasFile('image')) {
+            $extension = $request->image->extension();
+            $request->image->store('user', 'public');
+            $profile->photo = $request->image->hashName();
+        }
+
+        if ($profile->save() && $user->save()) {
+            return response()->json(['message' => 'Update Success'], 200);
+        } else {
+            return response()->json(['message' => 'Update Fail'], 400);
+        }
+
+    }
+
 }

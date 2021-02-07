@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\Event;
 use App\Models\Artikel;
+use App\Models\GroupOrganisasi;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,6 @@ class HomeController extends Controller
     public function oig(Request $request)
     {
         $organisasi = GroupOrganisasi::all();
-        dd($organisasi);
 
         return view('pages.organisasi.index', compact('organisasi'));
     }
