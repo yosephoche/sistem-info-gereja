@@ -55,17 +55,29 @@ class UserProfileController extends Controller
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
         // dd($query);
         
-        if ($request->exists('keyword')) {
-            $keyword = $request->keyword;
-            $query->search(['nama', 'alamat', 'user.email', 'jemaat.name'], $keyword);
+        // if ($request->exists('keyword')) {
+            // $keyword = $request->keyword;
+            // $query->search(['nama', 'alamat', 'user.email', 'jemaat.name'], $keyword);
             // $query->whereLike(['nama'], $keyword);
             // $query->orWhere('nama', 'like', '%z%');
-        }
+        // }
 
         if ($request->exists('sortBy')) {
             $queryString = Str::of($request->sortBy)->explode('|');
 
             $query->orderBy($queryString[0], $queryString[1]);
+        };
+
+        if ($request->exists('wilayah')) {
+            $query->where('wilayah_id', $request->wilayah);
+        };
+
+        if ($request->exists('klasis')) {
+            $query->where('klasis_id', $request->klasis);
+        };
+
+        if ($request->exists('jemaat')) {
+            $query->where('jemaat_id', $request->jemaat);
         };
 
         // dd($query->toSql(), $query->getBindings());
