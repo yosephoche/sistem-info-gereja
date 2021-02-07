@@ -14,6 +14,7 @@ class RenameSektorIdInTblJemaat extends Migration
     public function up()
     {
         Schema::table('jemaats', function (Blueprint $table) {
+            $table->dropForeign('jemaats_sektor_id_foreign');
             $table->renameColumn('sektor_id', 'klasis_id');
         });
     }

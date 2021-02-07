@@ -14,6 +14,7 @@ class RenameColumnOrganisasiWilayahIdInPengurusOrganisasiKlasis extends Migratio
     public function up()
     {
         Schema::table('pengurus_organisasi_klasis', function (Blueprint $table) {
+            $table->dropForeign('pengurus_organisasi_klasis_organisasi_wilayah_id_foreign');
             $table->renameColumn('organisasi_wilayah_id', 'organisasi_klasis_id');
         });
     }
