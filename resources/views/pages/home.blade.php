@@ -29,7 +29,7 @@
                     data-param10=""
                     data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="https://www.panorama-destination.com/wp-content/uploads/2019/04/Toraja-Chris-_8815-Large.jpg" alt="" title="slider1-3" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <img src="https://picsum.photos/1920/768?grayscale&blur=2" alt="" title="slider1-3" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                     {{-- <iframe width="1519" height="700" src="https://www.youtube.com/embed/P56VLd4sDuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
@@ -37,7 +37,7 @@
                         <br/> BPS Gereja Toraja </div>
                     <!-- LAYER NR. 2 -->
                     <div class="tp-caption tp-resizeme slide_medium_text" id="slide-4-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['416','416','416','416']" data-fontsize="['24','24','21','24']" data-width="['879','870','691','none']" data-height="['none','71','none','none']" data-whitespace="['normal','normal','normal','nowrap']" data-visibility="['on','on','off','off']" data-transform_idle="o:1;" data-transform_in="y:-50px;opacity:0;s:990;e:Power3.easeInOut;" data-transform_out="opacity:0;s:300;" data-start="2200" data-splitin="none" data-splitout="none" data-responsive_offset="on">
-                        Badan Pekerja Sinode Gereja Toraja berkedudukan di Tongkonan Sangullele di Rantepao, 
+                        Badan Pekerja Sinode Gereja Toraja berkedudukan di Tongkonan Sangullele di Rantepao,
                         Kabupaten Toraja Utara Propinsi Sulawesi Selatan.
                     </div>
                     <!-- LAYER NR. 3 -->
@@ -70,11 +70,11 @@
                     data-param10=""
                     data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="https://bps-gerejatoraja.org/_library/images/slider/banner%20januari%202018-3.jpg" alt="" title="slider1-2" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <img src="https://picsum.photos/1920/768" alt="" title="slider1-2" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption tp-resizeme" id="slide-5-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-6','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:-50px;opacity:0;s:1200;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;" data-start="500" data-responsive_offset="on">
-                        <img src="http://placehold.it/543x500" alt="" width="543" height="500" data-ww="['543px','543px','543px','404px']" data-hh="['500px','500px','500px','378px']" data-no-retina>
+                        <img src="https://picsum.photos/543/500" alt="" width="543" height="500" data-ww="['543px','543px','543px','404px']" data-hh="['500px','500px','500px','378px']" data-no-retina>
                     </div>
                 </li>
                 <!-- SLIDE  -->
@@ -102,7 +102,7 @@
                     data-param10=""
                     data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="http://placehold.it/1920x768" alt="" title="home1_sl2" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <img src="https://picsum.photos/1920/768" alt="" title="home1_sl2" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption tp-resizeme slide_large_text" id="slide-6-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['179','179','239','102']" data-fontsize="['100','100','100','75']" data-lineheight="['115','115','115','85']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1350" data-splitin="none" data-splitout="none" data-responsive_offset="on">Conference </div>
@@ -172,11 +172,11 @@
                     data-param10=""
                     data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="http://placehold.it/1920x768" alt="" title="slider1_1" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <img src="https://picsum.photos/1920/768" alt="" title="slider1_1" width="1920" height="768" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption tp-resizeme" id="slide-7-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['1','1','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:{-250,250};y:{-150,150};rX:{-90,90};rY:{-90,90};rZ:{-360,360};sX:0;sY:0;opacity:0;s:1200;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;" data-start="500" data-responsive_offset="on">
-                        <img src="http://placehold.it/631x595" alt="" width="631" height="595" data-ww="['631px','631px','631px','401']" data-hh="['595px','595px','595px','359']" data-no-retina> </div>
+                        <img src="https://picsum.photos/631/595" alt="" width="631" height="595" data-ww="['631px','631px','631px','401']" data-hh="['595px','595px','595px','359']" data-no-retina> </div>
                 </li>
             </ul>
             <div class="tp-bannertimer"></div>
@@ -262,7 +262,7 @@
                             <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
                                 <figure class="sc_image sc_image_shape_square">
                                     <a href="service-single.html">
-                                        <img src="http://placehold.it/520x660" alt="" />
+                                        <img src="https://picsum.photos/520/660" alt="" />
                                     </a>
                                 </figure>
                             </div>
@@ -327,7 +327,7 @@
                     </div>
                 </div>
                 <!-- /Mission section -->
-               
+
                 <!-- Upcoming events section -->
                 <div class="hp1_upcoming_events_section">
                     <div class="content_wrap">
@@ -337,7 +337,8 @@
                                     <div class="sc_section_inner">
                                         <h6 class="sc_section_subtitle sc_item_subtitle">Fellowship</h6>
                                         <h2 class="sc_section_title sc_item_title margin_bottom_1_2em_imp">Renungan Firman Tuhan</h2>
-                                        <div id="myplayer"></div>
+                                        {{-- <div id="myplayer"></div> --}}
+                                        <iframe width="520" height="294" src="https://www.youtube.com/embed/xaQYSvjLPVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div><div class="column-1_2 sc_column_item sc_column_item_2 even">
@@ -383,14 +384,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600?random={{$i+1}}" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-washington-container" data-delay="0"></div>
                                             <div class="esg-center eg-washington-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-washington-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-washington-element-0 esgbox" href="https://picsum.photos/2400/1600?random=2">
                                                     <i class="eg-icon-search"></i>
                                                 </a>
                                             </div>
@@ -416,14 +417,14 @@
                 <!-- END OF THE GRID WRAPPER -->
                 <div class="clear"></div>
                 <!-- /The Essential Grid -->
-                
+
                 <!-- Call To Action -->
                 <div class="hp1_call_to_action_section">
                     <div class="sc_call_to_action sc_call_to_action_style_1 sc_call_to_action_align_left sc_call_to_action_color_style_1 width_100_per">
                         <div class="content_wrap">
                             <div class="columns_wrap">
                                 <div class="sc_call_to_action_featured column-1_2">
-                                    <img alt="" src="http://placehold.it/520x320">
+                                    <img alt="" src="https://picsum.photos/520/320">
                                 </div><div class="sc_call_to_action_info column-1_2">
                                     <h6 class="sc_call_to_action_subtitle sc_item_subtitle">Lyrics, Chords & Translations</h6>
                                     <h2 class="sc_call_to_action_title sc_item_title">Worship Team Resources</h2>
@@ -440,7 +441,7 @@
                 </div>
                 <!-- /Call To Action -->
                 <!-- Donation section -->
-                <div class="hp1_donation_section">
+                <div class="hp1_donation_section" style="background: url(https://picsum.photos/1920/434?blur) no-repeat #fdaa49; background-size: cover;">
                     <div class="content_wrap">
                         <div class="sc_section column-7_10">
                             <div class="sc_section_inner">
@@ -478,7 +479,7 @@
                                                         </span>
                                                         <div class="post_thumb" data-title="Small Group Leader Training">
                                                             <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                                <img alt="Small Group Leader Training" src="http://placehold.it/370x209">
+                                                                <img alt="Small Group Leader Training" src="https://picsum.photos/370/209">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -497,14 +498,14 @@
                                                 </div>
                                             </div>
                                             <!-- /Isotope item -->
-                                            
+
                                         @endforeach
                                     </div>
                                 </div>
                             </div>
                             <div id="sc_blogger_1_scroll_bar" class="sc_scroll_bar sc_scroll_bar_horizontal sc_blogger_1_scroll_bar"></div>
                         </div>
-                        
+
                         <div class="sc_blogger_button sc_item_button">
                             <a href="/blog" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_2 sc_button_size_large">Read more</a>
                         </div>
@@ -512,7 +513,7 @@
                 </div>
                 <!-- /Blogger section -->
                 <!-- Testimonials section -->
-                <div class="hp1_testimonials_section">
+                <div class="hp1_testimonials_section" style="background: url(https://picsum.photos/1920/434?grayscale); background-position: center; background-repeat: no-repeat; background-size: cover;">
                     <div class="content_wrap">
                         <div class="sc_testimonials sc_testimonials_style_testimonials-1 sc_slider_swiper swiper-slider-container sc_slider_pagination sc_slider_pagination_bottom sc_slider_nocontrols width_100_per" data-interval="6305" data-slides-min-width="250">
                             <div class="slides swiper-wrapper">
@@ -523,7 +524,7 @@
                                             <p>I have two great passions: one is to build the Church of Jesus Christ and the other is to lift the lives of people and help them fulfil their potential in life</p>
                                         </div>
                                         <div class="sc_testimonial_avatar">
-                                            <img alt="Community" src="http://placehold.it/56x56">
+                                            <img alt="Community" src="https://picsum.photos/56/56">
                                         </div>
                                         <div class="sc_testimonial_author">
                                             <span class="sc_testimonial_author_name">Hovard Gray</span>
@@ -539,7 +540,7 @@
                                             <p>I have been going to this church my whole life and it is such a blessing to me! I am so blessed to be able to attend Grace and be a part of the amazing things that God is doing.</p>
                                         </div>
                                         <div class="sc_testimonial_avatar">
-                                            <img alt="Thank you" src="http://placehold.it/56x56">
+                                            <img alt="Thank you" src="https://picsum.photos/56/56">
                                         </div>
                                         <div class="sc_testimonial_author">
                                             <span class="sc_testimonial_author_name">Herbert Wright</span>
@@ -555,7 +556,7 @@
                                             <p>Me and my partners have found our relationship with this team to be a very satisfying and mutually beneficial experience.</p>
                                         </div>
                                         <div class="sc_testimonial_avatar">
-                                            <img alt="I like your themes" src="http://placehold.it/56x56">
+                                            <img alt="I like your themes" src="https://picsum.photos/56/56">
                                         </div>
                                         <div class="sc_testimonial_author">
                                             <span class="sc_testimonial_author_name">Elmer Black</span>

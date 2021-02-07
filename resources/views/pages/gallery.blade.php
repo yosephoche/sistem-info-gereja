@@ -69,14 +69,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1220" alt="">
+                                            <img src="https://picsum.photos/2400/1220" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1220">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1220">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -93,14 +93,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -117,14 +117,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -141,14 +141,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -165,14 +165,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -189,14 +189,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x2200" alt="">
+                                            <img src="https://picsum.photos/2400/2200" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x2200">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/2200">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -213,14 +213,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -237,14 +237,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -261,14 +261,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x2040" alt="">
+                                            <img src="https://picsum.photos/2400/2040" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x2040">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/2040">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -285,14 +285,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -309,14 +309,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
@@ -333,14 +333,14 @@
                                     <div class="esg-media-cover-wrapper">
                                         <!-- THE MEDIA OF THE ENTRY -->
                                         <div class="esg-entry-media">
-                                            <img src="http://placehold.it/2400x1600" alt="">
+                                            <img src="https://picsum.photos/2400/1600" alt="">
                                         </div>
                                         <!-- THE CONTENT OF THE ENTRY -->
                                         <div class="esg-entry-cover esg-fade" data-delay="0">
                                             <!-- THE COLORED OVERLAY -->
                                             <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
                                             <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="http://placehold.it/2400x1600">
+                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
                                                     <i class="eg-icon-plus"></i>
                                                 </a>
                                             </div>
