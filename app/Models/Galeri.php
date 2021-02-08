@@ -14,6 +14,8 @@ class Galeri extends Model
     const ORGANISASI = "ORGANISASI";
     const OTHER = "OTHER";
 
+    protected $table = 'galeri';
+
     protected $fillable = [
         'file_name', 'path', 'category', 'caption'
     ];
