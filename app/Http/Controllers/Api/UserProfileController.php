@@ -103,7 +103,7 @@ class UserProfileController extends Controller
         if ($profile->save() && $user->save()) {
             return response()->json([
                 'message' => 'Update Success',
-                'user'=>$user
+                'user' => $user
             ], 200);
         } else {
             return response()->json(['message' => 'Update Fail'], 400);

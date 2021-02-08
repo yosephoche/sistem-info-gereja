@@ -24,6 +24,14 @@ class UserProfile extends Model
         'photo'
     ];
 
+    protected $appends = array('photo_url');
+
+    public function getPhotoUrlAttribute()
+    {
+        $file_name = $this->attributes['photo'];
+        return asset("storage/user/".$file_name);
+    }
+
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'user_id', 'id');
