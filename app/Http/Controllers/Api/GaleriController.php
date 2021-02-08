@@ -24,8 +24,9 @@ class GaleriController extends Controller
             $path = 'galeri/' + $request->category;
             $request->image->store($path, 'public');
             $attributes['image'] = $request->image->hashName();
+            $attributes['file_name'] = $request->image->hashName();
         }
-        
+
         $galeri->fill($attributes);
         $galeri->save();
     }
@@ -37,6 +38,7 @@ class GaleriController extends Controller
             $path = 'galeri/' + $request->category;
             $request->image->store($path, 'public');
             $attributes['image'] = $request->image->hashName();
+            $attributes['file_name'] = $request->image->hashName();
         }
 
         $galeri->fill($attributes);
