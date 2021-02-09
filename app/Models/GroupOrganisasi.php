@@ -10,6 +10,6 @@ class GroupOrganisasi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'short_name'
+        'name', 'short_name', 'visi', 'misi', 'sejarah'
     ];
 }
