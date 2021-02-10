@@ -11,6 +11,11 @@ use App\Models\UserRole;
 class UserRoleController extends Controller
 {
     use DisableAuthorization;
-    
+
     protected $model = UserRole::class;
+
+    protected function alwaysIncludes() : array
+    {
+        return ['user', 'role'];
+    }
 }
