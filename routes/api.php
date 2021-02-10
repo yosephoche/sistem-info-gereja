@@ -37,6 +37,7 @@ use App\Http\Controllers\Api\SettingController;
 use App\Http\Controllers\Api\GaleriController;
 use App\Http\Controllers\Api\GroupOrganisasiController;
 use App\Http\Controllers\Api\DashboardController;
+use App\Http\Controllers\Api\RoleGroupController;
 
 
 use App\Models\User;
@@ -90,6 +91,7 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     Orion::resource('oig-klasis', OrganisasiKlasisController::class);
     Orion::resource('pengurus-oig-klasis', PengurusOrganisasiKlasisController::class);
 
+    Orion::resource('role-group', RoleGroupController::class);
     Orion::resource('role', RoleController::class);
     Orion::resource('user-role', UserRoleController::class);
     Orion::resource('pendeta', PendetaController::class);
