@@ -16,6 +16,6 @@ class UserRoleController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['user', 'role'];
+        return ['user', 'role', 'group'];
     }
 }

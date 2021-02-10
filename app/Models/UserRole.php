@@ -27,4 +27,9 @@ class UserRole extends Model
     {
         return $this->hasOne('App\Models\Role', 'id', 'role_id');
     }
+
+    public function group()
+    {
+        return $this->hasOne('App\Models\RoleGroup', 'id', 'group_id');
+    }
 }
