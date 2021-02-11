@@ -20,10 +20,9 @@ class GaleriController extends Controller
     public function performStore(Request $request, Model $galeri, array $attributes): void
     {
         if ($request->hasFile('image')) {
-            $extension = $request->image->extension();
-            $path = 'galeri/' + $request->category;
+            $path = 'galeri/'.$request->category;
             $request->image->store($path, 'public');
-            $attributes['image'] = $request->image->hashName();
+            $attributes['path'] = $path;
             $attributes['file_name'] = $request->image->hashName();
         }
 
@@ -34,10 +33,9 @@ class GaleriController extends Controller
     public function performUpdate(Request $request, Model $galeri, array $attributes): void
     {
         if ($request->hasFile('image')) {
-            $extension = $request->image->extension();
-            $path = 'galeri/' + $request->category;
+            $path = 'galeri/'.$request->category;
             $request->image->store($path, 'public');
-            $attributes['image'] = $request->image->hashName();
+            $attributes['path'] = $path;
             $attributes['file_name'] = $request->image->hashName();
         }
 
