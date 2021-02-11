@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
 use App\Models\UserProfile;
+use App\Models\UserRole;
 use Auth;
 
 class UserProfileController extends Controller
@@ -55,23 +56,55 @@ class UserProfileController extends Controller
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
 
+        $user = Auth::user();
+
+        $userRole = UserRole::where('user_id', $user->id)->first();
+        $group = $userRole->group_id;
+
         if ($request->exists('sortBy')) {
             $queryString = Str::of($request->sortBy)->explode('|');
 
             $query->orderBy($queryString[0], $queryString[1]);
         };
 
-        if ($request->exists('wilayah')) {
-            $query->where('wilayah_id', $request->wilayah);
-        };
+        // role : 2 => admin, 3 => Pengurus OIG, 4 => Koordinator
+        // group : 1 => Wilayah, 2 => Klasis, 3 => Jemaat
 
-        if ($request->exists('klasis')) {
-            $query->where('klasis_id', $request->klasis);
-        };
+        if ($userRole->role_id == 1) {
+            if ($request->exists('wilayah')) {
+                $query->where('wilayah_id', $request->wilayah);
+            };
 
-        if ($request->exists('jemaat')) {
-            $query->where('jemaat_id', $request->jemaat);
-        };
+            if ($request->exists('klasis')) {
+                $query->where('klasis_id', $request->klasis);
+            };
+
+            if ($request->exists('jemaat')) {
+                $query->where('jemaat_id', $request->jemaat);
+            };
+        } else {
+            $query->when($group == 1, function($query) use ($user, $request) {
+                $query->where('wilayah_id', '=', $user->profile->wilayah_id);
+                if ($request->exists('klasis')) {
+                    $query->where('klasis_id', $user->profile->klasis);
+                };
+
+                if ($request->exists('jemaat')) {
+                    $query->where('jemaat_id', $user->profile->jemaat_id);
+                };
+            });
+
+            $query->when($group == 2, function($query) use ($user, $request){
+                $query->where('klasis_id', $user->klasis_id);
+                if ($request->exists('jemaat')) {
+                    $query->where('jemaat_id', $user->profile->jemaat_id);
+                };
+            });
+
+            $query->when($group == 3, function($query) use ($user){
+                $query->where('jemaat_id', $user->profile->jemaat_id);
+            });
+        }
 
         return $query;
     }
