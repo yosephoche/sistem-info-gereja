@@ -17,7 +17,7 @@ class OrganisasiKlasis extends Model
 
     public function pengurus()
     {
-        return $this->hasOne('App\Models\PengurusOrganisasiKlasis', 'organisasi_klasis_id', 'id');
+        return $this->hasMany('App\Models\PengurusOrganisasiKlasis', 'organisasi_klasis_id', 'id');
     }
 
     public function group()
