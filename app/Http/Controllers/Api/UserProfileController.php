@@ -59,7 +59,6 @@ class UserProfileController extends Controller
         $user = Auth::user();
 
         $userRole = UserRole::where('user_id', $user->id)->first();
-        $group = $userRole->group_id;
 
         if ($request->exists('sortBy')) {
             $queryString = Str::of($request->sortBy)->explode('|');
@@ -83,6 +82,7 @@ class UserProfileController extends Controller
                 $query->where('jemaat_id', $request->jemaat);
             };
         } else {
+            $group = $userRole->group_id;
             $query->when($group == 1, function($query) use ($user, $request) {
                 $query->where('wilayah_id', '=', $user->profile->wilayah_id);
                 if ($request->exists('klasis')) {
