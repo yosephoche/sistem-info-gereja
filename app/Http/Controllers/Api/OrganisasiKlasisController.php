@@ -11,11 +11,11 @@ use App\Models\OrganisasiKlasis;
 class OrganisasiKlasisController extends Controller
 {
     use DisableAuthorization;
-    
+
     protected $model = OrganisasiKlasis::class;
 
     protected function alwaysIncludes() : array
     {
-        return ['pengurus'];
+        return ['pengurus', 'pengurus.user', 'pengurus.user.profile'];
     }
 }
