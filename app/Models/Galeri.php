@@ -24,8 +24,7 @@ class Galeri extends Model
 
     public function getFullPathAttribute()
     {
-        $file_name = $this->attributes['file_name'];
         $path = $this->attributes['path'];
-        return asset($path);
+        return asset('storage/'.$path);
     }
 }

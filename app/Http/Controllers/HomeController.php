@@ -8,6 +8,7 @@ use App\Models\About;
 use App\Models\Event;
 use App\Models\Artikel;
 use App\Models\GroupOrganisasi;
+use App\Models\Galeri;
 
 class HomeController extends Controller
 {
@@ -44,6 +45,7 @@ class HomeController extends Controller
 
     public function gallery(Request $request)
     {
-        return view('pages.gallery');
+        $galeries = Galeri::all();
+        return view('pages.gallery', compact('galeries'));
     }
 }

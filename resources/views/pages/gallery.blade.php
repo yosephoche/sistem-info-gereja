@@ -31,26 +31,26 @@
                                     <div class="esg-filterbutton selected esg-allfilter" data-filter="filterall" data-fid="-1">
                                         <span>All</span>
                                     </div>
-                                    <div class="esg-filterbutton" data-fid="123" data-filter="filter-conferences">
-                                        <span>conferences</span>
+                                    <div class="esg-filterbutton" data-fid="123" data-filter="filter-{{GaleriModel::EVENT}}">
+                                        <span>{{GaleriModel::EVENT}}</span>
                                         <span class="esg-filter-checked">
                                             <i class="eg-icon-ok-1"></i>
                                         </span>
                                     </div>
-                                    <div class="esg-filterbutton" data-fid="121" data-filter="filter-events">
-                                        <span>events</span>
+                                    <div class="esg-filterbutton" data-fid="121" data-filter="filter-{{GaleriModel::IBADAH}}">
+                                        <span>{{GaleriModel::IBADAH}}</span>
                                         <span class="esg-filter-checked">
                                             <i class="eg-icon-ok-1"></i>
                                         </span>
                                     </div>
-                                    <div class="esg-filterbutton" data-fid="124" data-filter="filter-sermons">
-                                        <span>sermons</span>
+                                    <div class="esg-filterbutton" data-fid="124" data-filter="filter-{{GaleriModel::ORGANISASI}}">
+                                        <span>{{GaleriModel::ORGANISASI}}</span>
                                         <span class="esg-filter-checked">
                                             <i class="eg-icon-ok-1"></i>
                                         </span>
                                     </div>
-                                    <div class="esg-filterbutton" data-fid="122" data-filter="filter-worship">
-                                        <span>worship</span>
+                                    <div class="esg-filterbutton" data-fid="122" data-filter="filter-{{GaleriModel::OTHER}}">
+                                        <span>{{GaleriModel::OTHER}}</span>
                                         <span class="esg-filter-checked">
                                             <i class="eg-icon-ok-1"></i>
                                             </span>
@@ -63,295 +63,32 @@
                             <!-- THE GRID ITSELF WITH ENTRIES -->
                             <!-- ############################ -->
                             <ul>
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-events filter-worship eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1220" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1220">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
+                                @foreach ($galeries as $image)
+                                    <!-- PORTFOLIO ITEM -->
+                                    <li class="filterall filter-gallery filter-events filter-{{$image->category}} eg-gallery-wrapper">
+                                        <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
+                                        <div class="esg-media-cover-wrapper">
+                                            <!-- THE MEDIA OF THE ENTRY -->
+                                            <div class="esg-entry-media">
+                                                <img src="{{$image->full_path}}" alt="" width="2400" height="1220">
                                             </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-conferences eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
+                                            <!-- THE CONTENT OF THE ENTRY -->
+                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                <!-- THE COLORED OVERLAY -->
+                                                <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
+                                                <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
+                                                    <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1220">
+                                                        <i class="eg-icon-plus"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
                                             </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
+                                            <!-- END OF THE CONTENT IN THE ENTRY -->
                                         </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-events filter-sermons eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-worship eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-conferences filter-sermons eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-events eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/2200" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/2200">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-sermons eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-worship eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-conferences filter-events eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/2040" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/2040">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-worship eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-events eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
-                                <!-- PORTFOLIO ITEM -->
-                                <li class="filterall filter-gallery filter-conferences eg-gallery-wrapper">
-                                    <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
-                                    <div class="esg-media-cover-wrapper">
-                                        <!-- THE MEDIA OF THE ENTRY -->
-                                        <div class="esg-entry-media">
-                                            <img src="https://picsum.photos/2400/1600" alt="">
-                                        </div>
-                                        <!-- THE CONTENT OF THE ENTRY -->
-                                        <div class="esg-entry-cover esg-fade" data-delay="0">
-                                            <!-- THE COLORED OVERLAY -->
-                                            <div class="esg-overlay esg-fade eg-gallery-container" data-delay="0"></div>
-                                            <div class="esg-center eg-gallery-element-0-a esg-falldown" data-delay="0.1">
-                                                <a class="eg-gallery-element-0 esgbox" href="https://picsum.photos/2400/1600">
-                                                    <i class="eg-icon-plus"></i>
-                                                </a>
-                                            </div>
-                                            <div class="esg-center eg-gallery-element-8 esg-none esg-clear"></div>
-                                        </div>
-                                        <!-- END OF THE CONTENT IN THE ENTRY -->
-                                    </div>
-                                    <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
-
-                                </li>
-                                <!-- END OF PORTFOLIO ITEM -->
+                                        <!-- END OF THE CONTAINER FOR THE MEDIA AND COVER/HOVER EFFECTS -->
+                                    </li>
+                                    <!-- END OF PORTFOLIO ITEM -->
+                                @endforeach
                             </ul>
                             <!-- ############################ -->
                             <!--      END OF THE GRID         -->
