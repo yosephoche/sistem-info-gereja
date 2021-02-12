@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -22,7 +22,8 @@ class GaleriController extends Controller
         if ($request->hasFile('image')) {
             $path = 'galeri/'.$request->category;
             $request->image->store($path, 'public');
-            $attributes['path'] = $path;
+            $fullPathUrl = $path.'/'.$request->image->hashName();
+            $attributes['path'] = url('/').Storage::url($fullPathUrl);
             $attributes['file_name'] = $request->image->hashName();
         }
 
@@ -35,7 +36,8 @@ class GaleriController extends Controller
         if ($request->hasFile('image')) {
             $path = 'galeri/'.$request->category;
             $request->image->store($path, 'public');
-            $attributes['path'] = $path;
+            $fullPathUrl = $path.'/'.$request->image->hashName();
+            $attributes['path'] = url('/').Storage::url($fullPathUrl);
             $attributes['file_name'] = $request->image->hashName();
         }
 
