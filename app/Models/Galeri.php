@@ -19,4 +19,13 @@ class Galeri extends Model
     protected $fillable = [
         'file_name', 'path', 'category', 'caption'
     ];
+
+    protected $appends = array('full_path');
+
+    public function getFullPathAttribute()
+    {
+        $file_name = $this->attributes['file_name'];
+        $path = $this->attributes['path'];
+        return asset($path);
+    }
 }

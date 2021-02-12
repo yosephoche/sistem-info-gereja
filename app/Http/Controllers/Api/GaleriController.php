@@ -23,7 +23,7 @@ class GaleriController extends Controller
             $path = 'galeri/'.$request->category;
             $request->image->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->image->hashName();
-            $attributes['path'] = url('/').Storage::url($fullPathUrl);
+            $attributes['path'] = $fullPathUrl;
             $attributes['file_name'] = $request->image->hashName();
         }
 
@@ -37,7 +37,7 @@ class GaleriController extends Controller
             $path = 'galeri/'.$request->category;
             $request->image->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->image->hashName();
-            $attributes['path'] = url('/').Storage::url($fullPathUrl);
+            $attributes['path'] = $fullPathUrl;
             $attributes['file_name'] = $request->image->hashName();
         }
 
