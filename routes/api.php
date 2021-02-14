@@ -58,16 +58,7 @@ use App\Models\User;
 Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     Orion::resource('user', UserController::class)->withSoftDeletes();
 
-    Route::get('auth/user', function () {
-        $user = User::with('profile')
-            ->where('id', Auth::user()->id)
-            ->first();
-
-        return response()->json([
-            'message' => 'SUCCESS',
-            'user' => $user
-        ], 200);
-    });
+    Route::get('auth/user', [AuthController::class, 'user']);
 
     Orion::resource('profile', UserProfileController::class)->withSoftDeletes();
     Route::post('edit-profile', [UserProfileController::class, 'update_login_info']);
