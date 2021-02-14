@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class RoleGroup extends Model
 {
     use HasFactory;
+
+    const WILAYAH = 'Wilayah';
+    const KLASIS = 'Klasis';
+    const JEMAAT = 'Jemaat';
 }

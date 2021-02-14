@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 
 use Auth;
 use Config;
+use DB;
 
 use App\Models\UserProfile;
+use App\Models\Role;
+use App\Models\UserRole;
+use App\Models\RoleGroup;
 
 class DashboardController extends Controller
 {
@@ -21,21 +25,33 @@ class DashboardController extends Controller
     {
         $data = [];
         $user = Auth::user();
-        $user_role = $user->user_role();
-        $role = $user_role->first()->role;
 
-        // dd(Config::get('constants.role.SUPERADMIN'));
-
-        $data = $this->get_dashboard_data($role->name);
+        $data = $this->_dashboard_data($user);
 
         return response()->json($data, 200);
     }
 
-    public function get_dashboard_data(String $role = null)
+    public function _dashboard_data($user)
     {
-        switch ($role) {
-            case Config::get('constants.role.SUPERADMIN'):
+        $user_role = $user->user_role();
+        $role = $user_role->first()->role;
+        $group = $user_role->first()->group;
+
+        switch ($role->name) {
+            case Role::SUPERADMIN:
                 return $this->superadmin_data();
+                break;
+
+            case Role::ADMIN:
+                return $this->_dashboard($user->profile->wilayah_id, $group->name);
+                break;
+
+            case Role::PENGURUS_OIG:
+                return $this->_oig($user->profile->jemaat_id);
+                break;
+
+            case Role::PENGURUS_OIG_KLASIS:
+                return $this->_oig_klasis($user->profile->klasis_id);
                 break;
 
             default:
@@ -46,77 +62,60 @@ class DashboardController extends Controller
     public function superadmin_data()
     {
         $data = [];
+        $user = UserProfile::with('pekerjaan')->whereHas('pekerjaan')->get();
         $data['jemaat'] = UserProfile::all()->count();
         $data['pria'] = UserProfile::where('jenis_kelamin', 'Pria')->count();
         $data['wanita'] = UserProfile::where('jenis_kelamin', 'Wanita')->count();
-        // $data['pekerjaan'] = UserProfile::all()->count();
+
+        $data['pekerjaan'] = $user->groupBy('pekerjaan.name')->map(function ($pekerjaan) {
+            return $pekerjaan->count();
+        });
 
         return $data;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function _dashboard(int $id_wilayah, $group)
     {
-        //
+        // - Jumlah Jemaat/User
+        // - Jumlah Laki
+        // - Jumlah perempuan
+        // - Jumlah jemaat by pekerjaan
+        // - Jumlah anggota organisasi
+
+        $user = UserProfile::with('pekerjaan')->whereHas('pekerjaan');
+        switch ($group) {
+            case RoleGroup::WILAYAH:
+                $user = $user->where('wilayah_id', $id_wilayah)->get();
+                break;
+
+            case RoleGroup::KLASIS:
+                $user = $user->where('klasis_id', $id_wilayah)->get();
+                break;
+
+            case RoleGroup::JEMAAT:
+                $user = $user->where('jemaat_id', $id_wilayah)->get();
+                break;
+
+            default:
+                break;
+        }
+
+        $total = $user->count();
+        $total_pria = $user->where('jenis_kelamin', 'Pria')->count();
+        $total_wanita = $user->where('jenis_kelamin', 'Wanita')->count();
+
+        $total_user_by_pekerjaan = $user->groupBy('pekerjaan.name')->map(function ($pekerjaan) {
+            return $pekerjaan->count();
+        });
+
+        $data = [];
+        $data['jemaat'] = $total;
+        $data['pria'] = $total_pria;
+        $data['wanita'] = $total_wanita;
+        $data['pekerjaan'] = $total_user_by_pekerjaan;
+
+        return $data;
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

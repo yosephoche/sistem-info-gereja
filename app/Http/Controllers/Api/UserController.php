@@ -15,6 +15,8 @@ use App\Models\User;
 use App\Models\UserProfile;
 use App\Models\Jemaat;
 
+use Config;
+
 class UserController extends Controller
 {
     use DisableAuthorization;
@@ -54,7 +56,7 @@ class UserController extends Controller
 
     public function performStore(Request $request, Model $user, array $attributes): void
     {
-        $attributes['password'] = Hash::make($request->password);
+        $attributes['password'] = Hash::make(Config::get('constants.default.PASSWORD'));
         $user->fill($attributes);
         $user->save();
 

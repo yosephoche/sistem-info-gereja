@@ -21,7 +21,8 @@ class UserProfile extends Model
         'jemaat_id',
         'klasis_id',
         'wilayah_id',
-        'photo'
+        'photo',
+        'pekerjaan_id'
     ];
 
     protected $appends = array('photo_url');
@@ -41,5 +42,15 @@ class UserProfile extends Model
     {
         return $this->belongsTo('App\Models\Jemaat', 'jemaat_id', 'id');
     }
+
+   /**
+    * Get the user associated with the UserProfile
+    *
+    * @return \Illuminate\Database\Eloquent\Relations\HasOne
+    */
+   public function pekerjaan()
+   {
+       return $this->hasOne('App\Models\Pekerjaan', 'id', 'pekerjaan_id');
+   }
 
 }
