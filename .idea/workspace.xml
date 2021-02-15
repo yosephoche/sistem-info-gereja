@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/BeritaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/BeritaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/JemaatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/JemaatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KlasisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KlasisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiKlasisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiKlasisController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,9 +145,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -160,6 +168,12 @@
       <updated>1612987032175</updated>
       <workItem from="1612987034761" duration="764000" />
       <workItem from="1612987823297" duration="98000" />
+      <workItem from="1613372396398" duration="391000" />
+      <workItem from="1613372803508" duration="291000" />
+      <workItem from="1613376309658" duration="151000" />
+      <workItem from="1613376475553" duration="178000" />
+      <workItem from="1613376699929" duration="210000" />
+      <workItem from="1613376926550" duration="1459000" />
     </task>
     <servers />
   </component>
@@ -167,13 +181,27 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1612987781731">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613377331335">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613377331335" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613376086444">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1613376086444" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613378221545">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613378221545" />
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1613376776882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1612987781731" />
-    <state x="477" y="60" width="922" height="709" key="SettingsEditor" timestamp="1612987915772">
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613376776882" />
+    <state x="216" y="93" width="922" height="707" key="SettingsEditor" timestamp="1613376893126">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="60" width="922" height="709" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1612987915772" />
+    <state x="477" y="60" width="922" height="709" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1613372791404" />
+    <state x="216" y="93" width="922" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613376893126" />
   </component>
 </project>

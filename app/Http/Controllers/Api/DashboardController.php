@@ -5,13 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use Auth;
-use Config;
-use DB;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\UserProfile;
 use App\Models\Role;
-use App\Models\UserRole;
 use App\Models\RoleGroup;
 
 class DashboardController extends Controller
@@ -19,7 +16,7 @@ class DashboardController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
@@ -116,6 +113,14 @@ class DashboardController extends Controller
 
         return $data;
 
+    }
+
+    private function _oig($jemaat_id)
+    {
+    }
+
+    private function _oig_klasis($klasis_id)
+    {
     }
 
 }
