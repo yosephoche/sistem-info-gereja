@@ -25,8 +25,8 @@ class AnggotaKeluargaFactory extends Factory
     public function definition()
     {
         return [
-            'user_profile_id' => UserProfile::factory()->create()->id,
-            'keluarga_id' => Keluarga::factory()->create()->id,
+            'user_profile_id' => UserProfile::inRandomOrder()->first()->id,
+            'keluarga_id' => Keluarga::inRandomOrder()->first()->id,
         ];
     }
 }

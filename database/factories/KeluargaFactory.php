@@ -22,7 +22,7 @@ class KeluargaFactory extends Factory
     public function definition()
     {
         return [
-            'nama_keluarga' => $this->faker->name,
+            'nama_keluarga' => "Kel. ".$this->faker->name,
         ];
     }
 }

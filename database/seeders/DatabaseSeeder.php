@@ -31,12 +31,12 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
-            UserSeeder::class,
-            UserProfileSeeder::class,
-            PekerjaanSeeder::class,
             WilayahSeeder::class,
             KlasisSeeder::class,
             JemaatSeeder::class,
+            PekerjaanSeeder::class,
+            UserSeeder::class,
+            UserProfileSeeder::class,
             MajelisSeeder::class,
             KeluargaSeeder::class,
             AnggotaKeluargaSeeder::class,
@@ -45,7 +45,11 @@ class DatabaseSeeder extends Seeder
             OrganisasiWilayahSeeder::class,
             PengurusOrganisasiWilayahSeeder::class,
             RoleSeeder::class,
-            RoleGroupSeeder::class
+            RoleGroupSeeder::class,
+            ArtikelSeeder::class,
+            BeritaSeeder::class,
+            AboutSeeder::class,
+            SettingSeeder::class
         ]);
     }
 }

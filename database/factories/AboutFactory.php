@@ -22,7 +22,9 @@ class AboutFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'description' => $this->faker->realText(),
+            'visi' => $this->faker->text(300),
+            'misi' => $this->faker->text(500)
         ];
     }
 }

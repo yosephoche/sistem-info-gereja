@@ -22,7 +22,7 @@ class WilayahFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'name' => "Wilayah-".$this->faker->numberBetween(1, 100),
         ];
     }
 }

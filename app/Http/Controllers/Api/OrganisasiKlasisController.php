@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\UserRole;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 use Orion\Http\Controllers\Controller;
@@ -24,6 +25,12 @@ class OrganisasiKlasisController extends Controller
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
+
+        $user = Auth::user();
+
+        $userRole = UserRole::where('user_id', $user->id)->first();
+
+        if ($userRole->role_id == 1) return $query;
 
         $query->where('klasis_id', Auth::user()->profile->klasis_id);
 

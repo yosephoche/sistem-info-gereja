@@ -43,6 +43,16 @@ class UserProfile extends Model
         return $this->belongsTo('App\Models\Jemaat', 'jemaat_id', 'id');
     }
 
+    public function wilayah()
+    {
+        return $this->belongsTo('App\Models\Wilayah', 'wilayah_id', 'id');
+    }
+
+    public function klasis()
+    {
+        return $this->belongsTo('App\Models\Klasis', 'klasis_id', 'id');
+    }
+
    /**
     * Get the user associated with the UserProfile
     *

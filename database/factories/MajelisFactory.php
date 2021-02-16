@@ -25,6 +25,7 @@ class MajelisFactory extends Factory
     {
         return [
             'user_profile_id' => UserProfile::factory()->create()->id,
+            'periode' => $this->faker->year('now')
         ];
     }
 }

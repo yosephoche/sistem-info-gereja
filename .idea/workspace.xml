@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="" />
+    <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/JemaatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/JemaatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KlasisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KlasisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiKlasisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiKlasisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AboutFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AboutFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AnggotaKeluargaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AnggotaKeluargaFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/BeritaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BeritaFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/JemaatFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/JemaatFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/KeluargaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/KeluargaFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/KlasisFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/KlasisFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/MajelisFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MajelisFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/OrganisasiFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrganisasiFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/OrganisasiKlasisFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrganisasiKlasisFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PekerjaanFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PekerjaanFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/SettingFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/SettingFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserProfileFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserProfileFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/WilayahFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/WilayahFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/AboutSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AboutSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ArtikelSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ArtikelSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/BeritaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/BeritaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SettingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SettingSeeder.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +169,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -165,35 +193,12 @@
       <workItem from="1613376309658" duration="151000" />
       <workItem from="1613376475553" duration="178000" />
       <workItem from="1613376699929" duration="210000" />
-      <workItem from="1613376926550" duration="1820000" />
+      <workItem from="1613376926550" duration="4900000" />
+      <workItem from="1613464494233" duration="6012000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613377331335">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613377331335" />
-    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613376086444">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1613376086444" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613378434578">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613378434578" />
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1613376776882">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1612987781731" />
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613376776882" />
-    <state x="216" y="93" width="922" height="707" key="SettingsEditor" timestamp="1613376893126">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="60" width="922" height="709" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1613372791404" />
-    <state x="216" y="93" width="922" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613376893126" />
   </component>
 </project>

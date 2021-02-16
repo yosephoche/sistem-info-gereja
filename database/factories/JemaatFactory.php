@@ -23,7 +23,7 @@ class JemaatFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'name' => "Jemaat-".$this->faker->name,
             'klasis_id' => Klasis::factory()->create()->id,
         ];
     }

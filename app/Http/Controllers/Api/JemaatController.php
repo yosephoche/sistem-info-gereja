@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\UserRole;
 use Illuminate\Support\Facades\Auth;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
@@ -41,14 +42,20 @@ class JemaatController extends Controller
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
+        $user = Auth::user();
+        $userRole = UserRole::where('user_id', $user->id)->first();
 
-        $query->where('klasis_id', Auth::user()->profile->klasis_id);
+        if ($userRole->role_id == 1) {
+            return $query;
+        } else {
+            $query->where('klasis_id', Auth::user()->profile->klasis_id);
 
-        if ($request->exists('sortBy')) {
-            $queryString = Str::of($request->sortBy)->explode('|');
+            if ($request->exists('sortBy')) {
+                $queryString = Str::of($request->sortBy)->explode('|');
 
-            $query->orderBy($queryString[0], $queryString[1]);
-        };
+                $query->orderBy($queryString[0], $queryString[1]);
+            };
+        }
 
         return $query;
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\UserRole;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +24,28 @@ class DashboardController extends Controller
         $data = [];
         $user = Auth::user();
 
-        $data = $this->_dashboard_data($user);
+        $userRole = UserRole::where('user_id', $user->id)->first();
+        $user_profile = $userRole->role;
+
+        if ($userRole->role_id != 1) {
+            $group = $userRole->group_id;
+            switch ($group) {
+                case 1:
+                    $user_profile = $user->profile->wilayah;
+                    break;
+                case 2:
+                    $user_profile = $user->profile->klasis;
+                    break;
+                case 3:
+                    $user_profile = $user->profile->jemaat_id;
+                    break;
+            }
+        }
+
+        $data = [
+            "data" => $this->_dashboard_data($user),
+            "user" => $user_profile->name
+        ];
 
         return response()->json($data, 200);
     }

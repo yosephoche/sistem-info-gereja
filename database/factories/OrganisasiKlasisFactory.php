@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Klasis;
 use App\Models\OrganisasiKlasis;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,9 +25,9 @@ class OrganisasiKlasisFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name, 
-            'klasis_id'=> Wilayah::inRandomOrder()->first()->id, 
-            'description' => $this->faker->paragraphs($nb = 3, $asText = true), 
+            'name' => $this->faker->name,
+            'klasis_id'=> Klasis::inRandomOrder()->first()->id,
+            'description' => $this->faker->paragraphs($nb = 3, $asText = true),
             'status' => $this->faker->boolean
         ];
     }

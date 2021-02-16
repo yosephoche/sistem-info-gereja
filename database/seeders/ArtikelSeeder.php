@@ -15,6 +15,6 @@ class ArtikelSeeder extends Seeder
      */
     public function run()
     {
-        Artikel::factory()->times(5)->create();
+        Artikel::factory()->times(10)->create();
     }
 }

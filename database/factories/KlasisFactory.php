@@ -24,7 +24,7 @@ class KlasisFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'name' => "Klasis-".$this->faker->name,
             'wilayah_id' => Wilayah::factory()->create()->id,
         ];
     }

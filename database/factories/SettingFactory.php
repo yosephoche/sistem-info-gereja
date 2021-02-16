@@ -22,7 +22,8 @@ class SettingFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->title,
+            'address' => $this->faker->address
         ];
     }
 }

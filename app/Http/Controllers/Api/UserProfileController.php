@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Orion\Http\Controllers\Controller;
 use Orion\Http\Controllers\RelationController;
 use Orion\Concerns\DisableAuthorization;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use Orion\Http\Requests\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Str;
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Hash;
 
 use App\Models\UserProfile;
 use App\Models\UserRole;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class UserProfileController extends Controller
 {

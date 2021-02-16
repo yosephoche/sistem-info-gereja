@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\UserRole;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -21,13 +22,22 @@ class KlasisController extends Controller
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
 
-        $query->where('wilayah_id', Auth::user()->profile->wilayah_id);
+        $user = Auth::user();
 
-        if ($request->exists('sortBy')) {
-            $queryString = Str::of($request->sortBy)->explode('|');
+        $userRole = UserRole::where('user_id', $user->id)->first();
 
-            $query->orderBy($queryString[0], $queryString[1]);
-        };
+        if ($userRole->role_id == 1) {
+            return $query;
+        } else {
+            $query->where('wilayah_id', Auth::user()->profile->wilayah_id);
+
+            if ($request->exists('sortBy')) {
+                $queryString = Str::of($request->sortBy)->explode('|');
+
+                $query->orderBy($queryString[0], $queryString[1]);
+            };
+
+        }
 
         return $query;
     }
