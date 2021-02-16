@@ -61,12 +61,6 @@ class UserProfileController extends Controller
 
         $userRole = UserRole::where('user_id', $user->id)->first();
 
-        if ($request->exists('sortBy')) {
-            $queryString = Str::of($request->sortBy)->explode('|');
-
-            $query->orderBy($queryString[0], $queryString[1]);
-        };
-
         // role : 2 => admin, 3 => Pengurus OIG, 4 => Koordinator
         // group : 1 => Wilayah, 2 => Klasis, 3 => Jemaat
 
@@ -106,6 +100,12 @@ class UserProfileController extends Controller
                 $query->where('jemaat_id', $user->profile->jemaat_id);
             });
         }
+
+        if ($request->exists('sortBy')) {
+            $queryString = Str::of($request->sortBy)->explode('|');
+
+            $query->orderBy($queryString[0], $queryString[1]);
+        };
 
         return $query;
     }

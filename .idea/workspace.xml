@@ -3,32 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/JemaatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/JemaatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KlasisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KlasisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiKlasisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrganisasiKlasisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/AboutFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AboutFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/AnggotaKeluargaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AnggotaKeluargaFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/BeritaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BeritaFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/JemaatFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/JemaatFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/KeluargaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/KeluargaFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/KlasisFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/KlasisFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/MajelisFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MajelisFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/OrganisasiFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrganisasiFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/OrganisasiKlasisFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrganisasiKlasisFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/PekerjaanFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PekerjaanFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/SettingFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/SettingFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserProfileFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserProfileFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/WilayahFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/WilayahFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AboutSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AboutSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ArtikelSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ArtikelSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/BeritaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/BeritaSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SettingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SettingSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +15,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -194,7 +176,7 @@
       <workItem from="1613376475553" duration="178000" />
       <workItem from="1613376699929" duration="210000" />
       <workItem from="1613376926550" duration="4900000" />
-      <workItem from="1613464494233" duration="6012000" />
+      <workItem from="1613464494233" duration="8360000" />
     </task>
     <servers />
   </component>
