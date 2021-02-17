@@ -17,7 +17,7 @@ class AnggotaKeluarga extends Model
 
     public function keluarga()
     {
-        return $this->belongsTo('App\Models\Keluarga', 'keluarga_id', 'id');
+        return $this->hasOne('App\Models\Keluarga', 'id', 'keluarga_id');
     }
 
     public function profile()

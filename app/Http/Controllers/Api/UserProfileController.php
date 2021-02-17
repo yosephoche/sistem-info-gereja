@@ -26,11 +26,9 @@ class UserProfileController extends Controller
      */
     protected $model = UserProfile::class;
 
-    protected $relation = 'user';
-
     protected function alwaysIncludes() : array
     {
-        return ['user', 'jemaat', 'user.user_role', 'user.artikel'];
+        return ['user', 'jemaat', 'user.user_role', 'pekerjaan', 'anggota_keluarga'];
     }
 
     protected function filterableBy() : array

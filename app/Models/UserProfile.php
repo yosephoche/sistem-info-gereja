@@ -63,4 +63,10 @@ class UserProfile extends Model
        return $this->hasOne('App\Models\Pekerjaan', 'id', 'pekerjaan_id');
    }
 
+   public function anggota_keluarga()
+   {
+       return $this->belongsTo('App\Models\AnggotaKeluarga', 'id', 'user_profile_id');
+   }
+
+
 }
