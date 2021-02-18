@@ -68,7 +68,7 @@ class UserController extends Controller
         $path_surat_baptis = '';
         $path_surat_sidi = '';
 
-        $valid = $request->validate([
+        $request->validate([
             'surat_baptis' => 'mimes:pdf|max:5000'
         ]);
 
