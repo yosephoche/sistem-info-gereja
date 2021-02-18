@@ -22,15 +22,27 @@ class UserProfile extends Model
         'klasis_id',
         'wilayah_id',
         'photo',
-        'pekerjaan_id'
+        'pekerjaan_id',
+        'path_surat_baptis',
+        'path_surat_sidi'
     ];
 
-    protected $appends = array('photo_url');
+    protected $appends = array('photo_url', 'surat_sidi_url', 'surat_baptis_url');
 
-    public function getPhotoUrlAttribute()
+    public function getPhotoUrlAttribute(): string
     {
         $file_name = $this->attributes['photo'];
         return asset("storage/user/".$file_name);
+    }
+
+    public function getSuratSidiUrlAttribute(): string
+    {
+        return asset("storage/".$this->attributes['path_surat_sidi']);
+    }
+
+    public function getSuratBaptisUrlAttribute(): string
+    {
+        return asset("storage/".$this->attributes['path_surat_baptis']);
     }
 
     public function user()
