@@ -61,9 +61,9 @@ class UserController extends Controller
         $path_surat_baptis = '';
         $path_surat_sidi = '';
 
-        $request->validate([
-            'surat_baptis' => 'mimes:pdf|max:5000'
-        ]);
+//        $request->validate([
+//            'surat_baptis' => 'mimes:pdf|max:5000'
+//        ]);
 
         if ($request->hasFile('surat_baptis')) {
             $path = 'dokumen/'.$entity->name;

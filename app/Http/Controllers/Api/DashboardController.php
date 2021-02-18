@@ -24,8 +24,8 @@ class DashboardController extends Controller
         $data = [];
         $user = Auth::user();
 
-        $userRole = UserRole::where('user_id', $user->id)->first();
-        $user_profile = $userRole->role;
+        $userRole = UserRole::with('role')->where('user_id', $user->id)->first();
+        $user_profile = $userRole->role->name;
 
         if ($userRole->role_id != 1) {
             $group = $userRole->group_id;
@@ -44,7 +44,7 @@ class DashboardController extends Controller
 
         $data = [
             "data" => $this->_dashboard_data($user),
-            "user" => $user_profile->name
+            "user" => $user_profile
         ];
 
         return response()->json($data, 200);
