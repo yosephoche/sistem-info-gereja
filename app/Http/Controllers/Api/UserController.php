@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\UserRole;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 
-use Illuminate\Http\Request;
+use Orion\Http\Requests\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
@@ -48,19 +46,14 @@ class UserController extends Controller
         // return list of user that have profile
         $query->whereHas('profile');
 
-        // $query->whereHas('profile.jemaat', function($q) {
-        //     $q->where('id', 2);
-        // });
-
         return $query;
     }
 
-    public function performStore(Request $request, Model $user, array $attributes): void
+    public function performStore(Request $request, Model $entity, array $attributes): void
     {
 
         $attributes['password'] = Hash::make(Config::get('constants.default.PASSWORD'));
-        $user->fill($attributes);
-        $user->save();
+        $entity->fill($attributes);
 
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
@@ -73,23 +66,23 @@ class UserController extends Controller
         ]);
 
         if ($request->hasFile('surat_baptis')) {
-            $path = 'dokumen/'.$user->name;
+            $path = 'dokumen/'.$entity->name;
             $request->surat_baptis->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->surat_baptis->hashName();
             $path_surat_baptis = $fullPathUrl;
         }
 
         if ($request->hasFile('surat_sidi')) {
-            $path = 'dokumen/'.$user->name;
+            $path = 'dokumen/'.$entity->name;
             $request->surat_sidi->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->surat_sidi->hashName();
             $path_surat_sidi = $fullPathUrl;
         }
 
-        if ($user->save()) {
+        if ($entity->save()) {
             $profile = new UserProfile();
-            $profile->user_id = $user->id;
-            $profile->nama = $user->name;
+            $profile->user_id = $entity->id;
+            $profile->nama = $entity->name;
             $profile->jenis_kelamin = $request->jenis_kelamin;
             $profile->alamat = $request->alamat;
             $profile->jemaat_id = $request->jemaat_id;
@@ -107,11 +100,10 @@ class UserController extends Controller
 
     }
 
-    public function performUpdate(Request $request, Model $user, array $attributes): void
+    public function performUpdate(Request $request, Model $entity, array $attributes): void
     {
         $attributes['password'] = Hash::make($request->password);
-        $user->fill($attributes);
-        $user->save();
+        $entity->fill($attributes);
 
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
@@ -119,23 +111,23 @@ class UserController extends Controller
         $path_surat_baptis = '';
         $path_surat_sidi = '';
         if ($request->hasFile('surat_baptis')) {
-            $path = 'dokumen/'.$user->name;
+            $path = 'dokumen/'.$entity->name;
             $request->surat_baptis->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->surat_baptis->hashName();
             $path_surat_baptis = $fullPathUrl;
         }
 
         if ($request->hasFile('surat_sidi')) {
-            $path = 'dokumen/'.$user->name;
+            $path = 'dokumen/'.$entity->name;
             $request->surat_sidi->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->surat_sidi->hashName();
             $path_surat_sidi = $fullPathUrl;
         }
 
-        if ($user->save()) {
+        if ($entity->save()) {
             $profile = new UserProfile();
-            $profile->user_id = $user->id;
-            $profile->nama = $user->name;
+            $profile->user_id = $entity->id;
+            $profile->nama = $entity->name;
             $profile->jenis_kelamin = $request->jenis_kelamin;
             $profile->alamat = $request->alamat;
             $profile->jemaat_id = $request->jemaat_id;
