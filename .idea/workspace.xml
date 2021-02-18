@@ -2,27 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_18_032307_add_column_path_file_to_user_profiles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1a69c9bd88e45f30c48eaf55c165be9a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2b48ab988341fe8576db528dfbc51c9a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/38a3d3efd534ccdb8b55cb59facce9f9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/3b322232ef867d6006feaec391d12ed0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/59f74bd7ecb4ff821ead0657cc7466b7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/65ceadd633a943423c2e608da571b334.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8091c12f8f0bdc941f9c42ee3b687104.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/92919f7dc4a82c0d29d48cc66fae24cb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9b9283ddffb3928c0f7c8b42606f4382.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9b9707d31891efe116bb9fb1710f1d04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9dc28854e8f350d0f5ef35de6fa60599.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b7dcc7d7d3a1c70fe28de26786669528.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c04640811b11a9ece1570f9a0725681d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c0c75366a7f7829e6af53e1fce516026.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cb00ad7183dcf324ea77a96aa138024f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cc9e7bc3e5a5cef0466ff4a2e45c9ce2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e5bd40023ee5b39078cb80ff033770bb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e78a4fd46b9740e5493515b4f0b5cd83.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/fcacbe969b94ce98b818b89d9a24ef38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/fd73e376d99ee419cb119a4691477dc1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
     </list>
@@ -198,11 +177,22 @@
       <workItem from="1613376475553" duration="178000" />
       <workItem from="1613376699929" duration="210000" />
       <workItem from="1613376926550" duration="4900000" />
-      <workItem from="1613464494233" duration="16087000" />
+      <workItem from="1613464494233" duration="19913000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

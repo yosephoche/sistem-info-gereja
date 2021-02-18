@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\UserRole;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 
@@ -16,8 +17,6 @@ use Carbon\Carbon;
 use App\Models\User;
 use App\Models\UserProfile;
 use App\Models\Jemaat;
-
-use Config;
 
 class UserController extends Controller
 {
@@ -58,6 +57,7 @@ class UserController extends Controller
 
     public function performStore(Request $request, Model $user, array $attributes): void
     {
+
         $attributes['password'] = Hash::make(Config::get('constants.default.PASSWORD'));
         $user->fill($attributes);
         $user->save();
@@ -67,6 +67,11 @@ class UserController extends Controller
 
         $path_surat_baptis = '';
         $path_surat_sidi = '';
+
+        $valid = $request->validate([
+            'surat_baptis' => 'mimes:pdf|max:5000'
+        ]);
+
         if ($request->hasFile('surat_baptis')) {
             $path = 'dokumen/'.$user->name;
             $request->surat_baptis->store($path, 'public');
@@ -88,6 +93,7 @@ class UserController extends Controller
             $profile->jenis_kelamin = $request->jenis_kelamin;
             $profile->alamat = $request->alamat;
             $profile->jemaat_id = $request->jemaat_id;
+            $profile->pekerjaan_id = $request->pekerjaan_id;
             $profile->klasis_id = $klasis->id;
             $profile->wilayah_id = $klasis->wilayah_id;
             $profile->tanggal_lahir = Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s');
@@ -135,6 +141,7 @@ class UserController extends Controller
             $profile->jemaat_id = $request->jemaat_id;
             $profile->klasis_id = $klasis->id;
             $profile->wilayah_id = $klasis->wilayah_id;
+            $profile->pekerjaan_id = $request->pekerjaan_id;
             $profile->tanggal_lahir = Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s');
             $profile->path_surat_baptis = $path_surat_baptis;
             $profile->path_surat_sidi = $path_surat_sidi;
