@@ -265,47 +265,66 @@
                                         <img src="https://picsum.photos/520/660" alt="" />
                                     </a>
                                 </figure>
-                            </div>
-                            @if ($about)
-                            <div class="column-1_2 sc_column_item sc_column_item_2 even">
+                            </div><div class="column-1_2 sc_column_item sc_column_item_2 even">
                                 <!-- Services section -->
                                 <div class="sc_services_wrap">
                                     <div class="sc_services sc_services_style_services-5 sc_services_type_icons sc_slider_nopagination sc_slider_nocontrols width_100_per" data-interval="5040" data-slides-min-width="250">
                                         <h6 class="sc_services_subtitle sc_item_subtitle">Selamat Datang</h6>
                                         <h2 class="sc_services_title sc_item_title">Badan Pekerja Sinode Gereja Toraja</h2>
                                         <div class="sc_services_descr sc_item_descr">
-                                            {{ $about->description}}
+                                            @if ($about)
+                                                {!! $about->description !!}
+                                            @endif
                                         </div>
-                                        <!-- Services item -->
-                                        <div class="sc_services_item sc_services_item_1 odd first">
+                                        <!-- Services item --><div class="sc_services_item sc_services_item_1 odd first">
                                             <span class="sc_icon icon-house306"></span>
                                             <div class="sc_services_item_content">
                                                 <h4 class="sc_services_item_title">
                                                     <a href="service-single.html">Visi</a>
                                                 </h4>
                                                 <div class="sc_services_item_description">
-                                                    <p>{{ $about->visi }}</p>
+                                                    @if ($about)
+                                                        {!! $about->visi !!}
+                                                    @endif
                                                 </div>
                                             </div>
-                                        </div><!-- /Services item -->
-                                        <!-- Services item -->
+                                        </div>
+                                        <!-- /Services item --><!-- Services item -->
                                         <div class="sc_services_item sc_services_item_2 even">
                                             <span class="sc_icon icon-open-book6"></span>
                                             <div class="sc_services_item_content">
                                                 <h4 class="sc_services_item_title">
                                                     <a href="service-single.html">Misi</a></h4>
                                                 <div class="sc_services_item_description">
-                                                    <p>{{ $about->misi }}</p>
+                                                    @if ($about)
+                                                        {!! $about->visi !!}
+                                                    @endif
                                                 </div>
                                             </div>
-                                        </div><!-- /Services item -->
+                                        </div>
+                                        <!-- /Services item --><!-- Services item -->
+                                        <div class="sc_services_item sc_services_item_3 odd">
+{{--                                            <span class="sc_icon icon-avatar110"></span>--}}
+{{--                                            <div class="sc_services_item_content">--}}
+{{--                                                <h4 class="sc_services_item_title">--}}
+{{--                                                    <a href="service-single.html">New Here?</a>--}}
+{{--                                                </h4>--}}
+{{--                                                <div class="sc_services_item_description">--}}
+{{--                                                    <p>Tell us about yourself to begin your journey with connecting to our community.</p>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+                                        </div>
+                                        <!-- /Services item -->
                                     </div>
                                 </div>
                             </div>
-                            @endif
+                            <!-- /Services section -->
+
                         </div>
                     </div>
                 </div>
+
+
                 <!-- /Welcome section -->
                 <!-- Mission section -->
                 <div class="hp1_mission_section">
