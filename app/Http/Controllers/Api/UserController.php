@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\UserRole;
+use Illuminate\Support\Facades\Auth;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 
@@ -63,19 +65,38 @@ class UserController extends Controller
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
 
+        $path_surat_baptis = '';
+        $path_surat_sidi = '';
+        if ($request->hasFile('surat_baptis')) {
+            $path = 'dokumen/'.$user->name;
+            $request->surat_baptis->store($path, 'public');
+            $fullPathUrl = $path.'/'.$request->surat_baptis->hashName();
+            $path_surat_baptis = $fullPathUrl;
+        }
+
+        if ($request->hasFile('surat_sidi')) {
+            $path = 'dokumen/'.$user->name;
+            $request->surat_sidi->store($path, 'public');
+            $fullPathUrl = $path.'/'.$request->surat_sidi->hashName();
+            $path_surat_sidi = $fullPathUrl;
+        }
+
         if ($user->save()) {
-            $profile = UserProfile::create([
-                'user_id' => $user->id,
-                'nama' => $user->name,
-                'jenis_kelamin' => $request->jenis_kelamin,
-                'alamat' => $request->alamat,
-                'is_baptis' => $request->is_baptis,
-                'is_sidi' => $request->is_sidi,
-                'jemaat_id' => $request->jemaat_id,
-                'klasis_id' => $klasis->id,
-                'wilayah_id' => $klasis->wilayah_id,
-                'tanggal_lahir' => Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s')
-            ]);
+            $profile = new UserProfile();
+            $profile->user_id = $user->id;
+            $profile->nama = $user->name;
+            $profile->jenis_kelamin = $request->jenis_kelamin;
+            $profile->alamat = $request->alamat;
+            $profile->jemaat_id = $request->jemaat_id;
+            $profile->klasis_id = $klasis->id;
+            $profile->wilayah_id = $klasis->wilayah_id;
+            $profile->tanggal_lahir = Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s');
+            $profile->path_surat_baptis = $path_surat_baptis;
+            $profile->path_surat_sidi = $path_surat_sidi;
+            $profile->is_baptis = $path_surat_baptis == '' ? false : true;
+            $profile->is_sidi = $path_surat_sidi == '' ? false : true;
+
+            $profile->save();
         }
 
     }
@@ -89,19 +110,38 @@ class UserController extends Controller
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
 
+        $path_surat_baptis = '';
+        $path_surat_sidi = '';
+        if ($request->hasFile('surat_baptis')) {
+            $path = 'dokumen/'.$user->name;
+            $request->surat_baptis->store($path, 'public');
+            $fullPathUrl = $path.'/'.$request->surat_baptis->hashName();
+            $path_surat_baptis = $fullPathUrl;
+        }
+
+        if ($request->hasFile('surat_sidi')) {
+            $path = 'dokumen/'.$user->name;
+            $request->surat_sidi->store($path, 'public');
+            $fullPathUrl = $path.'/'.$request->surat_sidi->hashName();
+            $path_surat_sidi = $fullPathUrl;
+        }
+
         if ($user->save()) {
-            $profile = UserProfile::create([
-                'user_id' => $user->id,
-                'nama' => $user->name,
-                'jenis_kelamin' => $request->jenis_kelamin,
-                'alamat' => $request->alamat,
-                'is_baptis' => $request->is_baptis,
-                'is_sidi' => $request->is_sidi,
-                'jemaat_id' => $request->jemaat_id,
-                'klasis_id' => $klasis->id,
-                'wilayah_id' => $klasis->wilayah_id,
-                'tanggal_lahir' => Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s')
-            ]);
+            $profile = new UserProfile();
+            $profile->user_id = $user->id;
+            $profile->nama = $user->name;
+            $profile->jenis_kelamin = $request->jenis_kelamin;
+            $profile->alamat = $request->alamat;
+            $profile->jemaat_id = $request->jemaat_id;
+            $profile->klasis_id = $klasis->id;
+            $profile->wilayah_id = $klasis->wilayah_id;
+            $profile->tanggal_lahir = Carbon::parse($request->tanggal_lahir)->format('Y-m-d H:i:s');
+            $profile->path_surat_baptis = $path_surat_baptis;
+            $profile->path_surat_sidi = $path_surat_sidi;
+            $profile->is_baptis = $path_surat_baptis == '' ? false : true;
+            $profile->is_sidi = $path_surat_sidi == '' ? false : true;
+
+            $profile->save();
         }
     }
 }
