@@ -102,7 +102,6 @@ class UserController extends Controller
 
     public function performUpdate(Request $request, Model $entity, array $attributes): void
     {
-        $attributes['password'] = Hash::make($request->password);
         $entity->fill($attributes);
 
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
