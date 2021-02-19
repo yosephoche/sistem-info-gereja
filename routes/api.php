@@ -39,6 +39,8 @@ use App\Http\Controllers\Api\GroupOrganisasiController;
 use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\RoleGroupController;
 
+use App\Http\Controllers\Api\PendidikanController;
+
 
 use App\Models\User;
 
@@ -93,6 +95,8 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     Orion::resource('group-organisasi', GroupOrganisasiController::class);
 
     Orion::resource('settings', SettingController::class);
+
+    Orion::resource('pendidikan', PendidikanController::class);
 
 
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);

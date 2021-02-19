@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class UserProfile extends Model
 {
@@ -15,7 +16,7 @@ class UserProfile extends Model
         'jenis_kelamin',
         'tanggal_lahir',
         'alamat',
-        'status',
+        'status_perkawninan',
         'is_baptis',
         'is_sidi',
         'jemaat_id',
@@ -24,11 +25,32 @@ class UserProfile extends Model
         'photo',
         'pekerjaan_id',
         'path_surat_baptis',
-        'path_surat_sidi'
+        'path_surat_sidi',
+        'pendidikan_id',
+        'dokumen_nikah_gereja',
+        'dokumen_nikah_bs'
+
     ];
 
-//    need to append : usia, GR, BS, JD/DD, pendidikan, Diakonia
-    protected $appends = array('photo_url', 'surat_sidi_url', 'surat_baptis_url');
+    protected $appends = array('usia', 'photo_url', 'surat_sidi_url', 'surat_baptis_url', 'path_doc_bs', 'path_doc_gereja');
+
+    public function getUsiaAttribute(): string
+    {
+        $dateOfBirth = $this->attributes['tanggal_lahir'];
+        return Carbon::parse($dateOfBirth)->age;
+    }
+
+    public function getPathDocBsAttribute(): string
+    {
+        $file_name = $this->attributes['dokumen_nikah_bs'];
+        return asset("storage/dokumen/".$file_name);
+    }
+
+    public function getPathDocGerejaAttribute(): string
+    {
+        $file_name = $this->attributes['dokumen_nikah_gereja'];
+        return asset("storage/dokumen/".$file_name);
+    }
 
     public function getPhotoUrlAttribute(): string
     {
@@ -74,6 +96,11 @@ class UserProfile extends Model
    public function anggota_keluarga()
    {
        return $this->belongsTo('App\Models\AnggotaKeluarga', 'id', 'user_profile_id');
+   }
+
+   public function pendidikan()
+   {
+       return $this->hasOne('App\Models\Pendidikan', 'id', 'pendidikan_id');
    }
 
 

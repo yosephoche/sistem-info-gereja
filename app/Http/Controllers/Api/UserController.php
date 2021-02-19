@@ -60,10 +60,20 @@ class UserController extends Controller
 
         $path_surat_baptis = '';
         $path_surat_sidi = '';
+        $doc_nikah_gr = '';
+        $doc_nikah_bs = '';
 
-//        $request->validate([
-//            'surat_baptis' => 'mimes:pdf|max:5000'
-//        ]);
+        if ($request->hasFile('dokumen_nikah_gereja')) {
+            $doc_nikah_gr = $request->surat_sidi->hashName();
+            $path = 'dokumen/nikah/';
+            $request->dokumen_nikah_gereja->store($path, 'public');
+        }
+
+        if ($request->hasFile('dokumen_nikah_bs')) {
+            $doc_nikah_bs = $request->surat_sidi->hashName();
+            $path = 'dokumen/nikah/';
+            $request->dokumen_nikah_bs->store($path, 'public');
+        }
 
         if ($request->hasFile('surat_baptis')) {
             $path = 'dokumen/'.$entity->name;
@@ -94,6 +104,10 @@ class UserController extends Controller
             $profile->path_surat_sidi = $path_surat_sidi;
             $profile->is_baptis = $path_surat_baptis == '' ? false : true;
             $profile->is_sidi = $path_surat_sidi == '' ? false : true;
+            $profile->status_perkawinan = $request->status_perkawinan;
+            $profile->pendidikan_id = $request->pendidikan_id;
+            $profile->dokumen_nikah_gereja = $doc_nikah_gr;
+            $profile->dokumen_nikah_bs = $doc_nikah_bs;
 
             $profile->save();
         }
@@ -109,6 +123,9 @@ class UserController extends Controller
 
         $path_surat_baptis = '';
         $path_surat_sidi = '';
+        $doc_nikah_gr = '';
+        $doc_nikah_bs = '';
+
         if ($request->hasFile('surat_baptis')) {
             $path = 'dokumen/'.$entity->name;
             $request->surat_baptis->store($path, 'public');
@@ -121,6 +138,18 @@ class UserController extends Controller
             $request->surat_sidi->store($path, 'public');
             $fullPathUrl = $path.'/'.$request->surat_sidi->hashName();
             $path_surat_sidi = $fullPathUrl;
+        }
+
+        if ($request->hasFile('dokumen_nikah_gereja')) {
+            $doc_nikah_gr = $request->surat_sidi->hashName();
+            $path = 'dokumen/nikah/';
+            $request->dokumen_nikah_gereja->store($path, 'public');
+        }
+
+        if ($request->hasFile('dokumen_nikah_bs')) {
+            $doc_nikah_bs = $request->surat_sidi->hashName();
+            $path = 'dokumen/nikah/';
+            $request->dokumen_nikah_bs->store($path, 'public');
         }
 
         if ($entity->save()) {
@@ -138,6 +167,10 @@ class UserController extends Controller
             $profile->path_surat_sidi = $path_surat_sidi;
             $profile->is_baptis = $path_surat_baptis == '' ? false : true;
             $profile->is_sidi = $path_surat_sidi == '' ? false : true;
+            $profile->status_perkawinan = $request->status_perkawinan;
+            $profile->pendidikan_id = $request->pendidikan_id;
+            $profile->dokumen_nikah_gereja = $doc_nikah_gr;
+            $profile->dokumen_nikah_bs = $doc_nikah_bs;
 
             $profile->save();
         }
