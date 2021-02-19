@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;

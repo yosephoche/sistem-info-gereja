@@ -27,6 +27,7 @@ class UserProfile extends Model
         'path_surat_sidi'
     ];
 
+//    need to append : usia, GR, BS, JD/DD, pendidikan, Diakonia
     protected $appends = array('photo_url', 'surat_sidi_url', 'surat_baptis_url');
 
     public function getPhotoUrlAttribute(): string
@@ -65,11 +66,6 @@ class UserProfile extends Model
         return $this->belongsTo('App\Models\Klasis', 'klasis_id', 'id');
     }
 
-   /**
-    * Get the user associated with the UserProfile
-    *
-    * @return \Illuminate\Database\Eloquent\Relations\HasOne
-    */
    public function pekerjaan()
    {
        return $this->hasOne('App\Models\Pekerjaan', 'id', 'pekerjaan_id');
