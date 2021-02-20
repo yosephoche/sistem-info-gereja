@@ -10,7 +10,7 @@ class Setting extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'address'
+        'key',
+        'value'
     ];
 }
