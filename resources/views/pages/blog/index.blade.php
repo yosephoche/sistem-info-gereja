@@ -23,7 +23,7 @@
                     <div class="post_featured">
                         <div class="post_thumb" data-title="Image Post">
                             <a class="hover_icon hover_icon_link" href="#">
-                                <img alt="Image Post" src="{{ URL::to('/') }}/images/{{$post->image}}"></a>
+                                <img alt="Image Post" src="{{ asset('storage') }}/blog/{{$post->image}}"></a>
                         </div>
                     </div>
                     <div class="post_content clearfix">
@@ -38,7 +38,7 @@
                             <span class="post_info_item post_info_counters">{{$post->published_at}}</span>
                         </div>
                         <div class="post_descr">
-                            <p>{{\Illuminate\Support\Str::limit($post->content, 300, $end='...')}}</p>
+                            <p>{!! \Illuminate\Support\Str::limit($post->content, 500, $end='...') !!}</p>
                             <a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_color_style_2 sc_button_size_large">Read more</a>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
             @endforeach
 
             {{$articles->onEachSide(2)->links('vendor.pagination.custom')}}
-            
+
         </div>
         <div class="sidebar widget_area scheme_original">
             <div class="sidebar_inner widget_area_inner">
@@ -58,7 +58,7 @@
                         <button type="submit" class="search_button icon-search"></button>
                     </form>
                 </aside>
-                
+
                 <aside class="widget widget_recent_posts">
                     <h5 class="widget_title">Latest Post</h5>
                     @foreach ($latest_article as $item)
@@ -82,37 +82,15 @@
                 <aside class="widget widget_categories">
                     <h5 class="widget_title">Categories</h5>
                     <ul>
-                        <li>
-                            <a href="#">Blogger</a> (7)
-                        </li>
-                        <li>
-                            <a href="#">Gallery</a> (25)
-                        </li>
-                        <li>
-                            <a href="#">Mission</a> (3)
-                        </li>
-                        <li>
-                            <a href="#">Portfolio (2 columns)</a>
-                        </li>
-                        <li>
-                            <a href="#">Post formats</a> (11)
-                        </li>
-                        <li>
-                            <a href="#">Sermons</a> (6)
-                        </li>
+                        @foreach($categories as $category)
+                            <li>
+                                <a href="#">{{$category->name}}</a>
+                                @foreach($category->artikel as $artikel)
+                                    {{$artikel->count}}
+                                @endforeach
+                            </li>
+                        @endforeach
                     </ul>
-                </aside>
-                
-                <aside class="widget widget_tag_cloud">
-                    <h5 class="widget_title">Tags</h5>
-                    <div class="tagcloud">
-                        <a href="#" title="4 topics">change</a>
-                        <a href="#" title="3 topics">christian</a>
-                        <a href="#" title="3 topics">church</a>
-                        <a href="#" title="7 topics">conferences</a>
-                        <a href="#" title="9 topics">events</a>
-                        <a href="#" title="4 topics">family</a>
-                        <a href="#" title="4 topics">god</a>
                 </aside>
             </div>
         </div>

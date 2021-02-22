@@ -7,12 +7,12 @@
                 <!-- Contact logo -->
                 <div class="contact_logo">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src={{asset("images/logo-gt-small.png")}} class="logo_main" alt="">
                             <img src={{asset("images/logo-gt-small.png")}} class="logo_fixed" alt="">
                         </a>
 
-                        <h3 style="margin-top: -65px; margin-left: 75px;">{{$setting != null ? $setting->title : "BPS-Demo"}}</h3>
+                        <h3 style="margin-top: -65px; margin-left: 75px;">{{$title != null ? $title->value : "BPS-Demo"}}</h3>
                     </div>
                 </div>
                 <!-- /Contact logo -->

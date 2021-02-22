@@ -18,8 +18,9 @@ class HomeController extends Controller
         $events = Event::all();
         $newest_event = Event::orderBy('created_at', 'desc')->first();
         $latest_article = Artikel::orderBy('created_at', 'desc')->limit(3)->get();
+        $galeries = Galeri::all();
 
-        return view('pages.home', compact('about', 'events', 'newest_event', 'latest_article'));
+        return view('pages.home', compact('about', 'events', 'newest_event', 'latest_article', 'galeries'));
     }
 
     public function profile(Request $request)

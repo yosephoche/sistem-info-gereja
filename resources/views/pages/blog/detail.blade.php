@@ -26,7 +26,7 @@
                 <section class="post_featured">
                     <div class="post_thumb" data-image="http://placehold.it/2400x1600" data-title="The Answer Is God">
                         <a class="hover_icon hover_icon_view" href="http://placehold.it/2400x1600" title="The Answer Is God">
-                            <img alt="The Answer Is God" src="http://placehold.it/1170x659">
+                            <img alt="{{$article->title}}" src="{{ asset('storage') }}/blog/{{$article->image}}">
                         </a>
                     </div>
                 </section>
@@ -37,8 +37,8 @@
                             <a class="category_link" href="#">{{$article->kategori->name}}</a>
                         </span>
                     </div>
-                    <p>{{ $article->content }}</p>
-                    
+                    {!! $article->content !!}
+
                 </section>
                 <section class="post_author author">
                     <div class="post_author_avatar">
@@ -64,18 +64,16 @@
             <div class="sidebar_inner widget_area_inner">
                 <!-- Widget: Categories -->
                 <aside class="widget widget_categories">
-                    <h5 class="widget_title">Latest Sermons</h5>
+                    <h5 class="widget_title">Category</h5>
                     <ul>
-                        <li>
-                            <a href="#">Blogger</a> (7)
-                        </li>
-                       
-                        <li>
-                            <a href="#">Post formats</a> (11)
-                        </li>
-                        <li>
-                            <a href="#">Sermons</a> (6)
-                        </li>
+                        @foreach($categories as $category)
+                            <li>
+                                <a href="#">{{$category->name}}</a>
+                                @foreach($category->artikel as $artikel)
+                                    {{$artikel->count}}
+                                @endforeach
+                            </li>
+                        @endforeach
                     </ul>
                 </aside><!-- /Widget: Categories -->
                 <!-- Widget: Recent Posts -->
@@ -99,7 +97,7 @@
                         </article>
                     @endforeach
                 </aside><!-- /Widget: Recent Posts -->
-            
+
             <!-- Widget: Tag Cloud -->
             <aside class="widget widget_tag_cloud">
                 <h5 class="widget_title">Tags</h5>

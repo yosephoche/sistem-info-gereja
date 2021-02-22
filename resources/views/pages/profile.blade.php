@@ -20,14 +20,8 @@
             <section class="post_content">
                 <div class="content_wrap">
                     <h2 class="sc_title sc_title_underline_dark sc_align_center margin_top_huge margin_bottom_small text_align_center">Sejarah BPS</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque eleifend nulla, nec dapibus metus vestibulum quis. Etiam turpis eros, blandit vel ultrices non, viverra pellentesque ante. Sed consequat, tellus eget tincidunt mattis, massa mauris iaculis metus, non varius metus diam in velit. Quisque libero ex, aliquam quis placerat a, sollicitudin aliquet ligula. Donec ultrices dui ut orci facilisis lobortis. Duis a pharetra diam. Ut hendrerit posuere felis quis pellentesque. Suspendisse vel odio eleifend urna sollicitudin cursus. Vestibulum pretium dapibus nulla at ultrices. Etiam finibus semper quam in iaculis.
-                        Pellentesque malesuada erat leo, et aliquam justo interdum ut. Nunc fringilla malesuada lacus. Donec faucibus lorem non interdum vulputate. </p>
-                        
-                    <p>Aliquam erat volutpat. Praesent imperdiet eros luctus, rhoncus nisl vel, aliquam odio. Integer quis malesuada ex. Nam non mi sed metus venenatis pulvinar ac vel turpis. Quisque sed mattis justo.</p>
+                    {!! $about->description !!}
 
-                    <p>Suspendisse porta mi nisl, eu egestas nulla euismod et. Vivamus at rutrum mauris, non elementum felis. Quisque iaculis tristique ex eget fringilla. Sed non aliquet dui. Mauris eu fringilla eros. Ut fermentum ornare magna, eget fermentum nibh scelerisque eget. Aliquam vel auctor ante, vel placerat tortor. Nulla facilisi. Suspendisse elementum mauris a nibh dignissim aliquam. Vivamus gravida ornare gravida.
-                        Aenean accumsan vestibulum felis ac malesuada. Sed tristique odio ac mollis consectetur. Vestibulum at dignissim nisl. Suspendisse venenatis dui in accumsan vestibulum. Nunc maximus felis ac tortor aliquet ultricies. Aliquam at mollis massa. Ut porta ornare laoreet. Duis et tortor tincidunt, finibus nibh vel, auctor mi. Pellentesque faucibus sed sapien sed sagittis. Quisque eu bibendum felis. Pellentesque nibh sem, aliquam non purus et, egestas interdum nisl. Aenean in lectus fringilla, pretium nibh eu, laoreet magna. Curabitur semper porttitor interdum. Duis pretium mauris eget maximus sagittis. Cras gravida orci eu mi ornare, eget tincidunt ante facilisis. Aenean vel justo rutrum, iaculis lacus sit amet, mollis nibh.</p>
-                    
                 </div>
                 <!-- Services section -->
                 <div class="tpl_bg_1">
@@ -38,13 +32,13 @@
                                 <div class="swiper-slide width_100_per" data-style="width:100%;">
                                     <div class="sc_services_item_wrap">
                                         <div class="sc_services_item sc_services_item_2 even">
-                                            
+
                                             <div class="sc_services_item_content">
                                                 <h4 class="sc_services_item_title">
                                                     <a href="service-single.html">Visi</a>
                                                 </h4>
                                                 <div class="sc_services_item_description">
-                                                    <p>&#8220;{{$about->visi}} &#8230;</p>
+                                                    <p>&#8220;{!! $about->visi !!} &#8230;</p>
                                                     <a href="service-single.html" class="sc_services_item_readmore">Learn more
                                                         <span class="icon-right-1"></span>
                                                     </a>
@@ -58,13 +52,13 @@
                                 <div class="swiper-slide width_100_per" data-style="width:100%;">
                                     <div class="sc_services_item_wrap">
                                         <div class="sc_services_item sc_services_item_3 odd">
-                                            
+
                                             <div class="sc_services_item_content">
                                                 <h4 class="sc_services_item_title">
                                                     <a href="service-single.html">Misi</a>
                                                 </h4>
                                                 <div class="sc_services_item_description">
-                                                   <p>&#8220;{{$about->misi}} &#8230;</p>
+                                                   <p>&#8220;{!! $about->misi !!} &#8230;</p>
                                                     <a href="service-single.html" class="sc_services_item_readmore">Learn more
                                                         <span class="icon-right-1"></span>
                                                     </a>
@@ -75,12 +69,12 @@
                                 </div>
                             </div>
                             <!-- /Service item -->
-                            
+
                         </div>
                     </div>
                 </div>
                 <!-- /Services section -->
-                
+
                 <!-- General Info Section -->
                 <div class="general_info_section">
                     <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3 margin_bottom_large">
@@ -158,7 +152,7 @@
                                                 <a href="team-single.html">Herbert Wright</a>
                                             </h5>
                                             <div class="sc_team_item_position">Ketua Bidang I</div>
-    
+
                                             <div class="sc_socials sc_socials_type_icons sc_socials_shape_round sc_socials_size_tiny">
                                                 <div class="sc_socials_item">
                                                     <a href="#" target="_blank" class="social_icons social_twitter">

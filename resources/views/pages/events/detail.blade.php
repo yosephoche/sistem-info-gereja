@@ -68,9 +68,9 @@
                                                     <address class="tribe-events-address">
                                                         <span class="tribe-address">
                                                             <span class="tribe-street-address">{{$event->address}}</span>
-                                                                
+
                                                         </span>
-                                                            
+
                                                         <a class="tribe-events-gmap" href="http://maps.google.com/maps?f=q&#038;source=s_q&#038;hl=en&#038;geocode=&#038;q={{$event->address}}" title="Click to view a Google Map" target="_blank">+ Google Map</a>
                                                     </address>
                                                 </dd>
@@ -78,7 +78,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

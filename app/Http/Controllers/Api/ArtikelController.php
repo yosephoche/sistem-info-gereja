@@ -53,7 +53,7 @@ class ArtikelController extends Controller
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
     {
         $query = parent::buildIndexFetchQuery($request, $requestedRelations);
-        
+
         $query->where('author', Auth::user()->id);
 
         if ($request->exists('sortBy')) {
@@ -61,7 +61,7 @@ class ArtikelController extends Controller
 
             $query->orderBy($queryString[0], $queryString[1]);
         };
-        
+
         return $query;
     }
 
@@ -69,14 +69,14 @@ class ArtikelController extends Controller
     {
         if ($request->hasFile('image')) {
             $extension = $request->image->extension();
-            $request->image->store('galeri', 'public');
+            $request->image->store('blog', 'public');
             $attributes['image'] = $request->image->hashName();
         }
 
         $user = Auth::user();
         $attributes['author'] = $user->id;
 
-        
+
         $artikel->fill($attributes);
         $artikel->save();
     }
@@ -85,7 +85,7 @@ class ArtikelController extends Controller
     {
         if ($request->hasFile('image')) {
             $extension = $request->image->extension();
-            $request->image->store('galeri', 'public');
+            $request->image->store('blog', 'public');
             $attributes['image'] = $request->image->hashName();
         }
 

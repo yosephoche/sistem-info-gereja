@@ -3,18 +3,16 @@
 
     <head>
         <title>BPS Gereja Toraja</title>
-        
+
         @include('pages.includes.meta')
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat:400,700|Lato:300,300i,400,400i,700,700i|Raleway:300,300i,400,400i,700,700i&amp;subset=latin-ext">
-        
         @include('pages.includes.css')
-        
+
         <link rel="icon" href="http://placehold.it/32x32" />
         <link rel="icon" href="http://placehold.it/32x32" />
         <link rel="apple-touch-icon-precomposed" href="http://placehold.it/32x32" />
     </head>
-    
+
     <body class="home page body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
         <a id="toc_home" class="sc_anchor" title="Home" data-description="<i>Return to Home</i> - <br>navigate to home page of the site" data-icon="icon-home" data-url="index.html" data-separator="yes"></a>
         <a id="toc_top" class="sc_anchor" title="To Top" data-description="<i>Back to top</i> - <br>scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
@@ -25,9 +23,9 @@
                 <div class="top_panel_fixed_wrap"></div>
                 {{-- Header Section --}}
                 @include('pages.includes.header')
-                
+
                 {{-- Image Slider Section --}}
-                
+
                 @yield('slider')
 
                 @yield('title-breadcrumb')
@@ -58,7 +56,7 @@
         <!-- /Body wrap -->
 
         @include('pages.includes.js')
-        
+
         @yield('script')
 
     </body>

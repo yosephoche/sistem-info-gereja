@@ -50,7 +50,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('pages.layouts.main', function ($view) {
-            $view->with('setting', \App\Models\Setting::first());
+            $view->with('title', \App\Models\Setting::where('key', 'title')->first());
         });
     }
 }

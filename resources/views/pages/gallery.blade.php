@@ -55,7 +55,7 @@
                                             <i class="eg-icon-ok-1"></i>
                                             </span>
                                     </div>
-                                    <div class="eg-clearfix"></div>wwwww11s
+                                    <div class="eg-clearfix"></div>
                                 </div>
                             </article>
                             <div class="esg-clear-no-height"></div>

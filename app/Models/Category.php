@@ -18,4 +18,9 @@ class Category extends Model
     //     return $this->belongsTo('App\User', 'foreign_key', 'other_key');
     // }
 
+    public function artikel()
+    {
+        return $this->hasMany('App\Models\Artikel', 'category', 'id');
+    }
+
 }

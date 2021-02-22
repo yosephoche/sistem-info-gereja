@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -17,7 +18,13 @@ class BlogController extends Controller
 
         $latest_article = Artikel::orderBy('created_at', 'desc')->limit(2)->get();
 
-        return view('pages.blog.index', compact('articles', 'latest_article'));
+        $categories = Category::with([
+            'artikel' => function ($query) {
+                $query->withCount('kategori as count');
+            }
+        ])->get();
+
+        return view('pages.blog.index', compact('articles', 'categories', 'latest_article'));
     }
 
     public function detail($id)
@@ -26,6 +33,12 @@ class BlogController extends Controller
 
         $latest_article = Artikel::orderBy('created_at', 'desc')->limit(2)->get();
 
-        return view('pages.blog.detail', compact('article', 'latest_article'));
+        $categories = Category::with([
+            'artikel' => function ($query) {
+                $query->withCount('kategori as count');
+            }
+        ])->get();
+
+        return view('pages.blog.detail', compact('article', 'categories', 'latest_article'));
     }
 }
