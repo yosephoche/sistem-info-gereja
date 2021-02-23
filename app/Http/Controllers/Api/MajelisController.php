@@ -13,5 +13,9 @@ class MajelisController extends Controller
 {
     use DisableAuthorization;
     protected $model = Majelis::class;
-    
+
+    protected function alwaysIncludes() : array
+    {
+        return ['profile', 'periode'];
+    }
 }

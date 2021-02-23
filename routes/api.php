@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\KelompokController;
+use App\Http\Controllers\Api\PeriodeMajelisController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Orion\Facades\Orion;
@@ -97,7 +99,8 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     Orion::resource('settings', SettingController::class);
 
     Orion::resource('pendidikan', PendidikanController::class);
-
+    Orion::resource('kelompok', KelompokController::class);
+    Orion::resource('periode-majelis', PeriodeMajelisController::class);
 
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
     Route::get('dashboard', [DashboardController::class, 'index']);

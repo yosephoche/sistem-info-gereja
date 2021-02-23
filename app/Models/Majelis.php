@@ -13,11 +13,16 @@ class Majelis extends Model
 
     protected $fillable = [
         'user_profile_id',
-        'periode',
+        'periode_id',
     ];
 
     public function profile()
     {
         return $this->hasOne('App\Models\UserProfile', 'id', 'user_profile_id');
+    }
+
+    public function periode()
+    {
+        return $this->belongsTo(PeriodeMajelis::class, 'periode_id', 'id');
     }
 }

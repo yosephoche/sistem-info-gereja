@@ -10,6 +10,11 @@ class Keluarga extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_keluarga'
+        'nama_keluarga', 'kode_kk', 'kepala_keluarga'
     ];
+
+    public function profile_kepala_keluarga()
+    {
+        return $this->belongsTo(UserProfile::class, 'kepala_keluarga', 'id');
+    }
 }
