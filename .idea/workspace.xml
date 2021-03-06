@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KelompokController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KelompokController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Kelompok.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Kelompok.php" afterDir="false" />
-    </list>
+    <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +185,7 @@
       <workItem from="1613376926550" duration="4900000" />
       <workItem from="1613464494233" duration="41827000" />
       <workItem from="1614005231682" duration="17469000" />
-      <workItem from="1614999887791" duration="5898000" />
+      <workItem from="1614999887791" duration="6776000" />
     </task>
     <servers />
   </component>

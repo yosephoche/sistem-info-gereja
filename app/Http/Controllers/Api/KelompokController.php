@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\UserRole;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,6 +21,27 @@ class KelompokController extends Controller
     protected function alwaysIncludes() : array
     {
         return ['jemaat'];
+    }
+
+    protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
+    {
+        $query = parent::buildIndexFetchQuery($request, $requestedRelations);
+        $user = Auth::user();
+        $userRole = UserRole::where('user_id', $user->id)->first();
+
+        if ($userRole->role_id == 1) {
+            return $query;
+        } else {
+            $query->where('jemaat_id', $user->profile->jemaat_id);
+
+            if ($request->exists('sortBy')) {
+                $queryString = Str::of($request->sortBy)->explode('|');
+
+                $query->orderBy($queryString[0], $queryString[1]);
+            };
+        }
+
+        return $query;
     }
 
 //    public function performStore(Request $request, Model $entity, array $attributes): void

@@ -34,6 +34,11 @@ class JemaatController extends Controller
         return ['id', 'name', 'klasis', 'created_at'];
     }
 
+    protected function alwaysIncludes() : array
+    {
+        return ['kelompok'];
+    }
+
     protected function runIndexFetchQuery(Request $request, Builder $query, int $paginationLimit): LengthAwarePaginator
     {
         return $query->paginate($paginationLimit);
