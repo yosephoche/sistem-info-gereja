@@ -94,8 +94,11 @@ class UserProfileController extends Controller
                 };
             });
 
-            $query->when($group == 3, function($query) use ($user){
+            $query->when($group == 3, function($query) use ($user, $request){
                 $query->where('jemaat_id', $user->profile->jemaat_id);
+                if ($request->exists('kelompok')) {
+                    $query->where('kelompok_id', $request->kelompok);
+                }
             });
         }
 

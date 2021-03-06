@@ -36,7 +36,7 @@ class UserController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['profile', 'profile.jemaat', 'profile.jemaat.klasis', 'profile.jemaat.klasis.wilayah', 'artikel'];
+        return ['profile', 'profile.jemaat', 'profile.jemaat.klasis', 'profile.jemaat.klasis.wilayah', 'artikel', 'kelompok'];
     }
 
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
@@ -108,6 +108,7 @@ class UserController extends Controller
             $profile->pendidikan_id = $request->pendidikan_id;
             $profile->dokumen_nikah_gereja = $doc_nikah_gr;
             $profile->dokumen_nikah_bs = $doc_nikah_bs;
+            $profile->kelompok_id = $request->kelompok_id;
 
             $profile->save();
         }
@@ -171,6 +172,7 @@ class UserController extends Controller
             $profile->pendidikan_id = $request->pendidikan_id;
             $profile->dokumen_nikah_gereja = $doc_nikah_gr;
             $profile->dokumen_nikah_bs = $doc_nikah_bs;
+            $profile->kelompok_id = $request->kelompok_id;
 
             $profile->save();
         }

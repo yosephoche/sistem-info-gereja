@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b8cf485-1879-46d5-ad15-af786eca7467" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KelompokController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PeriodeMajelisController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Kelompok.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PeriodeMajelis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/KelompokFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/PeriodeMajelisFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_23_034446_create_kelompoks_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_23_045257_create_periode_majelis_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_23_045507_add_column_kode_kk_in_keluargas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_23_055550_rename_and_add_foreign_to_majeliss.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/KelompokSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/PeriodeMajelisSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_06_031728_add_column_kelompok_id_to_user_profiles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluargaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluargaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MajelisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MajelisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Keluarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Keluarga.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Majelis.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Majelis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Jemaat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Jemaat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +191,8 @@
       <workItem from="1613376699929" duration="210000" />
       <workItem from="1613376926550" duration="4900000" />
       <workItem from="1613464494233" duration="41827000" />
-      <workItem from="1614005231682" duration="15906000" />
+      <workItem from="1614005231682" duration="17469000" />
+      <workItem from="1614999887791" duration="2520000" />
     </task>
     <servers />
   </component>

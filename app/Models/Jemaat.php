@@ -23,4 +23,9 @@ class Jemaat extends Model
     {
         return $this->belongsTo('App\Models\Klasis', 'klasis_id', 'id');
     }
+
+    public function kelompok()
+    {
+        return $this->hasMany('App\Models\Kelompok', 'jemaat_id', 'id');
+    }
 }

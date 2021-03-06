@@ -28,7 +28,8 @@ class UserProfile extends Model
         'path_surat_sidi',
         'pendidikan_id',
         'dokumen_nikah_gereja',
-        'dokumen_nikah_bs'
+        'dokumen_nikah_bs',
+        'kelompok_id'
 
     ];
 
@@ -101,6 +102,11 @@ class UserProfile extends Model
    public function pendidikan()
    {
        return $this->hasOne('App\Models\Pendidikan', 'id', 'pendidikan_id');
+   }
+
+   public function kelompok()
+   {
+       return $this->hasOne('App\Models\Kelompok', 'id', 'kelompok_id');
    }
 
 
