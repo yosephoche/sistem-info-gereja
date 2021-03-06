@@ -21,21 +21,22 @@ class KelompokController extends Controller
         return ['jemaat'];
     }
 
-    public function performStore(Request $request, Model $entity, array $attributes): void
-    {
-        $jemaat_id = Auth::user()->jemaat_id;
-        $attributes['jemaat_id'] = $jemaat_id;
+//    public function performStore(Request $request, Model $entity, array $attributes): void
+//    {
+//        $admin_profile = Auth::user()->profile;
+//        dd($admin_profile->jemmat_id);
+//        $attributes['jemaat_id'] = $jemaat_id;
+//
+//        $entity->fill($attributes);
+//        $entity->save();
+//    }
 
-        $entity->fill($attributes);
-        $entity->save();
-    }
-
-    public function performUpdate(Request $request, Model $entity, array $attributes): void
-    {
-        $jemaat_id = Auth::user()->jemaat_id;
-        $attributes['jemaat_id'] = $jemaat_id;
-
-        $entity->fill($attributes);
-        $entity->save();
-    }
+//    public function performUpdate(Request $request, Model $entity, array $attributes): void
+//    {
+//        $jemaat_id = Auth::user()->jemaat_id;
+//        $attributes['jemaat_id'] = $jemaat_id;
+//
+//        $entity->fill($attributes);
+//        $entity->save();
+//    }
 }

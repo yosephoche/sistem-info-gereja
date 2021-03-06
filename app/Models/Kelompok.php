@@ -13,6 +13,6 @@ class Kelompok extends Model
 
     public function jemaat()
     {
-        return $this->belongsTo(Jemaat::class, 'jemaat_id', 'id');
+        return $this->belongsTo('App\Models\Jemaat', 'jemaat_id', 'id');
     }
 }
