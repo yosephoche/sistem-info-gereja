@@ -36,7 +36,7 @@ class UserController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['profile', 'profile.jemaat', 'profile.jemaat.klasis', 'profile.jemaat.klasis.wilayah', 'artikel', 'kelompok'];
+        return ['profile', 'profile.jemaat', 'profile.jemaat.klasis', 'profile.jemaat.klasis.wilayah', 'artikel', 'profile.kelompok'];
     }
 
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
