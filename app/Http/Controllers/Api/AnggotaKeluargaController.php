@@ -19,7 +19,7 @@ class AnggotaKeluargaController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['profile', 'keluarga'];
+        return ['profile', 'keluarga', 'profile.pekerjaan'];
     }
 
     protected function buildIndexFetchQuery(Request $request, array $requestedRelations): Builder
