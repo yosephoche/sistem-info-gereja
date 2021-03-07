@@ -119,6 +119,9 @@ class UserController extends Controller
     {
         $entity->fill($attributes);
 
+        $profile = UserProfile::where('user_id', $entity->id)->first();
+//        dd($profile->jemaat_id, $request->jemaat_id, $request->hasFile('surat_sidi'));
+
         $jemaat = Jemaat::with('klasis')->where('id', $request->jemaat_id)->first();
         $klasis = $jemaat->klasis;
 
@@ -154,7 +157,7 @@ class UserController extends Controller
         }
 
         if ($entity->save()) {
-            $profile = new UserProfile();
+//            $profile = new UserProfile();
             $profile->user_id = $entity->id;
             $profile->nama = $entity->name;
             $profile->jenis_kelamin = $request->jenis_kelamin;
