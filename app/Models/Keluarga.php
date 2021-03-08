@@ -17,4 +17,9 @@ class Keluarga extends Model
     {
         return $this->belongsTo(UserProfile::class, 'kepala_keluarga', 'id');
     }
+
+    public function anggota_keluarga()
+    {
+        return $this->hasMany(AnggotaKeluarga::class, 'keluarga_id', 'id');
+    }
 }
