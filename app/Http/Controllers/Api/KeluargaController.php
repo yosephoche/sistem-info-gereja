@@ -15,6 +15,6 @@ class KeluargaController extends Controller
 
     protected function alwaysIncludes() : array
     {
-        return ['profile_kepala_keluarga', 'anggota_keluarga'];
+        return ['profile_kepala_keluarga', 'anggota_keluarga', 'anggota_keluarga.profile'];
     }
 }
