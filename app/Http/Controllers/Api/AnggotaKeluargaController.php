@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Api;
 use Orion\Http\Controllers\Controller;
 use Orion\Concerns\DisableAuthorization;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 
+use App\Exports\KeluargaExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 use App\Models\AnggotaKeluarga;
@@ -31,5 +32,10 @@ class AnggotaKeluargaController extends Controller
         };
 
         return $query;
+    }
+
+    public function export_to_excel(Request $request)
+    {
+        return Excel::download(new KeluargaExport($request->keluarga_id), 'Anggota_Keluarga.xlsx');
     }
 }

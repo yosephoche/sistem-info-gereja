@@ -90,6 +90,11 @@ class DashboardController extends Controller
             return $pekerjaan->count();
         });
 
+        $total_user_baptis = UserProfile::where('is_baptis', true)->count();
+        $total_user_sidi = UserProfile::where('is_sidi', true)->count();
+        $data['baptis'] = $total_user_baptis;
+        $data['sidi'] = $total_user_sidi;
+
         return $data;
     }
 
@@ -127,11 +132,16 @@ class DashboardController extends Controller
             return $pekerjaan->count();
         });
 
+        $total_user_baptis = UserProfile::where('is_baptis', true)->count();
+        $total_user_sidi = UserProfile::where('is_sidi', true)->count();
+
         $data = [];
         $data['jemaat'] = $total;
         $data['pria'] = $total_pria;
         $data['wanita'] = $total_wanita;
         $data['pekerjaan'] = $total_user_by_pekerjaan;
+        $data['baptis'] = $total_user_baptis;
+        $data['sidi'] = $total_user_sidi;
 
         return $data;
 

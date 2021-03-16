@@ -105,5 +105,6 @@ Route::group(['as' => 'api.', 'middleware' => ['auth:sanctum']], function() {
     // Orion::hasOneResource('oig', 'pengurus' , OrganisasiController::class);
     Route::get('dashboard', [DashboardController::class, 'index']);
 });
+Route::get('anggota-keluarga-export-excel', [AnggotaKeluargaController::class, 'export_to_excel']);
 
 Route::post('/login', [AuthController::class, 'login']);
