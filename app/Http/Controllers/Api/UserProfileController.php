@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 use Orion\Http\Controllers\Controller;
 use Orion\Http\Controllers\RelationController;
 use Orion\Concerns\DisableAuthorization;
@@ -100,6 +102,25 @@ class UserProfileController extends Controller
                     $query->where('kelompok_id', $request->kelompok);
                 }
             });
+        }
+
+        if ($request->exists('is_meninggal')) {
+            $query->where('is_meninggal', '=', 1);
+        }
+
+        if ($request->exists('ulang_tahun')) {
+            $now = CarbonImmutable::now();
+            $start_week = $now->startOfWeek()->format('Y-m-d H:i:s');
+            $end_week = $now->startOfWeek()->format('Y-m-d H:i:s');
+            $query->whereBetween('tanggal_lahir', [$start_week, $end_week]);
+        }
+
+        if ($request->exists('is_baptis')) {
+            $query->where('is_baptis', 1);
+        }
+
+        if ($request->exists('is_sidi')) {
+            $query->where('is_sidi', 1);
         }
 
         if ($request->exists('sortBy')) {
