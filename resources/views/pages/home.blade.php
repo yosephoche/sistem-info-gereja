@@ -123,6 +123,7 @@
     <div class="content">
         <article class="post_item post_item_single page">
             <section class="post_content">
+                @if($newest_event)
                 <!-- Next event section -->
                 <div class="hp1_next_event_section tpl_add_bg">
                     <div class="content_wrap">
@@ -153,6 +154,7 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                @endif
 
                 <!-- /Next event section -->
                 <!-- Welcome section -->
